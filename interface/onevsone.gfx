@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_button_transparent2"
+		texturefile = "gfx/interface/button_transparent2.dds"
+	}
+	spriteType = {
+		name = "GFX_swap_button"
+		textureFile = "gfx/interface/swap_button.dds"
+	}
+	spriteType = {
+		name = "GFX_button_transparent3"
+		texturefile = "gfx/interface/button_transparent3.dds"
+	}
+}

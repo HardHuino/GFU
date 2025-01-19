@@ -1,0 +1,29 @@
+scripted_gui = {
+
+	host_tool_open= {
+		context_type = player_context
+		window_name = "hosttool_open_container"
+		visible = {
+			has_country_flag = host
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+		effects = {
+			host_tool_open_click = {
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = transfer_enabled } } }
+					ROOT = { set_country_flag = transfer_enabled }
+				}
+				else = {
+					ROOT = { clr_country_flag = transfer_enabled }
+				}
+			}
+		}
+		triggers = {
+			host_tool_open_click_enabled = {
+				always = yes
+			}
+		}
+	}
+}

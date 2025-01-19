@@ -1,0 +1,32 @@
+state = {
+	id = 100
+	name = "STATE_100"
+	manpower = 115870
+
+	state_category = rural
+
+
+	history = {
+		owner = ICE
+		1936.1.1.15 = {
+			owner = WST
+		}
+		victory_points = { 12674 1 }
+		buildings = {
+			infrastructure = 6
+			dockyard = 2
+			12674 = {
+				naval_base = 1
+			}
+			industrial_complex = 8
+			arms_factory = 6
+		}
+		add_core_of = DEN
+		add_core_of = ICE
+	}
+	provinces = {
+		4861 12674 12689 13266 13267 13268 13271
+	}
+
+	local_supplies = 0.0
+}

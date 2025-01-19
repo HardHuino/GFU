@@ -1,0 +1,26 @@
+form_roman_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_roman_empire
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_greater_german_reich_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_hre
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+	visible = {
+		NOT = {
+			has_global_flag = ONE_VS_ONE
+		}
+	}
+}

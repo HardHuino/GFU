@@ -1,0 +1,28 @@
+spanish_civil_war_CAN_resistance = {
+	enable = {
+		original_tag = CAN
+		country_exists = SPD
+		has_global_flag = spanish_civil_war
+		NOT = { has_global_flag = scw_over }
+	}
+
+	abort = {
+		has_global_flag = scw_over
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SPD"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "SPD"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SPD"
+		value = 100
+	}
+}

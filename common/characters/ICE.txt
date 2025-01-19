@@ -1,0 +1,18 @@
+characters={
+	ICE_sveinn_bjornsson = {
+		name = ICE_sveinn_bjornsson
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ICE_sveinn_bjornsson
+				small = GFX_portrait_ICE_sveinn_bjornsson_small
+			}
+
+		}
+		country_leader = {
+			ideology = centrism
+			traits = { ICE_the_strict_regent }
+			expire = "1965.1.1"
+			id = -1
+		}
+	}
+}

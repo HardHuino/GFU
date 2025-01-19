@@ -1,0 +1,151 @@
+form_roman_empire_category = {
+
+	form_roman_empire = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = ITA
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			has_completed_focus = ITA_roma_invicta
+		}
+
+		visible = {
+			original_tag = ITA
+			NOT = { has_global_flag = form_roman_empire_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = SPQR_UNIFIED
+			hidden_effect = {
+				news_event = { id = wtt_news.64 hours = 6 }
+				set_global_flag = form_roman_empire_flag
+				if = {
+					limit = {
+						has_completed_focus = ITA_socialist_roots
+					}
+					if = {
+						limit = {
+							has_country_leader = { ruling_only = yes name = "Benito Mussolini" }
+						}
+						kill_country_leader = yes
+						create_country_leader = {
+							name = "Augustus Mussolini"
+							desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+							picture = "GFX_portrait_italy_emperor_mussolini"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								imperator il_duce_11
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = ITA_corporate_statism
+					}
+					if = {
+						limit = {
+							has_country_leader = { ruling_only = yes name = "Benito Mussolini" }
+						}
+						kill_country_leader = yes
+						create_country_leader = {
+							name = "Augustus Mussolini"
+							desc = "POLITICS_BENITO_MUSSOLINI_DESC"
+							picture = "GFX_portrait_italy_emperor_mussolini"
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								imperator il_duce_12
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_idea = vittorio_emanuele
+					}
+					remove_ideas = vittorio_emanuele
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+
+form_greater_german_reich_category = { # greater german reich
+
+	form_greater_german_reich = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = GER
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			has_full_control_of_state = 195
+			has_full_control_of_state = 217
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			AND = {
+				original_tag = GER
+				has_government = fascism
+				has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
+			}
+			# NOT = { has_global_flag = form_greater_german_reich_flag }
+			# OR = {
+			# 	AND = {
+			# 		has_war_with = FRA
+			# 		# FRA = { has_capitulated = yes }
+			# 		VIC = {
+			# 			has_country_flag = VIC_france_capped
+			# 		}
+			# 	}
+			# 	AND = {
+			# 		owns_state = 16
+			# 		has_full_control_of_state = 16
+			# 	}
+			# }
+		}
+
+		complete_effect = {
+			GER = {
+				add_ideas = GER_greater_german_reich_idea
+			}
+			# set_cosmetic_tag = GER_greater_german_reich
+			set_province_name = { id = 6521 name = "Germania" }
+			# hidden_effect = {
+			# 	set_global_flag = form_greater_german_reich_flag
+			# }
+			hidden_effect = {
+				every_country = {
+					limit = { check_variable= { speeches_enabled > 0 } }
+					scoped_sound_effect = "sp_greater_german_reich"
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

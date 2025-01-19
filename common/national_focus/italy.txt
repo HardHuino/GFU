@@ -1,0 +1,3691 @@
+﻿#!gfx:interface\lw_goals.gfx
+#!gfx:interface\tfu_goals.gfx
+#!gfx:interface\KR_goals.gfx
+#!gfx:interface\cic_goals.gfx
+#!gfx:interface\snek_teleport.gfx
+#!gfx:interface\replace\bruh_interface.gfx
+#!gfx:interface\replace\bruh_bra_interface.gfx
+#!gfx:interface\replace\bruh_eng_interface.gfx
+#!gfx:interface\replace\bruh_ger_interface.gfx
+#!gfx:interface\replace\bruh_hol_interface.gfx
+#!gfx:interface\replace\bruh_ita_interface.gfx
+#!gfx:interface\replace\bruh_jap_interface.gfx
+#!gfx:interface\replace\bruh_nsb_interface.gfx
+#!gfx:interface\replace\bruh_sov_interface.gfx
+
+focus_tree = {
+	id = italian_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+
+	#Focus Path shortcuts	
+	shortcut = {
+		name = GER_historical_path_shortcut
+		target = ITA_the_birthplace_of_fascism
+		scroll_wheel_factor = 0.835 #Optional parameter, if left unset will use existing zoomlevel. Warning: there's no good way for this to respect client resolution.
+		trigger = {
+			always = yes
+			# If FALSE, this will not display. If true, it will not supercede allow conditions of target focus.
+		}
+	}
+
+	shortcut = {
+		name = GER_naval_doctrine_shortcut
+		target = ITA_regia_marina
+		scroll_wheel_factor = 1.0
+		trigger = {
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = GER_air_doctrine_shortcut
+		target = ITA_regia_aeronautica
+		scroll_wheel_factor = 1.0
+		trigger = {
+			always = yes
+		}
+	}
+
+	shortcut = {
+		name = GER_military_doctrine_shortcut
+		target = ITA_lessons_of_the_italo_ethiopian_war
+		scroll_wheel_factor = 1.0
+		trigger = {
+			always = yes
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 1650 y = 900 }
+
+	# ECO NEW
+	focus = {
+		id = ITA_the_birthplace_of_fascism
+		icon = GFX_focus_ITA_bold_fascism
+		x = 10
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_political_power = 100
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_drift_defence_factor = 0.5 tooltip = drift_defence_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_prepare_the_coastal_defenses
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = ITA_the_birthplace_of_fascism }
+		x = -4
+		y = 1
+		relative_position_id = ITA_the_birthplace_of_fascism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = ITA_prepare_coastal_defenses_mainland
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_prepare_coastal_defenses_med_islands
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_prepare_coastal_defenses_greece
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_prepare_coastal_defenses_yugoslavia
+				show_effect_tooltip = yes # default is no
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_stake_our_claims
+		icon = GFX_focus_ITA_to_live_as_a_lion
+		prerequisite = { focus = ITA_the_birthplace_of_fascism }
+		x = 4
+		y = 1
+		relative_position_id = ITA_the_birthplace_of_fascism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = ITA_send_the_ultimatum_to_king_zog
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_demand_yugoslav_submission
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_demand_greek_submission
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_demand_our_french_claims
+				show_effect_tooltip = yes # default is no
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_solidify_the_dictatorship
+		icon = GFX_ITA_dirigism
+		prerequisite = { focus = ITA_the_birthplace_of_fascism }
+		x = -8
+		y = 1
+		relative_position_id = ITA_the_birthplace_of_fascism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_country_leader_trait = il_duce
+			hidden_effect = {
+				ITA_il_duce_update_tt = yes # tooltip
+				add_to_variable = { ITA_il_duce_political_power_factor = 0.15 tooltip = political_power_factor_tt }
+				il_duce_trait_update = yes
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_a_cult_of_personality
+		icon = GFX_focus_ger_assassinate_mussolini
+		prerequisite = { focus = ITA_solidify_the_dictatorship }
+		x = -1
+		y = 1
+		relative_position_id = ITA_solidify_the_dictatorship
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_il_duce_update_tt = yes # tooltip
+			add_to_variable = { ITA_il_duce_stability_factor = 0.1 tooltip = stability_factor_tt }
+			il_duce_trait_update = yes
+		}
+	}
+
+	focus = {
+		id = ITA_me_ne_frego
+		icon = GFX_goal_italy_decimal
+		prerequisite = { focus = ITA_solidify_the_dictatorship }
+		x = 0
+		y = 2
+		relative_position_id = ITA_solidify_the_dictatorship
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_il_duce_update_tt = yes # tooltip
+			add_to_variable = { ITA_il_duce_conscription = 0.02 tooltip = conscription_tt }
+			add_to_variable = { ITA_il_duce_intelligence_agency_defense = 1 tooltip = intelligence_agency_defense_tt }
+			il_duce_trait_update = yes
+		}
+	}
+
+	focus = {
+		id = ITA_mediator_of_classes
+		icon = GFX_focus_ITA_muss_greatness
+		prerequisite = { focus = ITA_solidify_the_dictatorship }
+		x = 1
+		y = 1
+		relative_position_id = ITA_solidify_the_dictatorship
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_il_duce_update_tt = yes # tooltip
+			add_to_variable = { ITA_il_duce_political_power_factor = 0.05 tooltip = political_power_factor_tt }
+			add_to_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { ITA_il_duce_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+			il_duce_trait_update = yes
+		}
+	}
+
+	focus = {
+		id = ITA_socialist_roots
+		icon = GFX_goal_ita_develop_south
+		prerequisite = { focus = ITA_a_cult_of_personality }
+		prerequisite = { focus = ITA_me_ne_frego }
+		prerequisite = { focus = ITA_mediator_of_classes }
+		x = 0
+		y = 2
+		relative_position_id = ITA_a_cult_of_personality
+		mutually_exclusive = { focus = ITA_corporate_statism }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_il_duce_update_tt = yes # tooltip
+			add_to_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { ITA_il_duce_local_resources_factor = 0.1 tooltip = local_resources_factor_tt }
+			il_duce_trait_update = yes
+		}
+	}
+
+	focus = {
+		id = ITA_corporate_statism
+		icon = GFX_goal_ita_statilize_iri
+		prerequisite = { focus = ITA_me_ne_frego }
+		prerequisite = { focus = ITA_mediator_of_classes }
+		prerequisite = { focus = ITA_a_cult_of_personality }
+		x = 1
+		y = 1
+		relative_position_id = ITA_me_ne_frego
+		mutually_exclusive = { focus = ITA_socialist_roots }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_il_duce_update_tt = yes # tooltip
+			add_to_variable = { ITA_il_duce_production_factory_max_efficiency_factor = 0.025 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { ITA_il_duce_production_factory_efficiency_gain_factor = 0.025 tooltip = production_factory_efficiency_gain_factor_tt }
+			add_to_variable = { ITA_il_duce_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+			il_duce_trait_update = yes
+		}
+	}
+
+	focus = {
+		id = ITA_state-union_supremacy
+		icon = GFX_goal_ITA_fasci_e_corporazioni
+		prerequisite = { focus = ITA_socialist_roots }
+		x = -1
+		y = 1
+		relative_position_id = ITA_socialist_roots
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_il_duce_update_tt = yes # tooltip
+			add_to_variable = { ITA_il_duce_production_speed_buildings_factor = 0.1 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { ITA_il_duce_global_building_slots_factor = 0.1 tooltip = global_building_slots_factor_tt }
+			il_duce_trait_update = yes
+		}
+	}
+
+	focus = {
+		id = ITA_the_total_mobilization_of_society
+		icon = GFX_goal_mobilisation_thailand_fascism
+		prerequisite = { focus = ITA_socialist_roots focus = ITA_corporate_statism }
+		x = 1
+		y = 1
+		relative_position_id = ITA_socialist_roots
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_mobilization_speed = 0.25 tooltip = mobilization_speed_tt }
+			add_to_variable = { ITA_italian_army_conscription = 0.01 tooltip = conscription_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_state-business_supremacy
+		icon = GFX_goal_generic_business_bills
+		prerequisite = { focus = ITA_corporate_statism }
+		x = 1
+		y = 1
+		relative_position_id = ITA_corporate_statism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_il_duce_update_tt = yes # tooltip
+			add_to_variable = { ITA_il_duce_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { ITA_il_duce_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
+			il_duce_trait_update = yes
+		}
+	}
+
+	focus = {
+		id = ITA_finish_the_autostrade
+		icon = GFX_ITA_italian_highways
+		prerequisite = { focus = ITA_the_birthplace_of_fascism }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_birthplace_of_fascism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_core_of = ITA
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_production_speed_infrastructure_factor = 0.10 tooltip = production_speed_infrastructure_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_german_economic_interdependence
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = ITA_finish_the_autostrade }
+		x = -1
+		y = 1
+		relative_position_id = ITA_finish_the_autostrade
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				add_relation_modifier = { target = ITA modifier = ITA_german_economic_interdependence_stat_mod }
+				GER_economy_dynamic_modifier_tt = yes # tooltip
+				add_to_variable = { GER_german_economy_industrial_capacity_factory = 0.025 tooltip = industrial_capacity_factory_tt }
+			}
+			add_relation_modifier = { target = GER modifier = ITA_german_economic_interdependence_stat_mod }
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_industrial_capacity_factory = 0.025 tooltip = industrial_capacity_factory_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_seize_foreign_assets
+		icon = GFX_goal_seize_industry
+		prerequisite = { focus = ITA_finish_the_autostrade }
+		x = 1
+		y = 1
+		relative_position_id = ITA_finish_the_autostrade
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_stability_factor = -0.1 tooltip = stability_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_joint_metals_development
+		icon = GFX_GER_the_steel_most_flow
+		prerequisite = { focus = ITA_german_economic_interdependence }
+		x = -1
+		y = 2
+		relative_position_id = ITA_german_economic_interdependence
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				random_owned_controlled_state = {
+					limit = {
+						is_controlled_by = PREV
+						is_core_of = PREV
+					}
+					add_building_construction = {
+						type = steel_refinery
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = steel_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			modify_building_resources = {
+				building = steel_refinery
+				resource = steel
+				amount = 50
+			}
+			modify_building_resources = {
+				building = steel_refinery
+				resource = aluminium
+				amount = 50
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_gold_for_the_fatherland
+		icon = GFX_goal_tblra_gold_extraction
+		prerequisite = { focus = ITA_seize_foreign_assets }
+		x = 1
+		y = 2
+		relative_position_id = ITA_seize_foreign_assets
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_stability_factor = -0.1 tooltip = stability_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_towards_autarky
+		icon = GFX_ger_autarchy1
+		prerequisite = { focus = ITA_german_economic_interdependence }
+		x = 0
+		y = 1
+		relative_position_id = ITA_german_economic_interdependence
+		mutually_exclusive = { focus = ITA_european_free_trade_agreements }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = limited_exports
+			custom_effect_tooltip = ITA_towards_autarky_tt
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_local_resources_factor = 0.2 tooltip = local_resources_factor_tt }
+			random_owned_controlled_state = {
+				prioritize = { 161 158 159 160 162 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 158 159 160 162 161 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 159 160 162 161 158 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 160 162 161 158 159 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_european_free_trade_agreements
+		icon = GFX_goal_free_trade
+		prerequisite = { focus = ITA_seize_foreign_assets }
+		x = 0
+		y = 1
+		relative_position_id = ITA_seize_foreign_assets
+		mutually_exclusive = { focus = ITA_towards_autarky }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = free_trade
+			custom_effect_tooltip = ITA_european_free_trade_agreements_tt
+			every_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = SPR
+						tag = HUN
+						tag = ROM
+						tag = BUL
+					}
+				}
+				add_relation_modifier = { target = ITA modifier = ITA_european_free_trade_agreements }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_joint_research_programs
+		icon = GFX_focus_research
+		prerequisite = { focus = ITA_joint_metals_development }
+		x = -1
+		y = 1
+		relative_position_id = ITA_joint_metals_development
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+			GER = {
+				GER_economy_dynamic_modifier_tt = yes # tooltip
+				add_to_variable = { GER_german_economy_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_danieli_government_contracts
+		icon = GFX_ENG_amend_factory_acts
+		prerequisite = { focus = ITA_joint_metals_development focus = ITA_towards_autarky }
+		x = 1
+		y = 1
+		relative_position_id = ITA_joint_metals_development
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = ITA_danieli_government_contracts
+				bonus = 0.75
+				uses = 2
+				category = concentrated_industry_category
+				category = dispersed_industry_category
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_pillage_east_africa
+		icon = GFX_goal_ITA_exploit_empire
+		prerequisite = { focus = ITA_gold_for_the_fatherland focus = ITA_european_free_trade_agreements }
+		x = -1
+		y = 1
+		relative_position_id = ITA_gold_for_the_fatherland
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = "Moves all Military factories and Civilian factories from Ethiopia, Eritrea and Somalia to mainland Italy"
+			hidden_effect = {
+				set_variable = { ROOT.ITA_COLONY_mils_removed_var = 0 }
+				set_variable = { ROOT.ITA_COLONY_civs_removed_var = 0 }
+				every_state = {
+					limit = {
+						ITA_colony_states_base = yes
+					}
+					while_loop_effect = {
+						limit = {
+							arms_factory > 0
+						}
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+						ROOT = {
+							add_to_variable = { ROOT.ITA_COLONY_mils_removed_var = 1 }
+						}
+					}
+					while_loop_effect = {
+						limit = {
+							industrial_complex > 0
+						}
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+						ROOT = {
+							add_to_variable = { ROOT.ITA_COLONY_civs_removed_var = 1 }
+						}
+					}
+				}
+				for_loop_effect = {
+					end = ITA_COLONY_mils_removed_var
+					ITA = {
+						random_owned_controlled_state= {
+							prioritize = { 736 }
+							limit = {
+								is_controlled_by = ITA
+								is_core_of = ITA
+								NOT = {
+									OR = {
+										state = 852
+										state = 39
+										state = 850
+									}
+								}
+							}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes
+							}
+						}
+					}
+				}
+				for_loop_effect = {
+					end = ITA_COLONY_civs_removed_var
+					ITA = {
+						random_owned_controlled_state= {
+							prioritize = { 852 }
+							limit = {
+								is_controlled_by = ITA
+								is_core_of = ITA
+								NOT = {
+									OR = {
+										state = 736
+										state = 39
+										state = 850
+									}
+								}
+							}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_land_appropriation_programs
+		icon = GFX_GER_private_military_industrial_complex
+		prerequisite = { focus = ITA_gold_for_the_fatherland }
+		x = 1
+		y = 1
+		relative_position_id = ITA_gold_for_the_fatherland
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_global_building_slots_factor = 0.10 tooltip = global_building_slots_factor_tt }
+			unlock_decision_tooltip = {
+				decision = ITA_appropriate_additional_land
+				show_effect_tooltip = yes # default is no
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_heartland
+		icon = GFX_goal_ita_via_balbia
+		prerequisite = { focus = ITA_the_birthplace_of_fascism }
+		x = 7
+		y = 1
+		relative_position_id = ITA_the_birthplace_of_fascism
+		mutually_exclusive = { focus = ITA_imperialismo }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_core_of = ITA
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_imperialismo
+		icon = GFX_goal_italy_africa
+		prerequisite = { focus = ITA_the_birthplace_of_fascism }
+		x = 9
+		y = 1
+		relative_position_id = ITA_the_birthplace_of_fascism
+		mutually_exclusive = { focus = ITA_the_heartland }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_compliance_gain = 0.005 tooltip = compliance_gain_5_tt }
+			add_to_variable = { ITA_italian_economy_resistance_target = -0.1 tooltip = resistance_target_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_the_green_fields_of_italy
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = ITA_the_heartland }
+		x = -1
+		y = 1
+		relative_position_id = ITA_the_heartland
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_conscription_factor = 0.1 tooltip = conscription_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_give_the_ustase_autonomy
+		icon = GFX_focus_YUG_banovina_of_croatia
+		prerequisite = { focus = ITA_the_green_fields_of_italy }
+		x = -1
+		y = 1
+		relative_position_id = ITA_the_green_fields_of_italy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_controlled_state = {
+				is_core_of = YUG
+				NOT = {
+					state = 736
+					state = 852
+					state = 163
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = YUG
+					is_controlled_by = ITA
+					NOT = {
+						state = 736
+						state = 852
+						state = 163
+					}
+				}
+				add_dynamic_modifier = { modifier = ITA_ustase_autonomy }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_relinquish_greece_to_the_bulgarians
+		icon = GFX_goal_italy_ally_bulgaria
+		prerequisite = { focus = ITA_the_green_fields_of_italy }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_green_fields_of_italy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_controlled_state = {
+				is_core_of = GRE
+				NOT = {
+					state = 164
+					state = 187
+					state = 182
+					state = 164
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_core_of = GRE
+					NOT = {
+						state = 164
+						state = 187
+						state = 182
+						state = 164
+					}
+				}
+				transfer_state_to = BUL
+			}
+			BUL = {
+				add_ideas = ITA_payments_for_greece
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_expropriate_factory_tooling
+		icon = GFX_advanced_industry
+		prerequisite = { focus = ITA_the_green_fields_of_italy }
+		x = 0
+		y = 2
+		relative_position_id = ITA_the_green_fields_of_italy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					NOT = {
+						is_core_of = ITA
+					}
+					NOT = {
+						state = 164
+						state = 163
+					}
+				}
+				add_compliance = -10
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { ITA_italian_economy_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_tt }
+			add_to_variable = { ITA_italian_economy_production_factory_efficiency_gain_factor = 0.2 tooltip = production_factory_efficiency_gain_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_ancient_ambitions
+		icon = GFX_focus_ITA_a_colonial_empire
+		prerequisite = { focus = ITA_imperialismo }
+		x = 1
+		y = 1
+		relative_position_id = ITA_imperialismo
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = ITA_ancient_ambitions_tt
+			show_ideas_tooltip = ITA_fake_provincial_system_law
+		}
+	}
+
+	focus = {
+		id = ITA_illyricum
+		icon = GFX_focus_invite_yugoslavia
+		prerequisite = { focus = ITA_ancient_ambitions }
+		x = -1
+		y = 1
+		relative_position_id = ITA_ancient_ambitions
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_core_of = YUG
+					NOT = {
+						state = 736
+						state = 852
+						state = 163
+					}
+				}
+				# add_compliance = 60
+				add_core_of = ITA
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_graecia
+		icon = GFX_goal_ENG_collaboration_with_greece
+		prerequisite = { focus = ITA_ancient_ambitions }
+		x = 1
+		y = 1
+		relative_position_id = ITA_ancient_ambitions
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_core_of = GRE
+					NOT = {
+						state = 164
+					}
+				}
+				# add_compliance = 60
+				add_core_of = ITA
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_veni_vidi_vici
+		icon = GFX_focus_ITA_mare_nostrum
+		prerequisite = { focus = ITA_ancient_ambitions }
+		x = 0
+		y = 2
+		relative_position_id = ITA_ancient_ambitions
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = ITA_develop_yugoslavia
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_develop_former_french_territory
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_develop_the_levant
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_develop_egypt
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_develop_tunisia
+				show_effect_tooltip = yes # default is no
+			}
+			unlock_decision_tooltip = {
+				decision = ITA_develop_libya
+				show_effect_tooltip = yes # default is no
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_mediterranean_brothers
+		icon = GFX_focus_generic_invite_nat_spain
+		prerequisite = { focus = ITA_expropriate_factory_tooling focus = ITA_veni_vidi_vici }
+		x = -1
+		y = 1
+		relative_position_id = ITA_expropriate_factory_tooling
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_global_flag = scw_over
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_relation_modifier = { target = SPR modifier = ITA_trade_agreement }
+			SPR = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+						is_core_of = SPR
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				add_relation_modifier = { target = ITA modifier = ITA_trade_agreement }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_magyar_alignment
+		icon = GFX_goal_ita_hungary
+		prerequisite = { focus = ITA_expropriate_factory_tooling focus = ITA_veni_vidi_vici }
+		x = 1
+		y = 1
+		relative_position_id = ITA_expropriate_factory_tooling
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_relation_modifier = { target = HUN modifier = ITA_trade_agreement }
+			HUN = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+						is_core_of = HUN
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				add_relation_modifier = { target = ITA modifier = ITA_trade_agreement }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_rome_and_romania
+		icon = GFX_focus_invite_romania
+		prerequisite = { focus = ITA_expropriate_factory_tooling focus = ITA_veni_vidi_vici }
+		x = -1
+		y = 1
+		relative_position_id = ITA_veni_vidi_vici
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_relation_modifier = { target = ROM modifier = ITA_trade_agreement }
+			ROM = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+						is_core_of = ROM
+					}
+					prioritize = { 81 46 79 84 }
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				add_relation_modifier = { target = ITA modifier = ITA_trade_agreement }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_brotherhood_of_christ
+		icon = GFX_focus_generic_befriend_bulgaria
+		prerequisite = { focus = ITA_expropriate_factory_tooling focus = ITA_veni_vidi_vici }
+		x = 1
+		y = 1
+		relative_position_id = ITA_veni_vidi_vici
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_relation_modifier = { target = BUL modifier = ITA_trade_agreement }
+			if = {
+				limit = {
+					BUL = {
+						exists = yes
+					}
+				}
+				BUL = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 2
+								include_locked = yes
+							}
+							is_core_of = BUL
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = industrial_complex
+							level = 3
+							instant_build = yes
+						}
+					}
+					add_relation_modifier = { target = ITA modifier = ITA_trade_agreement }
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+						is_core_of = BUL
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_connections_in_the_mafia
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = ITA_the_total_mobilization_of_society }
+		prerequisite = { focus = ITA_danieli_government_contracts }
+		prerequisite = { focus = ITA_pillage_east_africa }
+		prerequisite = { focus = ITA_mediterranean_brothers }
+		prerequisite = { focus = ITA_magyar_alignment }
+		prerequisite = { focus = ITA_rome_and_romania }
+		prerequisite = { focus = ITA_brotherhood_of_christ }
+		x = 4
+		y = 1
+		relative_position_id = ITA_the_total_mobilization_of_society
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			effect_tooltip = {
+				add_intel = {
+					target = USA
+					civilian_intel = 10
+					army_intel = 10
+					navy_intel = 10
+					airforce_intel = 10
+				}
+				add_intel = {
+					target = ENG
+					civilian_intel = 10
+					army_intel = 10
+					navy_intel = 10
+					airforce_intel = 10
+				}
+				add_intel = {
+					target = FRA
+					civilian_intel = 10
+					army_intel = 10
+					navy_intel = 10
+					airforce_intel = 10
+				}
+			}
+			hidden_effect = {
+				add_operation_token = {
+					tag = USA
+					token = token_mafia_civilian
+				}
+				add_operation_token = {
+					tag = USA
+					token = token_mafia_army
+				}
+				add_operation_token = {
+					tag = USA
+					token = token_mafia_airforce
+				}
+				add_operation_token = {
+					tag = USA
+					token = token_mafia_navy
+				}
+				add_operation_token = {
+					tag = ENG
+					token = token_mafia_civilian
+				}
+				add_operation_token = {
+					tag = ENG
+					token = token_mafia_army
+				}
+				add_operation_token = {
+					tag = ENG
+					token = token_mafia_airforce
+				}
+				add_operation_token = {
+					tag = ENG
+					token = token_mafia_navy
+				}
+				add_operation_token = {
+					tag = FRA
+					token = token_mafia_civilian
+				}
+				add_operation_token = {
+					tag = FRA
+					token = token_mafia_army
+				}
+				add_operation_token = {
+					tag = FRA
+					token = token_mafia_airforce
+				}
+				add_operation_token = {
+					tag = FRA
+					token = token_mafia_navy
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_operative_slot = 1 tooltip = operative_slot_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_ORVA
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = ITA_the_total_mobilization_of_society }
+		prerequisite = { focus = ITA_danieli_government_contracts }
+		prerequisite = { focus = ITA_pillage_east_africa }
+		prerequisite = { focus = ITA_mediterranean_brothers }
+		prerequisite = { focus = ITA_magyar_alignment }
+		prerequisite = { focus = ITA_rome_and_romania }
+		prerequisite = { focus = ITA_brotherhood_of_christ }
+		x = 6
+		y = 1
+		relative_position_id = ITA_the_total_mobilization_of_society
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_operative_slot = 1 tooltip = operative_slot_tt }
+			add_to_variable = { ITA_italian_economy_intelligence_agency_defense = 1 tooltip = intelligence_agency_defense_tt }
+			add_to_variable = { ITA_italian_economy_decryption_power = 25 tooltip = decryption_power_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_heavy_industry_development
+		icon = GFX_ITA_industrial_triangle
+		prerequisite = { focus = ITA_the_total_mobilization_of_society }
+		prerequisite = { focus = ITA_danieli_government_contracts }
+		prerequisite = { focus = ITA_pillage_east_africa }
+		prerequisite = { focus = ITA_mediterranean_brothers }
+		prerequisite = { focus = ITA_magyar_alignment }
+		prerequisite = { focus = ITA_rome_and_romania }
+		prerequisite = { focus = ITA_brotherhood_of_christ }
+		x = 8
+		y = 1
+		relative_position_id = ITA_the_total_mobilization_of_society
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_global_building_slots_factor = 0.10 tooltip = global_building_slots_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_licence_farben_BUNA
+		icon = GFX_ig_farben
+		prerequisite = { focus = ITA_the_total_mobilization_of_society }
+		prerequisite = { focus = ITA_danieli_government_contracts }
+		prerequisite = { focus = ITA_pillage_east_africa }
+		prerequisite = { focus = ITA_mediterranean_brothers }
+		prerequisite = { focus = ITA_magyar_alignment }
+		prerequisite = { focus = ITA_rome_and_romania }
+		prerequisite = { focus = ITA_brotherhood_of_christ }
+		x = 10
+		y = 1
+		relative_position_id = ITA_the_total_mobilization_of_society
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 15
+			}
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = ig_farben_ita
+		}
+	}
+
+	focus = {
+		id = ITA_the_rome-berlin_axis
+		icon = GFX_ger_alliance_with_italy
+		prerequisite = { focus = ITA_the_total_mobilization_of_society }
+		prerequisite = { focus = ITA_danieli_government_contracts }
+		prerequisite = { focus = ITA_pillage_east_africa }
+		prerequisite = { focus = ITA_mediterranean_brothers }
+		prerequisite = { focus = ITA_magyar_alignment }
+		prerequisite = { focus = ITA_rome_and_romania }
+		prerequisite = { focus = ITA_brotherhood_of_christ }
+		x = 12
+		y = 1
+		relative_position_id = ITA_the_total_mobilization_of_society
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 200
+			GER = { add_political_power = 100 }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_mafia_state
+		icon = GFX_focus_generic_conspiracy
+		prerequisite = { focus = ITA_connections_in_the_mafia }
+		prerequisite = { focus = ITA_ORVA }
+		x = 1
+		y = 1
+		relative_position_id = ITA_connections_in_the_mafia
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_operative_slot = 1 tooltip = operative_slot_tt }
+			add_to_variable = { ITA_italian_economy_civilian_intel_to_others = -10 tooltip = civilian_intel_to_others_tt }
+			add_to_variable = { ITA_italian_economy_army_intel_to_others = -10 tooltip = army_intel_to_others_tt }
+			add_to_variable = { ITA_italian_economy_navy_intel_to_others = -10 tooltip = navy_intel_to_others_tt }
+			add_to_variable = { ITA_italian_economy_airforce_intel_to_others = -10 tooltip = airforce_intel_to_others_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_pact_of_steel
+		icon = GFX_goal_further_military_cooperation
+		prerequisite = { focus = ITA_licence_farben_BUNA }
+		prerequisite = { focus = ITA_the_rome-berlin_axis }
+		x = 1
+		y = 1
+		relative_position_id = ITA_licence_farben_BUNA
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				date > 1939.1.1
+				threat > 0.50
+				has_war_with = ENG
+				has_war_with = FRA
+				has_war_with = SOV
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				GER = {
+					add_opinion_modifier = { target = ITA modifier = pact_of_steel_opinion }
+				}
+				add_opinion_modifier = { target = GER modifier = pact_of_steel_opinion }
+				GER = {
+					add_opinion_modifier = { target = ITA modifier = pact_of_steel_opinion_hidden }
+				}
+				add_opinion_modifier = { target = GER modifier = pact_of_steel_opinion_hidden }
+			}
+			add_to_tech_sharing_group = axis_research
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = ITA_vincere_prop
+		}
+	}
+
+	focus = {
+		id = ITA_roma_invicta
+		icon = GFX_ITA_Mare_Nostrum
+		prerequisite = { focus = ITA_the_mafia_state }
+		prerequisite = { focus = ITA_pact_of_steel }
+		prerequisite = { focus = ITA_heavy_industry_development }
+		x = 3
+		y = 1
+		relative_position_id = ITA_the_mafia_state
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			182 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			183 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			454 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			453 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			446 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			447 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			452 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			1 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			735 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			187 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			116 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			NOT = {
+				any_state = {
+					is_core_of = ITA
+					is_on_continent = europe
+					NOT = { is_fully_controlled_by = ITA }
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_variable = { global.TVAR_roman_empire_time = global.num_days }
+			add_ideas = ITA_mare_nostrum
+			add_political_power = 200
+			unlock_decision_tooltip = form_roman_empire
+		}
+	}
+
+	focus = {
+		id = ITA_fortify_casablanca
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = ITA_roma_invicta }
+		x = -4
+		y = 1
+		relative_position_id = ITA_roma_invicta
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			461 = { is_controlled_by_ROOT_or_ally = yes }
+			462 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 461
+						state = 462
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+				set_building_level  = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_algerian_de-francisation
+		icon = GFX_FRA_the_blum_viollette_proposal
+		prerequisite = { focus = ITA_roma_invicta }
+		x = -2
+		y = 1
+		relative_position_id = ITA_roma_invicta
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			FRA = {
+				remove_state_core = 460
+				remove_state_core = 459
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_aswan_defensive_line
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = ITA_roma_invicta }
+		x = 0
+		y = 1
+		relative_position_id = ITA_roma_invicta
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			457 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			457 = {
+				set_building_level  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction  = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+				set_building_level  = {
+					type = radar_station
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_iraqi_petroleum_development
+		icon = GFX_GER_synthetic_oil_refinery
+		prerequisite = { focus = ITA_roma_invicta }
+		x = 2
+		y = 1
+		relative_position_id = ITA_roma_invicta
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			291 = { is_controlled_by_ROOT_or_ally = yes }
+			676 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			291 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+			676 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_secure_the_zagros
+		icon = GFX_goal_ENG_attack_iran
+		prerequisite = { focus = ITA_roma_invicta }
+		x = 4
+		y = 1
+		relative_position_id = ITA_roma_invicta
+		cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			291 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+						is_in_faction_with = ITA
+					}
+				}
+			}
+			country_exists = PER
+			OR = {
+				JAP = {
+					has_completed_focus = JAP_strike_the_west
+				}
+				date > 1941.6.1
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			hidden_effect = {
+				every_country = {
+					news_event = generic.33
+				}
+			}
+			ENG = {
+				# hidden_effect = { set_technology = { countenance_dp = 1 popup = no } }
+				ENG = {
+					annex_country = { target = PER transfer_troops = no }
+				}
+				# division_template = {
+				# 	name = "Colonial Infantry (Iran)"
+				# 	division_names_group = ENG_INF_01
+
+				# 	regiments = {
+				# 		infantry = { x = 0 y = 0 }
+				# 		infantry = { x = 0 y = 1 }
+				# 		infantry = { x = 0 y = 2 }
+				# 		infantry = { x = 0 y = 3 }
+
+				# 		infantry = { x = 1 y = 0 }
+				# 		infantry = { x = 1 y = 1 }
+				# 		infantry = { x = 1 y = 2 }
+				# 		infantry = { x = 1 y = 3 }
+
+				# 		infantry = { x = 2 y = 0 }
+				# 		infantry = { x = 2 y = 1 }
+				# 		infantry = { x = 2 y = 2 }
+
+				# 		dp_artillery_brigade = { x = 3 y = 0 }
+				# 		dp_artillery_brigade = { x = 3 y = 1 }
+				# 		dp_artillery_brigade = { x = 3 y = 2 }
+				# 		dp_artillery_brigade = { x = 3 y = 3 }
+
+				# 		dp_artillery_brigade = { x = 4 y = 0 }
+				# 		dp_artillery_brigade = { x = 4 y = 1 }
+				# 		dp_artillery_brigade = { x = 4 y = 2 }
+				# 		dp_artillery_brigade = { x = 4 y = 3 }
+				# 	}
+				# 	support = {
+				# 		light_tank_recon = { x = 0 y = 0 }
+				# 		engineer = { x = 0 y = 1 }
+				# 		signal_company = { x = 0 y = 2 }
+				# 		logistics_company_mot = { x = 0 y = 3 }
+				# 		anti_air = { x = 1 y = 0 }
+				# 		military_police = { x = 1 y = 1 }
+				# 		field_hospital = { x = 1 y = 2 }
+				# 	}
+				# }
+				# 444 = {
+				# 	for_loop_effect = {
+				# 		end = 9
+				# 		create_unit = {
+				# 			division = "name = \"Colonial Infantry (Iran)\" division_template = \"Colonial Infantry (Iran)\" start_experience_factor = 0.5"
+				# 			owner = ENG
+				# 		}
+				# 	}
+				# }
+				give_resource_rights = { receiver = SOV state = 411 }
+				give_resource_rights = { receiver = SOV state = 412 }
+				hidden_effect = {
+					ENG = { country_event = { id = NSB_soviet_foreign_politics_events.270 days = 1 } } #Hidden Effect to transfer states and give resource rights
+				}
+				# custom_effect_tooltip = ENG_iran_spawn_in_tt
+			}
+		}
+	}
+
+	# NEW ARMY
+
+	focus = {
+		id = ITA_lessons_of_the_italo_ethiopian_war
+		icon = GFX_Italian_Shield
+		x = 28
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ITA_lessons_of_the_italo_ethiopian_war
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_arditi
+		icon = GFX_superior_tactics
+		prerequisite = { focus = ITA_lessons_of_the_italo_ethiopian_war }
+		x = -3
+		y = 1
+		relative_position_id = ITA_lessons_of_the_italo_ethiopian_war
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_special_forces_attack_factor = 0.05 tooltip = special_forces_attack_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_focus_on_the_alpini
+		icon = GFX_focus_ITA_alpine_division
+		prerequisite = { focus = ITA_the_arditi }
+		x = -1
+		y = 1
+		relative_position_id = ITA_the_arditi
+		mutually_exclusive = { focus = ITA_lessons_of_vittorio_veneto }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = ITA_focus_on_the_alpini
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_mountaineers_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_lessons_of_vittorio_veneto
+		icon = GFX_arditi_camo
+		prerequisite = { focus = ITA_the_arditi }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_arditi
+		mutually_exclusive = { focus = ITA_focus_on_the_alpini }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = ITA_focus_on_the_alpini
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_paratroopers_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_camouflage_the_uniforms
+		icon = GFX_goal_ITA_guerra_di_posizioni_e_decisioni
+		prerequisite = { focus = ITA_the_arditi }
+		x = 0
+		y = 2
+		relative_position_id = ITA_the_arditi
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_enemy_army_bonus_air_superiority_factor = -0.1 tooltip = enemy_army_bonus_air_superiority_factor_tt }
+			add_to_variable = { ITA_italian_army_cas_damage_reduction = 0.1 tooltip = cas_damage_reduction_tt }
+			hidden_effect = {
+				every_army_leader={
+					add_trait = {
+						trait = ten_terrain_penalty_reduction
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_alpine_training
+		icon = GFX_goal_ita_armir
+		prerequisite = { focus = ITA_focus_on_the_alpini }
+		x = -1
+		y = 1
+		relative_position_id = ITA_focus_on_the_alpini
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_terrain_penalty_reduction = 0.05 tooltip = terrain_penalty_reduction_tt }
+			add_to_variable = { ITA_italian_army_max_planning = 0.025 tooltip = max_planning_tt }
+			hidden_effect = {
+				every_army_leader={
+					add_trait = {
+						trait = five_terrain_penalty_reduction
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_night_assault_tactics
+		icon = GFX_goal_italy_besagliari
+		prerequisite = { focus = ITA_lessons_of_vittorio_veneto }
+		x = 1
+		y = 1
+		relative_position_id = ITA_lessons_of_vittorio_veneto
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			hidden_effect = {
+				set_technology = {
+					arditi_tech_night_assault = 1 popup = no
+				}
+			}
+			custom_effect_tooltip = ITA_arditi_night_assault_tt
+		}
+	}
+
+	focus = {
+		id = ITA_standardized_kits
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = ITA_camouflage_the_uniforms }
+		x = -1
+		y = 1
+		relative_position_id = ITA_camouflage_the_uniforms
+		mutually_exclusive = { focus = ITA_triarii }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ITA_standardized_kits
+		}
+	}
+
+	focus = {
+		id = ITA_triarii
+		icon = GFX_focus_ITA_aerial_legion
+		prerequisite = { focus = ITA_camouflage_the_uniforms }
+		x = 1
+		y = 1
+		relative_position_id = ITA_camouflage_the_uniforms
+		mutually_exclusive = { focus = ITA_standardized_kits }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			# add_ideas = ITA_triarii
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_special_forces_attack_factor = 0.025 tooltip = special_forces_attack_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_cutting_edge_technology
+		icon = GFX_goal_ITA_more_cannons_for_the_army
+		prerequisite = { focus = ITA_lessons_of_the_italo_ethiopian_war }
+		x = 1
+		y = 1
+		relative_position_id = ITA_lessons_of_the_italo_ethiopian_war
+		mutually_exclusive = { focus = ITA_predictable_assembly_lines }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_cutting_edge_technology
+				bonus = 0.75
+				uses = 3
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = ITA_cutting_edge_technology
+				bonus = 0.75
+				uses = 3
+				category = artillery
+				category = heavy_artillery
+			}
+			add_ideas = ITA_cutting_edge_technology
+			custom_effect_tooltip = ITA_cutting_edge_technology_tt
+			hidden_effect = {
+				IF = {
+					limit = {
+						2 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					2 = {
+						add_building_construction = {
+							type = land_facility
+							level = 1
+							instant_build = yes
+							province = 9904
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_predictable_assembly_lines
+		icon = GFX_new_caliber
+		prerequisite = { focus = ITA_lessons_of_the_italo_ethiopian_war }
+		x = 5
+		y = 1
+		relative_position_id = ITA_lessons_of_the_italo_ethiopian_war
+		mutually_exclusive = { focus = ITA_cutting_edge_technology }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ITA_predictable_assembly_lines
+		}
+	}
+
+	focus = {
+		id = ITA_quality_manufacturing
+		icon = GFX_GOAL_infantry_equipment
+		prerequisite = { focus = ITA_cutting_edge_technology }
+		x = -1
+		y = 1
+		relative_position_id = ITA_cutting_edge_technology
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = beretta
+		}
+	}
+
+	focus = {
+		id = ITA_shock_and_awe
+		icon = GFX_goal_ITA_focus_on_artillery
+		prerequisite = { focus = ITA_cutting_edge_technology focus = ITA_predictable_assembly_lines }
+		x = 1
+		y = 1
+		relative_position_id = ITA_cutting_edge_technology
+		mutually_exclusive = { focus = ITA_defense_in_depth }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_army_leader = {
+				add_attack = 1
+			}
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_army_speed_factor = 0.05 tooltip = army_speed_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_defense_in_depth
+		icon = GFX_ww1_tactics
+		prerequisite = { focus = ITA_predictable_assembly_lines focus = ITA_cutting_edge_technology }
+		x = -1
+		y = 1
+		relative_position_id = ITA_predictable_assembly_lines
+		mutually_exclusive = { focus = ITA_shock_and_awe }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_army_leader = {
+				add_defense = 1
+				ITA_army_dynamic_modifier_tt = yes # tooltip
+				add_to_variable = { ITA_italian_army_max_dig_in_factor = 0.05 tooltip = max_dig_in_factor_tt }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_military_industrial_complex
+		icon = GFX_GER_synthetic_rubber_refinery
+		prerequisite = { focus = ITA_predictable_assembly_lines }
+		x = 1
+		y = 1
+		relative_position_id = ITA_predictable_assembly_lines
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_military_industrial_complex
+				bonus = 0.75
+				uses = 2
+				technology = basic_machine_tools
+				technology = improved_machine_tools
+				technology = advanced_machine_tools
+				technology = assembly_line_production
+				technology = flexible_line
+				technology = streamlined_line
+			}
+			add_ideas = ITA_military_industrial_complex_research_department
+		}
+	}
+
+	focus = {
+		id = ITA_professional_officer_corps
+		icon = GFX_goal_ITA_reformed_army
+		prerequisite = { focus = ITA_quality_manufacturing focus = ITA_shock_and_awe focus = ITA_defense_in_depth }
+		x = 1
+		y = 1
+		relative_position_id = ITA_quality_manufacturing
+		mutually_exclusive = { focus = ITA_the_legions }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			add_to_variable = { ITA_italian_army_max_planning = 0.05 tooltip = max_planning_tt }
+			add_to_variable = { ITA_italian_army_planning_speed = 0.2 tooltip = planning_speed_tt }
+			add_to_variable = { ITA_italian_army_experience_gain_army_unit_factor = 0.1 tooltip = experience_gain_army_unit_factor_tt }
+			add_to_variable = { ITA_italian_army_land_doctrine_cost_factor = -0.05 tooltip = land_doctrine_cost_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_the_legions
+		icon = GFX_ITA_viva_il_duce
+		prerequisite = { focus = ITA_defense_in_depth focus = ITA_shock_and_awe focus = ITA_military_industrial_complex }
+		x = 1
+		y = 1
+		relative_position_id = ITA_defense_in_depth
+		mutually_exclusive = { focus = ITA_professional_officer_corps }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_army_morale_factor = 0.1 tooltip = army_morale_factor_tt }
+			add_to_variable = { ITA_italian_army_land_reinforce_rate = 0.05 tooltip = land_reinforce_rate_tt }
+			add_to_variable = { ITA_italian_army_conscription = 0.02 tooltip = conscription_tt }
+			add_to_variable = { ITA_italian_army_non_core_manpower = 0.15 tooltip = non_core_manpower_tt }
+			add_to_variable = { ITA_italian_army_training_time_factor = -0.25 tooltip = training_time_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_la_guerra_moderna
+		icon = GFX_goal_ITA_expand_military_academies
+		prerequisite = { focus = ITA_professional_officer_corps }
+		x = -1
+		y = 1
+		relative_position_id = ITA_professional_officer_corps
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_la_guerra_moderna
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1
+				technology = night_vision
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_dio_impero_esercito
+		icon = GFX_focus_ITA_bella_italia
+		prerequisite = { focus = ITA_professional_officer_corps focus = ITA_the_legions }
+		x = 2
+		y = 1
+		relative_position_id = ITA_professional_officer_corps
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_army_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_army_land_night_attack = 0.05 tooltip = land_night_attack_tt }
+			add_to_variable = { ITA_italian_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			add_to_variable = { ITA_italian_army_army_morale_factor = 0.05 tooltip = army_morale_factor_tt }
+			add_to_variable = { ITA_italian_army_army_core_attack_factor = 0.1 tooltip = army_core_attack_factor_tt }
+			add_to_variable = { ITA_italian_army_army_core_defence_factor = 0.1 tooltip = army_core_defence_factor_tt }
+			add_doctrine_cost_reduction = {
+				name = ITA_dio_impero_esercito
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_crociata_ideologica
+		icon = GFX_Ultranationalism_2
+		prerequisite = { focus = ITA_the_legions }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_legions
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ITA_crociata_ideologica
+		}
+	}
+
+	# NAVY NEW
+	focus = {
+		id = ITA_regia_marina
+		icon = GFX_goal_ITA_Regia_Marina
+		x = 43
+		y = 0
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 100
+			add_doctrine_cost_reduction = {
+				name = ITA_regia_marina
+				cost_reduction = 0.75
+				uses = 2
+				category = naval_doctrine
+			}
+			ITA_navy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_navy_navy_fuel_consumption_factor = -0.10 tooltip = navy_fuel_consumption_factor_tt }
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_industrial_capacity_dockyard = 0.05 tooltip = industrial_capacity_dockyard_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_mare_nostrum
+		icon = GFX_goal_ITA_littorio_class
+		prerequisite = { focus = ITA_regia_marina }
+		x = -5
+		y = 1
+		relative_position_id = ITA_regia_marina
+		mutually_exclusive = { focus = ITA_circumvent_british_naval_superiority }
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = ITA_mare_nostrum
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_fleet_in_being
+				category = cat_trade_interdiction
+			}
+			add_tech_bonus = {
+				name = ITA_mare_nostrum
+				bonus = 0.75
+				uses = 2
+				technology = fire_control_methods_1
+				technology = fire_control_methods_2
+				technology = fire_control_methods_3
+			}
+			add_tech_bonus = {
+				name = ITA_mare_nostrum
+				bonus = 0.75
+				uses = 2
+				technology = damage_control_1
+				technology = damage_control_2
+				technology = damage_control_3
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_littorio
+		icon = GFX_goal_ITA_heavy_ships_production
+		prerequisite = { focus = ITA_mare_nostrum }
+		x = -1
+		y = 1
+		relative_position_id = ITA_mare_nostrum
+		# mutually_exclusive = { focus = ITA_the_abruzzi } #DANSTER_CHANGE
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_the_littorio
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 1
+				technology = improved_ship_hull_heavy
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_abruzzi
+		icon = GFX_goal_ITA_light_ships_production
+		prerequisite = { focus = ITA_mare_nostrum }
+		x = 1
+		y = 1
+		relative_position_id = ITA_mare_nostrum
+		# mutually_exclusive = { focus = ITA_the_littorio } #DANSTER_CHANGE
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_the_littorio
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 1
+				technology = improved_ship_hull_cruiser
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_instilled_aggression
+		icon = GFX_focus_ITA_new_horizons
+		prerequisite = { focus = ITA_the_littorio }
+		x = -1
+		y = 1
+		relative_position_id = ITA_the_littorio
+		mutually_exclusive = { focus = ITA_cautionary_measures focus = ITA_admiral_schooling }
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_navy_leader = {
+				add_attack = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_cautionary_measures
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = ITA_the_littorio focus = ITA_the_abruzzi }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_littorio
+		mutually_exclusive = { focus = ITA_instilled_aggression focus = ITA_admiral_schooling }
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_navy_leader = {
+				add_defense = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_admiral_schooling
+		icon = GFX_goal_generic_admirality
+		prerequisite = { focus = ITA_the_abruzzi }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_abruzzi
+		mutually_exclusive = { focus = ITA_instilled_aggression focus = ITA_cautionary_measures }
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_navy_leader = {
+				add_skill_level = 1
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_german_RADAR_technology
+		icon = GFX_goal_ITA_advanced_radar
+		prerequisite = { focus = ITA_instilled_aggression focus = ITA_cautionary_measures focus = ITA_admiral_schooling }
+		x = 1
+		y = 1
+		relative_position_id = ITA_instilled_aggression
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_german_RADAR_technology
+				bonus = 0.75
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_long_range_gunnery
+		icon = GFX_goal_ITA_new_gunnery_standards
+		prerequisite = { focus = ITA_instilled_aggression focus = ITA_cautionary_measures focus = ITA_admiral_schooling }
+		x = 1
+		y = 1
+		relative_position_id = ITA_cautionary_measures
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_long_range_gunnery
+				bonus = 0.75
+				uses = 2
+				technology = improved_medium_battery
+				technology = advanced_medium_battery
+				technology = improved_heavy_battery
+				technology = advanced_heavy_battery
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_improved_range_finding
+		icon = GFX_goal_generic_build_navy_2
+		prerequisite = { focus = ITA_german_RADAR_technology }
+		prerequisite = { focus = ITA_long_range_gunnery }
+		x = 1
+		y = 1
+		relative_position_id = ITA_german_RADAR_technology
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_improved_range_finding
+				bonus = 0.75
+				uses = 2
+				technology = basic_fire_control_system
+				technology = improved_fire_control_system
+				technology = advanced_fire_control_system
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_CRDA_takeover
+		icon = GFX_goal_ITA_expand_naval_dockyards
+		prerequisite = { focus = ITA_regia_marina }
+		x = -1
+		y = 2
+		relative_position_id = ITA_regia_marina
+		mutually_exclusive = { focus = ITA_balanced_approach }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 4
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 4
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 4
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_consumer_goods_factor = 0.025 tooltip = consumer_goods_expected_value_tt }
+			set_variable = { ITA_CRDA_takeover_duration = 365 tooltip = modification_length_tt }
+			hidden_effect = {
+				ITA = {
+					country_event = { id = generic.59 days = ITA_CRDA_takeover_duration }
+				}
+			}
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_industrial_capacity_dockyard = 0.1 tooltip = industrial_capacity_dockyard_tt }
+			custom_effect_tooltip = ITA_CRDA_takeover_tt
+			hidden_effect = {
+				IF = {
+					limit = {
+						160 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					160 = {
+						add_building_construction = {
+							type = naval_facility
+							level = 1
+							instant_build = yes
+							province = 9582
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_balanced_approach
+		icon = GFX_JAP_expand_military_factories
+		prerequisite = { focus = ITA_regia_marina }
+		x = 1
+		y = 2
+		relative_position_id = ITA_regia_marina
+		mutually_exclusive = { focus = ITA_CRDA_takeover }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 4
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = dockyard
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+					is_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_exploratori
+		icon = GFX_goal_ITA_mobilize_nav_workers
+		prerequisite = { focus = ITA_CRDA_takeover focus = ITA_balanced_approach }
+		x = 1
+		y = 1
+		relative_position_id = ITA_CRDA_takeover
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ITA_navy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_navy_naval_speed_factor = 0.05 tooltip = naval_speed_factor_tt }
+			add_to_variable = { ITA_italian_navy_refit_speed = 0.2 tooltip = refit_speed_tt }
+			add_to_variable = { ITA_italian_navy_refit_ic_cost = -0.1 tooltip = refit_ic_cost_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_circumvent_british_naval_superiority
+		icon = GFX_goal_ITA_challenge_the_royal_navy
+		prerequisite = { focus = ITA_regia_marina }
+		x = 5
+		y = 1
+		relative_position_id = ITA_regia_marina
+		mutually_exclusive = { focus = ITA_mare_nostrum }
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ITA_circumvent_british_naval_superiority
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_base_strike
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_aquila
+		icon = GFX_goal_ITA_rn_aquila
+		prerequisite = { focus = ITA_circumvent_british_naval_superiority }
+		x = -2
+		y = 1
+		relative_position_id = ITA_circumvent_british_naval_superiority
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_the_aquila
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 1
+				technology = improved_ship_hull_carrier
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_torpedo_development
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = ITA_circumvent_british_naval_superiority }
+		x = 0
+		y = 1
+		relative_position_id = ITA_circumvent_british_naval_superiority
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_torpedo_development
+				bonus = 0.75
+				uses = 1
+				category = cat_torpedoes
+			}
+			add_tech_bonus = {
+				name = ITA_torpedo_development
+				bonus = 0.75
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_modernize_the_cruisers
+		icon = GFX_goal_ITA_light_ships_production
+		prerequisite = { focus = ITA_circumvent_british_naval_superiority }
+		x = 2
+		y = 1
+		relative_position_id = ITA_circumvent_british_naval_superiority
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_modernize_the_cruisers
+				bonus = 0.75
+				uses = 1
+				technology = improved_ship_hull_cruiser
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_a_new_playing_field
+		icon = GFX_goal_ITA_project_gagnotto
+		prerequisite = { focus = ITA_the_aquila }
+		prerequisite = { focus = ITA_torpedo_development }
+		prerequisite = { focus = ITA_modernize_the_cruisers }
+		x = 1
+		y = 1
+		relative_position_id = ITA_the_aquila
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ITA_a_new_playing_field
+		}
+	}
+
+	focus = {
+		id = ITA_purchase_japanese_pilot_programs
+		icon = GFX_focus_jap_zero
+		prerequisite = { focus = ITA_the_aquila }
+		prerequisite = { focus = ITA_torpedo_development }
+		prerequisite = { focus = ITA_modernize_the_cruisers }
+		x = 1
+		y = 1
+		relative_position_id = ITA_torpedo_development
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			JAP = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+						is_controlled_by = PREV
+						is_core_of = PREV
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			ITA_airforce_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_airforce_naval_strike_targetting_factor = 0.05 tooltip = naval_strike_targetting_factor_tt }
+			add_to_variable = { ITA_italian_airforce_sortie_efficiency = 0.2 tooltip = sortie_efficiency_tt }
+			add_to_variable = { ITA_italian_airforce_naval_strike_attack_factor = 0.05 tooltip = naval_strike_attack_factor_tt }
+		}
+	}
+
+	# NAVY AIR
+	focus = {
+		id = ITA_regia_aeronautica
+		icon = GFX_goal_ITA_Regia_Aeronautica
+		x = 56
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ITA_air_dynamic_modifier
+				}
+			}
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				name = ITA_regia_aeronautica
+				cost_reduction = 0.75
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_nostri_cieli
+		icon = GFX_goal_ITA_reggiane
+		prerequisite = { focus = ITA_regia_aeronautica }
+		x = -2
+		y = 1
+		relative_position_id = ITA_regia_aeronautica
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_nostri_cieli
+				bonus = 0.75
+				uses = 2
+				technology = improved_small_airframe
+				technology = advanced_small_airframe
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_legions_of_machinery
+		icon = GFX_goal_ITA_domestic_engines
+		prerequisite = { focus = ITA_nostri_cieli }
+		x = -1
+		y = 1
+		relative_position_id = ITA_nostri_cieli
+		mutually_exclusive = { focus = ITA_black_out_the_sun }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_caproni_organization = {
+					add_mio_size = 2
+				}
+				mio:ITA_macchi_organization = {
+					add_mio_size = 2
+				}
+			}
+			else = {
+				set_country_flag = ITA_legions_of_machinery_done
+				if = {
+					limit = {
+						has_idea = macchi
+					}
+					swap_ideas = {
+						remove_idea = macchi
+						add_idea = macchi_2
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = macchi
+							add_idea = macchi_2
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_black_out_the_sun
+		icon = GFX_goal_ITA_programma_r
+		prerequisite = { focus = ITA_nostri_cieli }
+		x = 1
+		y = 1
+		relative_position_id = ITA_nostri_cieli
+		mutually_exclusive = { focus = ITA_legions_of_machinery }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_caproni_organization = {
+					add_mio_size = 2
+				}
+				mio:ITA_macchi_organization = {
+					add_mio_size = 2
+				}
+			}
+			else = {
+				set_country_flag = ITA_black_out_the_sun_done
+				if = {
+					limit = {
+						has_idea = macchi
+					}
+					swap_ideas = {
+						remove_idea = macchi
+						add_idea = macchi_3
+					}
+				}
+				else = {
+					effect_tooltip = {
+						swap_ideas = {
+							remove_idea = macchi
+							add_idea = macchi_3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_integrate_german_doctrine
+		icon = GFX_GER_Fast_Bomber
+		prerequisite = { focus = ITA_legions_of_machinery focus = ITA_black_out_the_sun }
+		x = 1
+		y = 1
+		relative_position_id = ITA_legions_of_machinery
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = ITA_integrate_german_doctrine
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_battlefield_support
+			}
+			ITA_airforce_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_airforce_air_mission_efficiency = 0.1 tooltip = air_mission_efficiency_tt }
+			add_to_variable = { ITA_italian_airforce_ace_effectiveness_factor = 0.25 tooltip = ace_effectiveness_factor_tt }
+			add_to_variable = { ITA_italian_airforce_air_ace_generation_chance_factor = 0.25 tooltip = air_ace_generation_chance_factor_tt }
+			add_to_variable = { ITA_italian_airforce_air_power_projection_factor = 0.05 tooltip = air_power_projection_factor_tt }
+			add_to_variable = { ITA_italian_airforce_air_home_defence_factor = 0.05 tooltip = air_home_defence_factor_tt }
+		}
+	}
+
+	focus = {
+		id = ITA_airfield_expansion
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = ITA_regia_aeronautica }
+		x = 0
+		y = 1
+		relative_position_id = ITA_regia_aeronautica
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			663 = { #cyrenica
+				if = {
+					limit = {
+						air_base < 10
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+			451 = { #derna
+				if = {
+					limit = {
+						air_base < 10
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+			450 = { #benghasi
+				if = {
+					limit = {
+						air_base < 10
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+			164 = { #dodecaneso
+				if = {
+					limit = {
+						air_base < 10
+					}
+				}
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_joint_aircraft_development
+		icon = GFX_goal_research_silver_cooperation
+		prerequisite = { focus = ITA_regia_aeronautica }
+		x = 2
+		y = 1
+		relative_position_id = ITA_regia_aeronautica
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_air_experience > 50
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = -50
+			add_research_slot = 1
+			add_ideas = ITA_joint_aircraft_development_idea
+			GER = {
+				add_ideas = ITA_joint_aircraft_development_idea
+			}
+			custom_effect_tooltip = ITA_joint_aircraft_development_tt
+			hidden_effect = {
+				IF = {
+					limit = {
+						159 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					159 = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							instant_build = yes
+							province = 773
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_the_shield
+		icon = GFX_ROM_air_defense
+		prerequisite = { focus = ITA_joint_aircraft_development }
+		x = -1
+		y = 1
+		relative_position_id = ITA_joint_aircraft_development
+		mutually_exclusive = { focus = ITA_the_spear }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ITA_the_shield
+				bonus = 0.75
+				uses = 2
+				technology = heavy_artillery_research1
+				technology = heavy_artillery_research2
+				technology = heavy_artillery_research3
+				category = cat_anti_air
+			}
+			add_ideas = ITA_the_shield
+		}
+	}
+
+	focus = {
+		id = ITA_the_spear
+		icon = GFX_goal_ITA_air_land_coordination
+		prerequisite = { focus = ITA_joint_aircraft_development }
+		x = 1
+		y = 1
+		relative_position_id = ITA_joint_aircraft_development
+		mutually_exclusive = { focus = ITA_the_shield }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = ITA_the_spear
+		}
+	}
+}

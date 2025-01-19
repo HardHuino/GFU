@@ -1,0 +1,37 @@
+﻿capital = 111
+
+oob = "FIN_1936"
+
+set_research_slots = 0 #5
+
+add_ideas = {
+	limited_conscription
+	neutrality_idea
+	neutrality_idea2
+	stupid_ai
+	free_trade
+}
+# add_timed_idea = { idea = peacetime_economics days = 1339 }
+# add_manpower = 80000
+
+set_rule = { can_be_spymaster = no }
+
+set_convoys = 50
+
+set_variable = { axis_poster_center_icon_frame = 1 }
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.7.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 10
+	fascism = 10
+	communism = 1
+	neutrality = 79
+}
+
+recruit_character = FIN_risto_heikki_ryti
+

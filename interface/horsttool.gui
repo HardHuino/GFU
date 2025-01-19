@@ -1,0 +1,230 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "horsttool_open_container_1VS1"
+		position = { x = 1000 y = 4 }
+		Orientation = UPPER_LEFT
+		buttonType = {
+			name = "tool_open_1VS1"
+			#quadTextureSprite = "GFX_generic_bg"
+			quadTextureSprite = "GFX_generic_box_96"
+			position = { x = 0 y = 0 }
+			#scale=0.5
+			pdx_tooltip = "[ST_TOOLTIP_1VS1]"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+		
+		instantTextboxType = {
+			name = "title_1VS1"
+			#position = {x=22 y=5}
+			position = {x=8 y=4}
+			font = "hoi_18mbs"
+			text = "[transfer_states_tooltip_1VS1]"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+
+	}
+	
+	containerWindowType = {
+		name = "horsttool_container_1VS1"
+		position = {x=600 y=200}
+		size = { width=700 height=650}
+		Orientation = UPPER_LEFT
+		fade_time = 300
+		fade_type = linear
+		moveable=yes
+		background = {
+			name = "Background"
+			#spriteType = "GFX_generic_bg_307x113"
+		spriteType = "GFX_tiled_window2_1b_border"
+		}
+		
+		
+		instantTextboxType = {
+			name = "why use lel lennard_1VS1"
+			#position = {x=14 y=}
+			position = {x=225 y=12}
+			font = "hoi_24header"
+			text = "Settings"
+			maxWidth = 200
+			maxHeight = 23
+			format = centre
+		}
+		
+#######################################################################
+		buttonType = {
+			name = "add_cheat_1VS1" 
+			position = {x=240 y=580}
+			#buttontext = "Start"
+			buttontext =[Getstartname]
+			quadTextureSprite ="GFX_button_123x34"	
+			buttonFont = "hoi_24header"
+			#spriteType = = "GFX_lobby_button"
+            #pdx_tooltip = "ADD_CHEAT"
+			#pdx_tooltip_delayed = "ADD_CHEAT_DELAYED"
+		}
+		buttonType = {
+			name = "add_cheat2_1VS1" 
+			position = {x=400 y=580}
+			buttontext = "2v2Preset"
+			quadTextureSprite ="GFX_button_123x34"	
+			buttonFont = "hoi_24header"
+			#spriteType = = "GFX_lobby_button"
+            #pdx_tooltip = "ADD_CHEAT"
+			#pdx_tooltip_delayed = "ADD_CHEAT_DELAYED"
+		}
+		buttonType = {
+			name = "add_cheat3_1VS1" 
+			position = {x=100 y=580}
+			buttontext = "1v1Preset"
+			quadTextureSprite ="GFX_button_123x34"	
+			buttonFont = "hoi_24header"
+			#spriteType = = "GFX_lobby_button"
+            #pdx_tooltip = "ADD_CHEAT"
+			#pdx_tooltip_delayed = "ADD_CHEAT_DELAYED"
+		}
+		buttonType = {
+			name = "add_cheat4_1VS1" 
+			position = {x=550 y=320}
+			buttontext = "Tournament"
+			quadTextureSprite ="GFX_button_123x34"	
+			buttonFont = "hoi_24header"
+			#spriteType = = "GFX_lobby_button"
+            #pdx_tooltip = "ADD_CHEAT"
+			#pdx_tooltip_delayed = "ADD_CHEAT_DELAYED"
+		}
+		instantTextboxType = {
+			name = "North"
+			#position = {x=14 y=}
+			position = {x=480 y=225}
+			font = "hoi_24header"
+			text = "North"
+			maxWidth = 200
+			maxHeight = 23
+			format = centre
+		}
+		
+		instantTextboxType = {
+			name = "South"
+			#position = {x=14 y=}
+			position = {x=480 y=275}
+			font = "hoi_24header"
+			text = "South"
+			maxWidth = 200
+			maxHeight = 23
+			format = centre
+		}
+		buttonType = {
+			name = "enable_north"
+			spriteType = "GFX_generic_checkbox"
+			frame = 1
+			buttonFont = "hoi_16mbs"
+			position = { x = 630 y = 225 }
+			size = { x = 75 y = 25 }
+			pdx_tooltip = "ADD_CORE_TT_1VS1"
+			pdx_tooltip_delayed = "ADD_CORE_TT_DELAYED_1VS1"
+		}
+		
+		buttonType = {
+			name = "enable_south"
+			spriteType = "GFX_generic_checkbox"
+			frame = 1
+			buttonFont = "hoi_16mbs"
+			position = { x = 630 y = 275 }
+			size = { x = 75 y = 25 }
+			pdx_tooltip = "ADD_CORE_TT_1VS1"
+			pdx_tooltip_delayed = "ADD_CORE_TT_DELAYED_1VS1"
+		}
+		buttonType = {
+			name = "observer_1VS1" 
+			position = {x=555 y=100}
+			spriteType = "GFX_observer_button"
+         	pdx_tooltip = "OBSERVER_1VS1"
+			pdx_tooltip_delayed = "OBSERVER_DELAYED_1VS1"
+			scale = 0.70
+		}
+		buttonType = {
+			name = "observer2_1VS1" 
+			position = {x=555 y=150}
+			spriteType = "GFX_swap_button"
+         	pdx_tooltip = "OBSERVER2_1VS1"
+			pdx_tooltip_delayed = "OBSERVER2_DELAYED_1VS1"
+			scale = 1
+		}
+		buttonType = {
+			name = "whitepeace_1VS1"	
+			position = {x=550 y=450}
+			spriteType = "GFX_relation_truce"
+            		scale=1.8
+			pdx_tooltip = "WHITEPEACE_1VS1"
+			pdx_tooltip_delayed = "WHITEPEACE_DELAYED_1VS1"
+			#scale = 0.95
+		}
+		gridboxtype = {
+				name = "fuel_faction_members_gridbox_1VS1"
+				position = { x = 30 y = 54 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 1 height = 1 }
+				add_horizontal = no
+				max_slots_horizontal = 1
+				format = "UPPER_LEFT"
+			}
+		
+		
+	}
+	containerWindowType = {
+		name = "fuel_faction_members_entry_1VS1"
+		position = { x = 0 y = 0 }
+		size = { width = 514 height = 40 }
+		buttonType = {
+			name = "entry_bg_button_1VS1"
+			spriteType = "GFX_tiled_header_1"
+			position = { x = 0 y = 0 }
+			size = { x = 514 y = 40 }
+			pdx_tooltip = "FALLOUT_GO_TO_STATE_TT_1VS1"
+			
+		}
+
+		instantTextboxType = {
+			name = "entry_name_1VS1"
+			position = { x = 10 y = 10 }
+			text = "[THIS.Getsettingsdesc]"
+			font = "hoi_18mbs"
+			format = left
+			maxWidth = 410
+			multiline = no
+			alwaystransparent = yes
+		}
+
+		
+		
+		instantTextboxType = {
+			name = "value_box_1VS1"
+			position = {x=350 y=10 }
+			font = "hoi_18mbs"
+			text = "[THIS.Getvaluedesc]"
+			maxWidth = 45
+			#only_numbers = yes
+		}
+		
+		buttonType = {
+			name = "increase_onevsonevar_button_1VS1"
+			quadTextureSprite ="GFX_zoom_in"
+			position = { x = 395 y = 8 }
+			scale = 1
+			clicksound = click_default
+		}
+		
+		buttonType = {
+			name = "decrease_onevsonevar_button_1VS1"
+			quadTextureSprite ="GFX_zoom_out"
+			position = { x = 318 y = 8 }
+			scale = 1
+			clicksound = click_default
+		}
+		
+	}
+}

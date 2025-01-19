@@ -1,0 +1,294 @@
+technologies = {
+
+
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 7
+	@1941 = 8
+	@1942 = 9
+	@1943 = 10
+	@1944 = 11
+	@1945 = 12
+	@1946 = 20
+
+	jap_light_tank_1 = {
+
+		enable_equipments = {
+			jap_light_tank_chassis_t95
+			# jap_medium_tank_chassis_t89
+		}
+		enable_equipment_modules = {
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_casemate_turret
+			tank_light_open_superstructure_turret
+			tank_light_open_turret
+			tank_riveted_armor
+			tank_welded_armor
+			tank_cast_armor
+			tank_gasoline_engine
+			tank_petrol_electric_engine
+			tank_diesel_engine
+			tank_christie_suspension
+			tank_bogie_suspension
+			tank_interleaved_suspension
+			tank_horstmann_suspension
+			tank_torsion_bar_suspension
+			easy_maintenance
+			smoke_launchers
+			grousers
+			apcr_round
+			he_round
+			extra_ammo_storage
+			wet_ammo_storage
+			armor_skirts
+			compact_armoring
+			external_lmg
+			coaxial_machine_gun
+			dozer_blade
+			expanded_fuel_tank
+		}
+
+		path = {
+			leads_to_tech = jap_light_tank_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = jap_medium_tank_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1936
+		folder = {
+			name = jap_armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+		allow_branch = {
+			OR = {
+				tag = JAP
+				tag = MAN
+				tag = SIA
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1936
+		}
+	}
+
+	jap_light_tank_2 = {
+
+		enable_equipments = {
+			jap_light_tank_chassis_t98
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			research_cost_coeff = 1
+			leads_to_tech = jap_light_tank_3
+		}
+
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = jap_armour_folder
+			position = { x = -2 y = 8 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1940
+		}
+	}
+
+	jap_light_tank_3 = {
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1943
+		folder = {
+			name = jap_armour_folder
+			position = { x = -2 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1943
+		}
+	}
+
+	jap_medium_tank_1 = {
+
+		enable_equipments = {
+			jap_medium_tank_chassis_t97
+		}
+
+		enable_equipment_modules = {
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+			tank_medium_fixed_casemate_turret
+			tank_medium_open_superstructure_turret
+			tank_medium_open_turret
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = jap_medium_tank_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1938
+		folder = {
+			name = jap_armour_folder
+			position = { x = 2 y = 4 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1938
+		}
+	}
+
+	jap_medium_tank_2 = {
+
+		enable_equipments = {
+			jap_medium_tank_chassis_t01
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = jap_medium_tank_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = jap_armour_folder
+			position = { x = 2 y = 8 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1940
+		}
+	}
+
+	jap_medium_tank_3 = {
+
+		enable_equipments = {
+			jap_medium_tank_chassis_t03
+		}
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		path = {
+			leads_to_tech = jap_medium_tank_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1943
+		folder = {
+			name = jap_armour_folder
+			position = { x = 2 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1943
+		}
+	}
+
+	jap_medium_tank_4 = {
+
+		enable_equipments = {
+			jap_medium_tank_chassis_t04
+		}
+
+		enable_equipment_modules = {
+			tank_modern_tank_turret
+		}
+
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = jap_armour_folder
+			position = { x = 2 y = 18 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1945
+		}
+	}
+}

@@ -1,0 +1,370 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = ONE_VS_ONE
+				}
+				every_country = {
+					every_state = {
+						remove_core_of = PREV
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							tag = SOV
+							tag = GER
+							tag = SWE
+							tag = WST
+						}
+					}
+					every_state = {
+						add_core_of = PREV
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_controlled_by = SOV
+							is_controlled_by = GER
+							is_controlled_by = SWE
+							is_controlled_by = WST
+						}
+					}
+					remove_building = {
+						type = infrastructure
+						level = 100
+					}
+					remove_building = {
+						type = arms_factory
+						level = 100
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 100
+					}
+					remove_building = {
+						type = air_base
+						level = 100
+					}
+					remove_building = {
+						type = dockyard
+						level = 100
+					}
+					remove_building = {
+						type = anti_air_building
+						level = 100
+					}
+					remove_building = {
+						type = synthetic_refinery
+						level = 100
+					}
+					remove_building = {
+						type = steel_refinery
+						level = 100
+					}
+					remove_building = {
+						type = fuel_silo
+						level = 100
+					}
+					remove_building = {
+						type = radar_station
+						level = 100
+					}
+					remove_building = {
+						type = rocket_site
+						level = 100
+					}
+					remove_building = {
+						type = nuclear_reactor
+						level = 100
+					}
+				}
+				every_state = {
+					set_building_level = {
+						type = infrastructure
+						level = 10
+						instant_build = yes
+					}
+				}
+				SOV = {
+					load_focus_tree = generic_focus
+				}
+				GER = {
+					load_focus_tree = generic_focus
+				}
+				# remove generals
+				SOV = {
+					SOV_georgy_zhukov = { retire = yes }
+					SOV_konstantin_rokossovsky = { retire = yes }
+					SOV_aleksandr_vasilevsky = { retire = yes }
+					SOV_boris_shaposhnikov = { retire = yes }
+					SOV_nikolai_vatutin = { retire = yes }
+					SOV_ivan_konev = { retire = yes }
+					SOV_semyon_timoshenko = { retire = yes }
+					SOV_kliment_voroshilov = { retire = yes }
+					SOV_mikhail_tukhachevsky = { retire = yes }
+					SOV_semyon_budyonny = { retire = yes }
+					SOV_grigory_kulik = { retire = yes }
+					SOV_ivan_chernyakhovsky = { retire = yes }
+					SOV_issa_pliyev = { retire = yes }
+					SOV_leonid_govorov = { retire = yes }
+					SOV_kirill_meretskov = { retire = yes }
+					SOV_filipp_golikov = { retire = yes }
+					SOV_andrey_yeryomenko = { retire = yes }
+					SOV_georgiy_zakharov = { retire = yes }
+					SOV_yakov_cherevichenko = { retire = yes }
+					SOV_max_reyter = { retire = yes }
+					SOV_nikandr_chibisov = { retire = yes }
+					SOV_vasily_kuznetsov = { retire = yes }
+					SOV_andrey_vlasov = { retire = yes }
+					SOV_ivan_fedyuninsky = { retire = yes }
+					SOV_maksim_purkayev = { retire = yes }
+					SOV_kuzma_galitsky = { retire = yes }
+					SOV_markian_popov = { retire = yes }
+					SOV_nikolai_berzarin = { retire = yes }
+					SOV_alexander_gorbatov = { retire = yes }
+					SOV_kirill_moskalenko = { retire = yes }
+					SOV_dmitry_lelyushenko = { retire = yes }
+					SOV_andrei_grechko = { retire = yes }
+					SOV_rodion_malinovsky = { retire = yes }
+					SOV_vasily_chuikov = { retire = yes }
+				}
+				GER = {
+					GER_gerd_von_rundstedt = { retire = yes }
+					GER_gunther_von_kluge = { retire = yes }
+					GER_friedrich_paulus = { retire = yes }
+					GER_erwin_rommel = { retire = yes }
+					GER_erich_von_manstein = { retire = yes }
+					GER_heinz_guderian = { retire = yes }
+					GER_wilhelm_list = { retire = yes }
+					GER_ewald_von_kleist = { retire = yes }
+					GER_fedor_von_bock = { retire = yes }
+					GER_wilhelm_keitel = { retire = yes }
+					GER_maximilian_von_weichs = { retire = yes }
+					GER_wilhelm_ritter_von_leeb = { retire = yes }
+					GER_georghans_reinhardt = { retire = yes }
+					GER_walter_kruger = { retire = yes }
+					GER_kurt_student = { retire = yes }
+					GER_erwin_von_witzleben = { retire = yes }
+					GER_hermann_hoth = { retire = yes }
+					GER_johannes_blaskowitz = { retire = yes }
+					GER_paul_hausser = { retire = yes }
+					GER_friedrich_schulz = { retire = yes }
+					GER_georg_von_kuchler = { retire = yes }
+					GER_alfred_jodl = { retire = yes }
+					GER_sepp_dietrich = { retire = yes }
+					GER_hasso_von_manteuffel = { retire = yes }
+					GER_albert_kesselring = { retire = yes }
+					GER_gotthard_heinrici = { retire = yes }
+					GER_ernsteberhard_hell = { retire = yes }
+					GER_felix_steiner = { retire = yes }
+					GER_walter_model = { retire = yes }
+				}
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = ONE_VS_ONE
+				}
+				clear_variable = SWE.passed_days
+			}
+		}
+	}
+
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = ONE_VS_ONE
+				}
+				if = {
+					limit = {
+						FROM.FROM = {
+							OR = {
+								state = 52
+								state = 64
+								state = 195
+								state = 202
+							}
+						}
+					}
+					clear_variable = SWE.win_con
+					set_variable = { SWE.win_days = 14 }
+					if = {
+						limit = {
+							SOV = {
+								controls_state = 52
+							}
+						}
+						add_to_variable = { SWE.win_con = 1 }
+					}
+					else = {
+						add_to_variable = { SWE.win_con = -1 }
+					}
+					if = {
+						limit = {
+							SOV = {
+								controls_state = 64
+							}
+						}
+						add_to_variable = { SWE.win_con = 1 }
+					}
+					else = {
+						add_to_variable = { SWE.win_con = -1 }
+					}
+					if = {
+						limit = {
+							SOV = {
+								controls_state = 195
+							}
+						}
+						add_to_variable = { SWE.win_con = 1 }
+					}
+					else = {
+						add_to_variable = { SWE.win_con = -1 }
+					}
+					if = {
+						limit = {
+							SOV = {
+								controls_state = 202
+							}
+						}
+						add_to_variable = { SWE.win_con = 1 }
+					}
+					else = {
+						add_to_variable = { SWE.win_con = -1 }
+					}
+				}
+			}
+		}
+	}
+
+	on_daily_SWE = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = ONE_VS_ONE
+				}
+				add_to_variable = { SWE.passed_days = 1 }
+				add_to_variable = { SWE.win_days = -1 }
+			}
+		}
+	}
+	on_monthly_SWE = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = ONE_VS_ONE
+				}
+				add_intel = {
+					target = SOV
+					civilian_intel = 200
+					army_intel = 200
+					navy_intel = 200
+					airforce_intel = 200
+				}
+				add_intel = {
+					target = GER
+					civilian_intel = 200
+					army_intel = 200
+					navy_intel = 200
+					airforce_intel = 200
+				}
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = ONE_VS_ONE
+				}
+				GER = {
+					add_intel = {
+						target = SOV
+						civilian_intel = 200
+						army_intel = 200
+						navy_intel = 200
+						airforce_intel = 200
+					}
+				}
+				SOV = {
+					add_intel = {
+						target = GER
+						civilian_intel = 200
+						army_intel = 200
+						navy_intel = 200
+						airforce_intel = 200
+					}
+				}
+				SWE = {
+					add_intel = {
+						target = SOV
+						civilian_intel = 200
+						army_intel = 200
+						navy_intel = 200
+						airforce_intel = 200
+					}
+					add_intel = {
+						target = GER
+						civilian_intel = 200
+						army_intel = 200
+						navy_intel = 200
+						airforce_intel = 200
+					}
+					every_owned_state= {
+						add_building_construction = {
+							type = radar_station
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				set_variable = { GER.onevsonevar = 18 }
+				set_variable = { SOV.onevsonevar = 60 }
+				set_variable = { HOL.onevsonevar = -0.8 }
+				set_variable = { ITA.onevsonevar = -0.5 }
+				set_variable = { VIC.onevsonevar = -1 }
+				set_variable = { BEL.onevsonevar = 0.15 }
+				set_variable = { LUX.onevsonevar = -0.15 }
+				set_variable = { GLOBAL.enable_north_enabled = 0 }
+				set_variable = { GLOBAL.enable_south_enabled = 2 }
+				SOV = {
+					set_country_flag = transfer_enabled_1vs1
+					every_owned_state = {
+						add_core_of = GER
+						add_core_of = SWE
+					}
+				}
+				GER = {
+					set_country_flag = transfer_enabled_1vs1
+					every_owned_state = {
+						add_core_of = SOV
+						add_core_of = SWE
+					}
+				}
+				GER = { add_dynamic_modifier = { modifier = Barb_Modifiers scope = GER } }
+				SOV = { add_dynamic_modifier = { modifier = Barb_Modifiers scope = SOV } }
+				add_to_array = { GLOBAL.faction_members_array = GER.id } #tanks
+				add_to_array = { GLOBAL.faction_members_array = SOV.id } #inf
+				add_to_array = { GLOBAL.faction_members_array = SWE.id } #tank div attack
+				add_to_array = { GLOBAL.faction_members_array = DEN.id } #inf div attack
+				add_to_array = { GLOBAL.faction_members_array = BUL.id } #tank div defense
+				add_to_array = { GLOBAL.faction_members_array = GRE.id } #inf div defense
+				add_to_array = { GLOBAL.faction_members_array = PER.id } #tank div speed
+				add_to_array = { GLOBAL.faction_members_array = LUX.id } #inf div speed
+				add_to_array = { GLOBAL.faction_members_array = HOL.id } #supply
+				add_to_array = { GLOBAL.faction_members_array = ITA.id } #planning
+				add_to_array = { GLOBAL.faction_members_array = BEL.id } #terrain penalty
+				add_to_array = { GLOBAL.faction_members_array = FRA.id } #max_dig_in_factor
+				add_to_array = { GLOBAL.faction_members_array = VIC.id } #night
+			}
+		}
+	}
+}

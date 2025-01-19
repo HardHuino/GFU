@@ -1,0 +1,36 @@
+
+state={
+	id=43
+	name="STATE_43" # Northern Hungary
+	manpower = 3750752
+	resources={
+		steel=110 # was: 4
+		aluminium=820 # was: 194
+	}
+
+	state_category = metropolis
+
+	history={
+		owner = HUN
+		1936.1.1.15 = {
+			owner = GER
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 6
+			steel_refinery = 1
+			air_base = 4
+		}
+		victory_points = {
+			9660 20
+		}
+		add_core_of = HUN
+	}
+
+	provinces={
+		684 716 3713 3731 6716 6751 9660 9690 11520
+	}
+
+	local_supplies=0.0
+}

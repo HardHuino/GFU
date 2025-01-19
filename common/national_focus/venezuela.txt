@@ -1,0 +1,519 @@
+focus_tree = {
+	id = venezuelan_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = VEN
+		}
+	}
+	continuous_focus_position = { x = 50 y = 300 }
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = danster_danster
+		icon = GFX_goal_generic_consumer_goods
+		x = 12
+		y = 0
+		cost = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			POL = { has_capitulated = yes }
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			every_country={
+				remove_ideas = no_grinding
+			}
+		}
+	}
+
+	focus = {
+		id = reaper
+		icon = GFX_goal_generic_consumer_goods
+		x = 14
+		y = 0
+		cost = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			date > 1938.1.1
+			# has_global_flag = NO_ASIA
+			NOT = {
+				has_global_flag = NO_ASIA
+			}
+			has_game_rule = {
+				rule = no_asia_bra_mex_status
+				option = MEX_BRA_REMOVED
+			}
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			AST = {
+				add_offsite_building = { type = industrial_complex level = 15 }
+				add_offsite_building = { type = arms_factory level = 15 }
+			}
+			ENG = {
+				add_offsite_building = { type = industrial_complex level = 15 }
+				add_offsite_building = { type = arms_factory level = 15 }
+			}
+		}
+	}
+
+	focus = {
+		id = scuff
+		icon = GFX_goal_generic_consumer_goods
+		x = 14
+		y = 1
+		cost = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		available = {
+			date > 1940.1.1
+			# has_global_flag = NO_ASIA
+			NOT = {
+				has_global_flag = NO_ASIA
+			}
+			has_game_rule = {
+				rule = no_asia_bra_mex_status
+				option = MEX_BRA_REMOVED
+			}
+		}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			CAN = {
+				add_offsite_building = { type = industrial_complex level = 20 }
+				add_offsite_building = { type = arms_factory level = 20 }
+			}
+			SAF = {
+				add_offsite_building = { type = industrial_complex level = 20 }
+				add_offsite_building = { type = arms_factory level = 20 }
+			}
+			AST = {
+				add_offsite_building = { type = industrial_complex level = 5 }
+				add_offsite_building = { type = arms_factory level = 5 }
+			}
+			ENG = {
+				add_offsite_building = { type = industrial_complex level = 5 }
+				add_offsite_building = { type = arms_factory level = 5 }
+			}
+		}
+	}
+
+	focus = {
+		id = titanic_titanic
+		icon = GFX_goal_generic_consumer_goods
+		x = 10
+		y = 0
+		cost =0
+
+		available_if_capitulated = yes
+		completion_reward = {
+			every_country={
+				swap_ideas={
+					remove_idea = research_35
+					add_idea = research_36
+				}
+			}
+			every_country={
+				remove_ideas = starting_cap
+			}
+		}
+	}
+	focus = {
+		id = titanic_titanic2
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		cost = 0
+		prerequisite = { focus = titanic_titanic }
+		relative_position_id = titanic_titanic
+		available_if_capitulated = yes
+		available = {
+			date > 1936.6.1
+		}
+		completion_reward = {
+			every_country={
+				swap_ideas={
+					remove_idea = research_36
+					add_idea = research_36_mid
+				}
+			}
+		}
+	}
+	focus = {
+		id = titanic_titanic3
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		cost = 0
+		prerequisite = { focus = titanic_titanic2 }
+		relative_position_id = titanic_titanic2
+		available_if_capitulated = yes
+		available = {
+			date > 1937.1.1
+		}
+		completion_reward = {
+			every_country={
+				swap_ideas={
+					remove_idea = research_36_mid
+					add_idea = research_37
+				}
+			}
+		}
+	}
+	focus = {
+		id = titanic_titanic4
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		cost = 0
+		prerequisite = { focus = titanic_titanic3 }
+		relative_position_id = titanic_titanic3
+		available_if_capitulated = yes
+		available = {
+			date > 1937.6.1
+		}
+		completion_reward = {
+			every_country={
+				swap_ideas={
+					remove_idea = research_37
+					add_idea = research_37_mid
+				}
+			}
+		}
+	}
+	focus = {
+		id = titanic_titanic5
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		cost = 0
+		prerequisite = { focus = titanic_titanic4 }
+		relative_position_id = titanic_titanic4
+		available_if_capitulated = yes
+		available = {
+			date > 1938.1.1
+		}
+		completion_reward = {
+			every_country={
+				swap_ideas={
+					remove_idea = research_37_mid
+					add_idea = research_38
+				}
+			}
+		}
+	}
+	focus = {
+		id = titanic_titanic6
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		cost = 0
+		prerequisite = { focus = titanic_titanic5 }
+		relative_position_id = titanic_titanic5
+		available_if_capitulated = yes
+		available = {
+			date > 1938.6.1
+		}
+		completion_reward = {
+			every_country={
+				swap_ideas={
+					remove_idea = research_38
+					add_idea = research_38_mid
+				}
+			}
+		}
+	}
+	# focus = {
+	# 	id = titanic_titanic7
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic6 }
+	# 	relative_position_id = titanic_titanic6
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1939.1.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_38_mid
+	# 				add_idea = research_39
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic8
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic7 }
+	# 	relative_position_id = titanic_titanic7
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1939.6.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_39
+	# 				add_idea = research_39_mid
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic9
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic8 }
+	# 	relative_position_id = titanic_titanic8
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1940.1.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_39_mid
+	# 				add_idea = research_40
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic10
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic9 }
+	# 	relative_position_id = titanic_titanic9
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1940.6.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_40
+	# 				add_idea = research_40_mid
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic11
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic10 }
+	# 	relative_position_id = titanic_titanic10
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1941.1.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_40_mid
+	# 				add_idea = research_41
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic12
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic11 }
+	# 	relative_position_id = titanic_titanic11
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1941.6.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_41
+	# 				add_idea = research_41_mid
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic13
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic12 }
+	# 	relative_position_id = titanic_titanic12
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1942.1.1
+	# 	}
+	# 	completion_reward = {	
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_41_mid
+	# 				add_idea = research_42
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic14
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic13 }
+	# 	relative_position_id = titanic_titanic13
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1942.6.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_42
+	# 				add_idea = research_42_mid
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic15
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic14 }
+	# 	relative_position_id = titanic_titanic14
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1943.1.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_42_mid
+	# 				add_idea = research_43
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic16
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic15 }
+	# 	relative_position_id = titanic_titanic15
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1943.6.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_43
+	# 				add_idea = research_43_mid
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic17
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic16 }
+	# 	relative_position_id = titanic_titanic16
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1944.1.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_43_mid
+	# 				add_idea = research_44
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic18
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	prerequisite = { focus = titanic_titanic17 }
+	# 	relative_position_id = titanic_titanic17
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1944.6.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_44
+	# 				add_idea = research_44_mid
+	# 			}
+	# 		}
+	# 	}
+	# }
+	# focus = {
+	# 	id = titanic_titanic19
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	prerequisite = { focus = titanic_titanic18 }
+	# 	x = 0
+	# 	y = 1
+	# 	cost = 0
+	# 	relative_position_id = titanic_titanic18
+	# 	available_if_capitulated = yes
+	# 	available = {
+	# 		date > 1945.1.1
+	# 	}
+	# 	completion_reward = {
+	# 		every_country={
+	# 			swap_ideas={
+	# 				remove_idea = research_44_mid
+	# 				add_idea = research_45
+	# 			}
+	# 		}
+	# 	}
+	# }
+	#######################################################
+
+}

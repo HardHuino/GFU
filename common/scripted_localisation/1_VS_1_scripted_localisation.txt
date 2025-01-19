@@ -1,0 +1,120 @@
+defined_text = {
+	name = Getvaluedesc
+	text = {
+		trigger = {
+			NOT = {OR = {tag=GER tag =SOV tag = HOL }}
+		}
+		localization_key = value_desc_1
+	}
+	text = {
+		trigger = {
+			tag=HOL
+		}
+		localization_key = value_desc_3
+	}
+	text = {
+		trigger = {
+			OR = {tag=GER tag =SOV }
+		}
+		localization_key = value_desc_2
+	}
+}
+defined_text = {
+	name = Getstartname
+	text = {
+		trigger = {
+			NOT={check_variable={GLOBAL.match_started>0}}
+
+		}
+		localization_key = start_desc_1
+	}
+	text = {
+		trigger = {
+			check_variable={GLOBAL.match_started>0}
+		}
+		localization_key = start_desc_2
+	}
+
+}
+defined_text = {
+	name = Getsettingsdesc
+	text = {
+		trigger = {
+			tag=GER
+		}
+		localization_key = settings_desc_1
+	}
+	text = {
+		trigger = {
+			tag=SOV
+		}
+		localization_key = settings_desc_2
+	}
+	text = {
+		trigger = {
+			tag=SWE
+		}
+		localization_key = settings_desc_3
+	}
+	text = {
+		trigger = {
+			tag=DEN
+		}
+		localization_key = settings_desc_4
+	}
+	text = {
+		trigger = {
+			tag=BUL
+		}
+		localization_key = settings_desc_5
+	}
+	text = {
+		trigger = {
+			tag=GRE
+		}
+		localization_key = settings_desc_6
+	}
+	text = {
+		trigger = {
+			tag=PER
+		}
+		localization_key = settings_desc_7
+	}
+	text = {
+		trigger = {
+			tag=LUX
+		}
+		localization_key = settings_desc_8
+	}
+	text = {
+		trigger = {
+			tag=HOL
+		}
+		localization_key = settings_desc_9
+	}
+	text = {
+		trigger = {
+			tag=ITA
+		}
+		localization_key = settings_desc_10
+	}
+	text = {
+		trigger = {
+			tag=BEL
+		}
+		localization_key = settings_desc_11
+	}
+	text = {
+		trigger = {
+			tag=FRA
+		}
+		localization_key = settings_desc_12
+	}
+	text = {
+		trigger = {
+			tag=VIC
+		}
+		localization_key = settings_desc_13
+	}
+
+}

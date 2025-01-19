@@ -1,0 +1,19 @@
+characters={
+	LAT_karlis_ulmanis={
+		name=LAT_karlis_ulmanis
+		portraits={
+			civilian={
+				large="GFX_Portrait_latvia_karlis_ulmanis"
+			}
+			army={
+				small="GFX_idea_LAT_karlis_ulmanis"
+			}
+		}
+
+		country_leader={
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

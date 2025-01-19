@@ -1,0 +1,38 @@
+state = {
+	id = 838 # Illubabor-Kaffa
+	name = "STATE_838"
+	manpower = 600000
+	resources = {
+		rubber = 85
+	}
+
+	state_category = pastoral
+
+	history = {
+
+		buildings = {
+			# infrastructure = 1
+		}
+		# Gambeila
+		victory_points = {
+			13244 2
+		}
+		# Jiren (add VPs to this if creating the Jimma Sultanate)
+		victory_points = {
+			7912 1
+		}
+
+		owner = ITA
+		1936.1.1.15 = {
+			owner = WST
+		}
+		add_core_of = WST
+		#add_core_of = GBA
+	}
+
+	provinces = {
+		7912 13244 13245
+	}
+
+	local_supplies = 0.0
+}

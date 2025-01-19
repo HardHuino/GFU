@@ -1,0 +1,193 @@
+sub_units = {
+	field_hospital = {
+		abbreviation = "HOS"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 20
+		default_morale = 0.6
+		manpower = 400
+		training_time = 60 #120
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.04 #0.05
+		can_be_parachuted = yes
+
+		# Important Ability
+		casualty_trickleback = 0.20
+		experience_loss_factor = -0.15
+
+		fuel_capacity = -1.00
+		own_equipment_fuel_consumption_mult = 0.00 # no fuel use
+
+		battalion_mult = {
+			category = category_all_infantry
+			max_strength = 0.05
+		}
+
+		essential = {
+			support_equipment
+			motorized_equipment
+		}
+
+		need = {
+			support_equipment = 20
+			motorized_equipment = 25
+		}
+
+		same_support_type = field_hospital
+	}
+
+	mech_field_hospital = {
+		sprite = mechanized
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			armor
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_front_line
+			category_support_battalions
+			category_army
+		}
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 2
+		max_organisation = 20
+		default_morale = 0.6
+		manpower = 400
+		training_time = 60 #120
+
+		#Misc Abilities
+		weight = 0.2
+		supply_consumption = 0.08 #0.1
+
+		# Important Ability
+		casualty_trickleback = 0.25
+		experience_loss_factor = -0.25
+
+		soft_attack = -1
+		hard_attack = -1
+		breakthrough = -1
+		defense = -1
+
+		battalion_mult = {
+			category = category_all_infantry
+			max_strength = 0.10
+		}
+
+		fuel_capacity = -1.00
+		own_equipment_fuel_consumption_mult = 0.00 # no fuel use
+
+		essential = {
+			mechanized_utility_equipment
+		}
+
+		maximum_speed = 2.0
+
+		need = {
+			support_equipment = 20
+			motorized_equipment = 25
+			mechanized_utility_equipment = 24
+		}
+
+		can_be_parachuted = yes
+
+		same_support_type = field_hospital
+	}
+
+	helicopter_field_hospital = {
+		abbreviation = "HELF"
+		sprite = helicopter_brigade
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_helicopter_support_companies
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 2 #Same as reg hospital
+		max_organisation = 20
+		default_morale = 0.3
+		manpower = 500
+		training_time = 60
+
+		#Misc Abilities
+		weight = 0.1
+		supply_consumption = 0.08
+		can_be_parachuted = yes
+
+		# Important Ability
+		casualty_trickleback = 0.25
+		experience_loss_factor = -0.10
+
+		battalion_mult = {
+			category = category_all_infantry
+			max_strength = 0.05 #Less than reg hospital (0.1)
+			default_morale = 0.1 #More than reg hospital (0)
+		}
+
+		essential = {
+			support_equipment
+			helicopter_equipment
+		}
+
+		need = {
+			support_equipment = 30
+			helicopter_equipment = 15
+			motorized_equipment = 15
+		}
+
+		same_support_type = field_hospital
+	}
+}
+
+

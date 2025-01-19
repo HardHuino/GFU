@@ -1,0 +1,77 @@
+SAF_historical = {
+	name = "South African historical plan"
+	desc = ""
+
+	enable = {
+		original_tag = SAF
+		has_dlc = "Together for Victory"
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		SAF_divided_in_approach
+		SAF_restore_the_economy
+		SAF_pretorian_arms
+		SAF_increase_military_spending
+		SAF_lobby_the_militarists
+		SAF_legacy_of_the_randlords
+		SAF_begin_a_naval_tradition
+		SAF_support_urban_areas
+		SAF_appease_desegration_activists
+		SAF_introduce_local_mining_quotas
+		SAF_the_final_preparations
+		SAF_a_long_war_to_come
+		SAF_an_africa_ruled_by_africans
+		SAF_develop_new_lands
+		SAF_our_duty_to_the_empire
+		SAF_local_training_excercises
+		SAF_equip_the_rank_and_file
+		SAF_our_role_in_rearmament
+		SAF_the_6th_sa_armoured
+		SAF_study_german_tactics
+		SAF_achieve_combined_arms
+		SAF_prepare_to_face_the_wehrmacht
+		SAF_recruit_boar_rangers
+		SAF_no_playground
+		SAF_realise_modern_warfare
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		partial_economic_mobilisation = 1000
+		war_economy = 2000
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = 100000
+	}
+}
+

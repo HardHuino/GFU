@@ -1,0 +1,55 @@
+﻿capital = 37
+
+
+oob = "DEN_1936"
+
+# # Diplomacy
+IF = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = ICE
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	ELSE = {
+		puppet = ICE
+	}
+}
+
+set_rule = { can_be_spymaster = no }
+# add_timed_idea = { idea = peacetime_economics days = 1339 }
+
+#### COUNTRY LEADERS ####
+recruit_character = DEN_thorvald_stauning
+
+
+
+set_research_slots = 0 #3
+set_stability = 0.9
+set_war_support = 0.1
+
+add_ideas = {
+	neutrality_idea
+	neutrality_idea2
+	stupid_ai
+}
+
+set_popularities = {
+	democratic = 94
+	fascism = 1
+	communism = 2
+	neutrality = 3
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.10.22"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_convoys = 55

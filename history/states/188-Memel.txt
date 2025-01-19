@@ -1,0 +1,41 @@
+state = {
+	id = 188
+	name = "STATE_188"
+	manpower = 150000
+
+	state_category = rural
+
+	history = {
+
+		owner = LIT
+		add_core_of = LIT
+		1936.1.1.15 = {
+			owner = GER
+		}
+
+		victory_points = {
+			3288 3 # Klaipeda/Memel
+		}
+
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 3
+			3288 = {
+				naval_base = 1
+			}
+		}
+		add_extra_state_shared_building_slots = 4
+
+		1939.3.22 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+
+	}
+
+	provinces = {
+		3288
+	}
+	local_supplies = 0.0
+}

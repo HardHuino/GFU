@@ -1,0 +1,89 @@
+Japanese_Historical = {
+	enable = {
+		original_tag = JAP
+	}
+	ai_national_focuses = {
+		JAP_secure_china
+		JAP_purge_the_kodoha_faction
+		JAP_national_mobilization_law
+		JAP_zaibatsu_corporatism
+		JAP_loosen_zaibatsu_legal_restraints
+		JAP_new_naval_estimates
+		JAP_control
+		JAP_nation_defence_state
+		JAP_kokura_arsenal
+		JAP_spiritual_mobilisation
+		JAP_austerity
+		JAP_war_ministry
+		JAP_expand_the_showa_steel_works
+		JAP_develop_aluminum_sources
+		JAP_prepare_expansion
+		JAP_combat_militarism
+		JAP_combat_gekokoju
+		JAP_new_shipyards
+		JAP_yasuda_bank_monopolization
+		JAP_liaison_conference
+		JAP_intervene_in_china
+		JAP_enable_corporate_centralization
+		JAP_sumitomo_mining_monopolization
+		JAP_asano_railway_monopolization
+		JAP_the_zaibatsu_economic_dominionship
+		JAP_light_industry_development
+		JAP_heavy_industry_development
+		JAP_control_the_army
+		JAP_technlogical_supremacy
+		JAP_appoint_tojo
+		JAP_supremacy_of_the_battlefleet
+		JAP_modern_subs
+		JAP_long_lance_torpedoes
+		JAP_mitsubishi_production_monopolization
+		JAP_mitsui_shipbuilding_monopolization
+		JAP_cruiser_modernization
+		JAP_escort_carriers
+		JAP_lessons_of_war
+		JAP_doctrine_lessons
+		JAP_infantry_lessons
+		JAP_air_innovations
+		JAP_strike_south_doctrine
+		JAP_pressure_siam
+		JAP_befriend_siam
+		JAP_expand_army
+		JAP_expand_marines
+		JAP_build_up_china
+		JAP_build_up_islands
+		JAP_modern_escorts
+		JAP_strike_the_west
+	}
+
+	ideas = {
+		partial_economic_mobilisation = 1000
+		war_economy = 2000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = CHI
+		value = 100
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = "CHI"
+		value = 20
+	}
+	ai_strategy = {
+		type = ignore
+		id = SOV
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPR
+		value = 100000
+	}
+	ai_strategy = {
+		type = invade
+		id = CHI
+		value = 50
+	}
+
+}

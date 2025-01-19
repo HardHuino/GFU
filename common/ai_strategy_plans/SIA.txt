@@ -1,0 +1,14 @@
+Siam_Historical = {
+	enable = {
+		original_tag = SIA
+	}
+
+	ai_national_focuses = {
+
+	}
+
+	ideas = {
+		partial_economic_mobilisation = 1000
+		war_economy = 2000
+	}
+}

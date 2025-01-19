@@ -1,0 +1,31 @@
+state={
+	id=287
+	name="STATE_287"
+
+	history={
+		# owner = MON
+		# 1936.1.1.15 = {
+		# 	owner = WST
+		# }
+		# add_core_of = WST
+		# #add_core_of = CHI
+		# #add_core_of = PRC
+		# buildings = {
+		# 	infrastructure = 1
+
+		# }
+		# victory_points = {
+		# 	4973 1
+		# }
+	}
+
+
+	provinces={
+		4973 8042 8086 10885 10911 12864
+	}
+	manpower=1 #408000
+	# buildings_max_level_factor=1.000
+	state_category=wasteland
+
+	local_supplies=0.0 #4.0
+}

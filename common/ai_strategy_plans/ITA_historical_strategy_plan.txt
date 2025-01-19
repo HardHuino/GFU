@@ -1,0 +1,52 @@
+Italy_Historical = {
+	enable = {
+		original_tag = ITA
+	}
+	ai_national_focuses = {
+		ITA_roma_invicta
+		ITA_the_birthplace_of_fascism
+		ITA_solidify_the_dictatorship
+		ITA_a_cult_of_personality
+		ITA_mediator_of_classes
+		ITA_me_ne_frego
+		ITA_socialist_roots
+		ITA_the_total_mobilization_of_society
+		ITA_state-union_supremacy
+		ITA_the_heartland
+		ITA_the_green_fields_of_italy
+		ITA_expropriate_factory_tooling
+		ITA_mediterranean_brothers
+		ITA_magyar_alignment
+		ITA_rome_and_romania
+		ITA_brotherhood_of_christ
+		ITA_finish_the_autostrade
+		ITA_seize_foreign_assets
+		ITA_gold_for_the_fatherland
+		ITA_european_free_trade_agreements
+		ITA_pillage_east_africa
+		ITA_german_economic_interdependence
+		ITA_land_appropriation_programs
+		ITA_heavy_industry_development
+		ITA_the_rome-berlin_axis
+		ITA_licence_farben_BUNA
+		ITA_pact_of_steel
+		ITA_ORVA
+		ITA_connections_in_the_mafia
+		ITA_the_mafia_state
+		ITA_stake_our_claims
+		ITA_prepare_the_coastal_defenses
+		ITA_give_the_ustase_autonomy
+		ITA_relinquish_greece_to_the_bulgarians
+	}
+
+	ideas = {
+		partial_economic_mobilisation = 1000
+		war_economy = 2000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPR
+		value = 100000
+	}
+}

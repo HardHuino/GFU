@@ -1,0 +1,29 @@
+ai_historical_focus_list_RAJ = {
+	ai_national_focuses = {
+		RAJ_for_the_worst
+		RAJ_defend_the_homeland
+		RAJ_bombay_military_expansion
+		RAJ_british_command_aid
+		RAJ_pass_the_defence_bill
+		RAJ_stop_the_rising_sun
+		RAJ_More_British_Investments
+		RAJ_Promises_for_the_future
+		RAJ_anti_corruption_laws
+		RAJ_go_with_the_Empire
+		RAJ_pass_the_dominion_bill
+		RAJ_far_east_development_plan
+		RAJ_indian_institute_of_science
+		RAJ_expand_indan_agriculture
+		RAJ_british_rail_investors
+		RAJ_indian_defence_plan
+		RAJ_ishapore_arsenal
+		RAJ_west_india_railways
+		RAJ_tata_steel
+		RAJ_indian_labourers
+		RAJ_assam_oil
+		RAJ_muslim-hindu_integration_laws
+		RAJ_jewel_in_the_crown
+		RAJ_British_armament_aid
+		RAJ_organize_the_production
+	}
+}

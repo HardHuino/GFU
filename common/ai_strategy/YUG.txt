@@ -1,0 +1,28 @@
+spanish_civil_war_YUG_help = {
+	enable = {
+		original_tag = YUG
+		country_exists = SPR
+		has_global_flag = spanish_civil_war
+		NOT = { has_global_flag = scw_over }
+	}
+
+	abort = {
+		has_global_flag = scw_over
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "SPR"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "SPR"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SPR"
+		value = 100
+	}
+}

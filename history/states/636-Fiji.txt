@@ -1,0 +1,35 @@
+
+state={
+	id=636
+	name="STATE_636"
+	manpower = 180000
+
+	state_category = small_island
+
+	history={
+		owner = ENG
+		1936.1.1.15 = {
+			owner = WST
+		}
+		add_core_of = WST
+		1936.1.1.14 = {
+			owner = WST
+		}
+		buildings = {
+			infrastructure = 3
+			4286 = {
+				naval_base = 1
+			}
+		}
+
+		victory_points = {
+			4286 1
+		}
+	}
+
+	provinces={
+		4286 7302 12159
+	}
+
+	local_supplies=0.0
+}

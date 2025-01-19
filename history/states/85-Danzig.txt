@@ -1,0 +1,47 @@
+state = {
+	id = 85
+	name = "STATE_85"
+	manpower = 366730
+
+	state_category = city
+
+	history = {
+
+		owner = POL
+		add_core_of = POL
+		add_core_of = WST #DNZ
+		1936.1.1.15 = {
+			owner = GER
+		}
+
+		victory_points = {
+			362 10 # Danzig
+		}
+
+		set_demilitarized_zone = yes
+		1936.1.1.15 = {
+			set_demilitarized_zone = no
+		}
+
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+			# dockyard = 1
+			air_base = 3
+			362 = {
+				naval_base = 5
+			}
+		}
+		add_extra_state_shared_building_slots = 7
+		1938.3.12 = {
+			add_claim_by = GER
+		}
+	}
+
+	provinces = {
+		362
+	}
+
+	local_supplies = 0.0
+}

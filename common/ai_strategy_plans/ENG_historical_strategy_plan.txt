@@ -1,0 +1,55 @@
+ENG_historical = {
+	name = "British historical plan"
+	desc = ""
+
+	enable = {
+		original_tag = ENG
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 0.5
+		cv_tech = 0.1
+		bb_tech = 1
+	}
+
+	ideas = {
+		partial_economic_mobilisation = 1000
+		war_economy = 2000
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = 100000
+	}
+}
+

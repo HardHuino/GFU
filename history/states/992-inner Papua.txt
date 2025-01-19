@@ -1,0 +1,20 @@
+state={
+	id=992
+	name="STATE_992"
+	impassable = yes
+
+	history={
+		# buildings = {
+		# 	infrastructure = 2
+		# }
+	}
+
+	provinces={
+		2129 5135 10954 11004 11018 12428 12931
+		1242 1222 12123 12107 10147 4635 12484 1310 1283
+	}
+	manpower=1
+	state_category=city
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

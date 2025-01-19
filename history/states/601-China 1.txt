@@ -1,0 +1,37 @@
+state={
+	id=601
+	name="STATE_601"
+	resources={
+
+	}
+
+	history={
+		# owner = CHI
+		# 1936.1.1.15 = {
+		# 	owner = WST
+		# }
+		# add_core_of = CHI
+		# #add_core_of = TIB
+		# #add_core_of = PRC
+		# buildings = {
+		# 	infrastructure = 1
+
+		# }
+		# victory_points = {
+		# 	10856 5
+		# }
+		# 1936.1.1.14 = {
+		# 	owner = WST
+		# }
+
+	}
+
+	provinces={
+		4407 5018 5080 5102 8041 8059 10741 10856
+	}
+	manpower=1 #368200
+	# buildings_max_level_factor=1.000
+	state_category=wasteland
+
+	local_supplies=0.0 #1.0
+}

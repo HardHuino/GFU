@@ -1,0 +1,673 @@
+﻿division_template = {
+	name = "Brigada Internacionales"			# International volunteers -- poor equipment, no experience (militia)
+	is_locked = yes
+	division_names_group = SPR_INF_01
+	regiments = {
+		# militia = { x = 0 y = 0 }
+		# militia = { x = 0 y = 1 }
+		# militia = { x = 0 y = 2 }
+		# militia = { x = 0 y = 3 }
+
+		# militia = { x = 1 y = 0 }
+		# militia = { x = 1 y = 1 }
+		# militia = { x = 1 y = 2 }
+
+		# militia = { x = 2 y = 0 }
+		# militia = { x = 2 y = 1 }
+		# militia = { x = 2 y = 2 }
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "I Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "II Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "III Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "IV Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "V Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "I Brigada Internacionales"
+		location = 1176  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "II Brigada Internacionales"
+		location = 7068  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "III Brigada Internacionales"
+		location = 10009  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "IV Brigada Internacionales"
+		location = 7153  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "V Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "VI Brigada Internacionales"
+		location = 6841  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "VII Brigada Internacionales"
+		location = 4098  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "VIII Brigada Internacionales"
+		location = 4098  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "IX Brigada Internacionales"
+		location = 4098  # Valencia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "X Brigada Internacionales"
+		location = 6906  # Valencia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XI Brigada Internacionales"
+		location = 6906  # Valencia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XII Brigada Internacionales"
+		location = 10024  # Murcia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XIII Brigada Internacionales"
+		location = 10024  # Murcia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XIV Brigada Internacionales"
+		location = 10024  # Murcia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XV Brigada Internacionales"
+		location = 9979  # Malaga
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XVI Brigada Internacionales"
+		location = 9979  # Malaga
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XVII Brigada Internacionales"
+		location = 9979  # Malaga
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XVIII Brigada Internacionales"
+		location = 740  # Bilbao
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XIX Brigada Internacionales"
+		location = 740  # Bilbao
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XX Brigada Internacionales"
+		location = 740  # Bilbao
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXI Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXII Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXIII Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXIV Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXV Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXVI Brigada Internacionales"
+		location = 6906  # Valencia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXVII Brigada Internacionales"
+		location = 6906  # Valencia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XX Brigada Internacionales"
+		location = 740  # Bilbao
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXI Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXII Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXII Brigada Internacionales 5a"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXII Brigada Internacionales 6a"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXIII Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXIV Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXV Brigada Internacionales"
+		location = 9764  # Barcelona
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXVI Brigada Internacionales"
+		location = 6906  # Valencia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXVII Brigada Internacionales"
+		location = 6906  # Valencia
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "XXVIII Brigada Internacionales"
+		location = 939
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "XXIX Brigada Internacionales"
+		location = 3794
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXIX Brigada Internacionales 2a"
+		location = 3794
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXIX Brigada Internacionales 3a"
+		location = 3794
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXIX Brigada Internacionales 4a"
+		location = 3794
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXX Brigada Internacionales"
+		location = 977
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXI Brigada Internacionales"
+		location = 12038
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXII Brigada Internacionales"
+		location = 9785
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXIII Brigada Internacionales"
+		location = 9933
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXIV Brigada Internacionales"
+		location = 3945
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXV Brigada Internacionales"
+		location = 3891
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXV Brigada Internacionales 11a"
+		location = 3891
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXV Brigada Internacionales 12a"
+		location = 3891
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXV Brigada Internacionales 13a"
+		location = 3891
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXVI Brigada Internacionales"
+		location = 871
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXVII Brigada Internacionales"
+		location = 798
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXVIII Brigada Internacionales"
+		location = 13222
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XXXIX Brigada Internacionales"
+		location = 13223
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XL Brigada Internacionales"
+		location = 13225
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLI Brigada Internacionales"
+		location = 3845
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLII Brigada Internacionales"
+		location = 11820
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLII Brigada Internacionales 97a"
+		location = 11820
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLII Brigada Internacionales 98a"
+		location = 11820
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLII Brigada Internacionales 99a"
+		location = 11820
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLIII Brigada Internacionales"
+		location = 3986
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLIV Brigada Internacionales"
+		location = 9881
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLV Brigada Internacionales"
+		location = 6832
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLVI Brigada Internacionales"
+		location = 6896
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLVII Brigada Internacionales"
+		location = 12081
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLVIII Brigada Internacionales"
+		location = 9828
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "XLIX Brigada Internacionales"
+		location = 11807
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "L Brigada Internacionales"
+		location = 4195
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "LI Brigada Internacionales"
+		location = 7196
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "LII Brigada Internacionales 25"
+		location = 11956
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "LII Brigada Internacionales 100"
+		location = 11956
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "LII Brigada Internacionales 101"
+		location = 11956
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "LII Brigada Internacionales 102"
+		location = 11956
+		division_template = "Brigada Internacionales"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "SPR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

@@ -1,0 +1,207 @@
+defined_text = { # state
+	name = mark_state_tooltip_1VS1
+
+	text = {
+		trigger = {
+			has_state_flag = marked_for_transfer
+		}
+		localization_key = mark_state_no_1VS1
+	}
+	text = {
+		localization_key = mark_state_yes_1VS1
+	}
+}
+defined_text = { # global
+	name = transfer_states_tooltip_1VS1
+
+	text = {
+		trigger = {
+			has_country_flag = transfer_enabled_1vs1
+		}
+		localization_key = transfer_states_off_1VS1
+	}
+	text = {
+		localization_key = transfer_states_on_1VS1
+	}
+}
+
+defined_text = { # global
+	name = ST_TOOLTIP_1VS1
+
+	text = {
+		trigger = {
+			has_country_flag = transfer_enabled_1vs1
+		}
+		localization_key = ST_TOOLTIP_off_1VS1
+	}
+	text = {
+		localization_key = ST_TOOLTIP_on_1VS1
+	}
+}
+
+defined_text = { # global
+	name = mark_status_1VS1
+
+	text = {
+		trigger = {
+			has_state_flag = marked_for_transfer
+		}
+		localization_key = mark_status_marked_1VS1
+	}
+	text = {
+		localization_key = mark_status_unmarked_1VS1
+	}
+}
+
+defined_text = { # global
+	name = pause_selected_1VS1
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=0}
+			NOT={Root={has_global_flag=blocking_pauses}}
+		}
+		localization_key = PAUSE_SELECT_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=1}
+		}
+		localization_key = PAUSE1_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=2}
+		}
+		localization_key = PAUSE2_1VS1
+	}
+
+	text = {
+		trigger = {
+			check_variable = {SWE.pause_blocker_variable=3}
+		}
+		localization_key = PAUSE3_1VS1
+	}
+
+}
+
+defined_text = { # global
+	name = cheat_selected_1VS1
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 0 }
+			NOT = { Root = { has_country_flag = cheating } }
+		}
+		localization_key = CHEAT_SELECT_1VS1
+	}
+	text = {
+		trigger = {
+			OR={
+				check_variable = { Root.selected_cheat = 1 }
+				Root = { has_country_flag = cheating }
+			}
+		}
+		localization_key = CHEAT1_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 2 }
+		}
+		localization_key = CHEAT2_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = {Root.selected_cheat=3 }
+		}
+		localization_key = CHEAT3_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 4 }
+		}
+		localization_key = CHEAT4_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 5 }
+		}
+		localization_key = CHEAT5_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 6 }
+		}
+		localization_key = CHEAT6_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 7 }
+		}
+		localization_key = CHEAT7_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 8 }
+		}
+		localization_key = CHEAT8_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 9 }
+		}
+		localization_key = CHEAT9_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 10 }
+		}
+		localization_key = CHEAT10_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 11 }
+		}
+		localization_key = CHEAT11_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 12 }
+		}
+		localization_key = CHEAT12_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 13 }
+		}
+		localization_key = CHEAT13_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 14 }
+		}
+		localization_key = CHEAT14_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 15 }
+		}
+		localization_key = CHEAT15_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 16 }
+		}
+		localization_key = CHEAT16_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 17 }
+		}
+		localization_key = CHEAT17_1VS1
+	}
+	text = {
+		trigger = {
+			check_variable = { Root.selected_cheat = 18 }
+		}
+		localization_key = CHEAT18_1VS1
+	}
+}

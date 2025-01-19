@@ -1,0 +1,903 @@
+technologies = {
+
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 7
+	@1941 = 8
+	@1942 = 9
+	@1943 = 10
+	@1944 = 11
+	@1945 = 12
+	@1946 = 20
+
+	fra_light_tank_export = {
+		enable_equipments = {
+			fra_light_tank_chassis_ft
+		}
+		enable_equipment_modules = {
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_casemate_turret
+			tank_light_open_superstructure_turret
+			tank_light_open_turret
+			tank_riveted_armor
+			tank_welded_armor
+			tank_cast_armor
+			tank_gasoline_engine
+			tank_diesel_engine
+			tank_christie_suspension
+			tank_bogie_suspension
+			tank_interleaved_suspension
+			tank_horstmann_suspension
+			tank_torsion_bar_suspension
+			easy_maintenance
+			smoke_launchers
+			grousers
+			apcr_round
+			he_round
+			extra_ammo_storage
+			wet_ammo_storage
+			armor_skirts
+			compact_armoring
+			external_lmg
+			coaxial_machine_gun
+			dozer_blade
+			expanded_fuel_tank
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fra_light_tank_1 = {
+
+		enable_equipments = {
+			fra_light_tank_chassis_ft
+			# fra_light_tank_chassis_r35
+			fra_light_tank_chassis_h35
+			fra_light_tank_chassis_s35
+			fra_heavy_tank_chassis_2c
+		}
+		enable_equipment_modules = {
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_casemate_turret
+			tank_light_open_superstructure_turret
+			tank_light_open_turret
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+			tank_medium_fixed_casemate_turret
+			tank_medium_open_superstructure_turret
+			tank_medium_open_turret
+			tank_heavy_one_man_tank_turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_casemate_turret
+			tank_heavy_open_superstructure_turret
+			tank_riveted_armor
+			tank_welded_armor
+			tank_cast_armor
+			tank_gasoline_engine
+			tank_diesel_engine
+			tank_petrol_electric_engine
+			tank_christie_suspension
+			tank_bogie_suspension
+			tank_interleaved_suspension
+			tank_horstmann_suspension
+			tank_torsion_bar_suspension
+			easy_maintenance
+			smoke_launchers
+			grousers
+			apcr_round
+			he_round
+			extra_ammo_storage
+			wet_ammo_storage
+			armor_skirts
+			compact_armoring
+			external_lmg
+			coaxial_machine_gun
+			dozer_blade
+			expanded_fuel_tank
+		}
+
+		path = {
+			leads_to_tech = fra_light_tank_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = fra_medium_tank_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = fra_heavy_tank_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1936
+		folder = {
+			name = fra_armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+		allow_branch = {
+			OR = {
+				tag = FRA
+				tag = VIC
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1936
+		}
+	}
+
+	# fra_light_tank_2 = {
+
+	# 	enable_equipment_modules = {
+	# 		tank_light_turret_2
+	# 	}
+	# 	path = {
+	# 		leads_to_tech = fra_light_tank_3
+	# 		research_cost_coeff = 1
+	# 	}
+	# 	research_cost = 1
+	# 	start_year = 1938
+	# 	folder = {
+	# 		name = fra_armour_folder
+	# 		position = { x = -4 y = 4 }
+	# 	}
+
+	# 	special_project_specialization = { specialization_land }
+	#	categories = {
+	# 		armor
+	# 		cat_light_armor
+	# 		mio_cat_tech_light_armor_and_modules
+	# 		year_1938
+	# 	}
+	# }
+
+	fra_light_tank_3 = {
+
+		enable_equipments = {
+			fra_light_tank_chassis_x13
+		}
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = fra_light_tank_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1941
+		folder = {
+			name = fra_armour_folder
+			position = { x = -4 y = 10 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1941
+		}
+	}
+
+	fra_light_tank_4 = {
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1943
+		folder = {
+			name = fra_armour_folder
+			position = { x = -4 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1943
+		}
+	}
+
+	fra_medium_tank_1 = {
+
+		enable_equipments = {
+			fra_medium_tank_chassis_s35
+		}
+
+		enable_equipment_modules = {
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = fra_medium_tank_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1937
+		folder = {
+			name = fra_armour_folder
+			position = { x = 0 y = 2 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1937
+		}
+	}
+
+	fra_medium_tank_2 = {
+
+		enable_equipments = {
+			fra_medium_tank_chassis_s40
+		}
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = fra_medium_tank_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1940
+		folder = {
+			name = fra_armour_folder
+			position = { x = 0 y = 8 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1940
+		}
+	}
+
+	fra_medium_tank_3 = {
+
+		enable_equipments = {
+			fra_medium_tank_chassis_s42
+		}
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		path = {
+			leads_to_tech = fra_medium_tank_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1942
+		folder = {
+			name = fra_armour_folder
+			position = { x = 0 y = 12 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1942
+		}
+	}
+
+	fra_medium_tank_4 = {
+
+		enable_equipments = {
+			fra_medium_tank_chassis_x4
+		}
+		enable_equipment_modules = {
+			tank_modern_tank_turret
+		}
+
+		research_cost = 2
+		start_year = 1945
+		folder = {
+			name = fra_armour_folder
+			position = { x = 0 y = 18 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1945
+		}
+	}
+
+	fra_heavy_tank_1 = {
+
+		enable_equipments = {
+			fra_heavy_tank_chassis_b1
+		}
+
+		enable_equipment_modules = {
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = fra_heavy_tank_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1938
+		folder = {
+			name = fra_armour_folder
+			position = { x = 4 y = 4 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1938
+		}
+	}
+	fra_heavy_tank_2 = {
+
+		enable_equipments = {
+			fra_heavy_tank_chassis_arl
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = fra_heavy_tank_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1941
+		folder = {
+			name = fra_armour_folder
+			position = { x = 4 y = 10 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1941
+		}
+	}
+
+	fra_heavy_tank_3 = {
+
+		enable_equipments = {
+			fra_heavy_tank_chassis_x50
+		}
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1944
+		folder = {
+			name = fra_armour_folder
+			position = { x = 4 y = 16 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1944
+		}
+	}
+
+	fra_usa_light_tank_2 = {
+
+		enable_equipments = {
+			usa_light_tank_chassis_lm3
+		}
+
+		enable_equipment_modules = {
+			tank_radio_1
+			tank_radio_2
+		}
+
+		sub_technologies = {
+			fra_usa_light_tank_1
+		}
+
+		allow = {
+			has_global_flag = GLOBAL_france_capped
+			tag = FRA
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = fra_usa_tank_post_cap_tt
+		}
+
+		path = {
+			leads_to_tech = fra_usa_light_tank_3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1939
+		folder = {
+			name = fra_armour_folder
+			position = { x = -7 y = 12 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1939
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fra_usa_light_tank_1 = { #t26
+
+		enable_equipments = {
+			usa_light_tank_chassis_lm2
+		}
+
+		enable_equipment_modules = {
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_casemate_turret
+			tank_light_open_superstructure_turret
+			tank_light_open_turret
+			tank_riveted_armor
+			tank_welded_armor
+			tank_cast_armor
+			tank_gasoline_engine
+			tank_diesel_engine
+			tank_petrol_electric_engine
+			tank_christie_suspension
+			tank_bogie_suspension
+			tank_interleaved_suspension
+			tank_horstmann_suspension
+			tank_torsion_bar_suspension
+			easy_maintenance
+			smoke_launchers
+			grousers
+			apcr_round
+			he_round
+			extra_ammo_storage
+			wet_ammo_storage
+			armor_skirts
+			compact_armoring
+			external_lmg
+			coaxial_machine_gun
+			dozer_blade
+			expanded_fuel_tank
+		}
+
+		research_cost = 2
+		start_year = 1935
+		folder = {
+			name = fra_armour_folder
+			position = { x = 0 y = 0 }
+		}
+
+		sub_tech_index = 0
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1935
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fra_usa_light_tank_3 = {
+
+		enable_equipments = {
+			usa_light_tank_chassis_lm5
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = fra_usa_light_tank_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1942
+		folder = {
+			name = fra_armour_folder
+			position = { x = -7 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1942
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fra_usa_light_tank_4 = {
+
+		enable_equipments = {
+			usa_light_tank_chassis_m24
+		}
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1944
+		folder = {
+			name = fra_armour_folder
+			position = { x = -7 y = 16 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1944
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = usa_m24_short_tt
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	### USA MEDIUM ###
+
+	fra_usa_medium_tank_2 = {
+
+		enable_equipments = {
+			usa_medium_tank_chassis_mm3
+		}
+
+		enable_equipment_modules = {
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+			tank_medium_fixed_casemate_turret
+			tank_medium_open_superstructure_turret
+			tank_medium_open_turret
+			tank_radio_1
+			tank_radio_2
+		}
+
+		research_cost = 2
+		start_year = 1939
+		folder = {
+			name = fra_armour_folder
+			position = { x = 0 y = 6 }
+		}
+
+		sub_tech_index = 1
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1939
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fra_usa_medium_tank_3 = {
+
+		enable_equipments = {
+			usa_medium_tank_chassis_mm4
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		sub_technologies = {
+			fra_usa_medium_tank_2
+		}
+
+		allow = {
+			has_global_flag = GLOBAL_france_capped
+			tag = FRA
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = fra_usa_tank_post_cap_tt
+		}
+
+		path = {
+			leads_to_tech = fra_usa_medium_tank_6 # PERSHING
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1941
+		folder = {
+			name = fra_armour_folder
+			position = { x = -4 y = 12 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1941
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fra_usa_medium_tank_6 = {
+
+		enable_equipments = {
+			usa_medium_tank_chassis_m26
+		}
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		sub_technologies = {
+			fra_usa_medium_tank_7
+		}
+
+		research_cost = 2.0
+		start_year = 1943
+		folder = {
+			name = fra_armour_folder
+			position = { x = -4 y = 16 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1943
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# T26E4 Super Pershing
+	fra_usa_medium_tank_7 = {
+
+		enable_equipment_modules = {
+			tank_modern_tank_turret
+		}
+
+		research_cost = 2.0
+		start_year = 1945
+		folder = {
+			name = fra_armour_folder
+			position = { x = -4 y = 14 }
+		}
+
+		sub_tech_index = 0
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1945
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	### HEAVY ###
+
+	fra_usa_heavy_tank_1 = {
+
+		enable_equipments = {
+			usa_heavy_tank_chassis_hm6
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_one_man_tank_turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_casemate_turret
+			tank_heavy_open_superstructure_turret
+			tank_radio_1
+			tank_radio_2
+		}
+
+		allow = {
+			has_global_flag = GLOBAL_france_capped
+			tag = FRA
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = fra_usa_tank_post_cap_tt
+		}
+
+		path = {
+			leads_to_tech = fra_usa_heavy_tank_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1941
+		folder = {
+			name = fra_armour_folder
+			position = { x = -1 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1941
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	fra_usa_heavy_tank_2 = {
+
+		enable_equipments = {
+			usa_heavy_tank_chassis_t29
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1944
+		folder = {
+			name = fra_armour_folder
+			position = { x = -1 y = 16 }
+		}
+
+		sub_tech_index = 0
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1944
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

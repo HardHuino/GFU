@@ -1,0 +1,306 @@
+bookmarks = {
+	bookmark = {
+		name = "MAJOR_ONLY_NAME"
+		desc = "MAJOR_ONLY_DESC"
+		date = 1936.1.1.13
+		picture = "GFX_select_date_asia"
+		default_country = "GER"
+		default = yes
+
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				new_deal
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_new_deal_2
+				USA_build_the_pentagon
+				USA_victory_plan
+			}
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				trotskyite_plot_nsb
+				home_of_revolution
+				SOV_order_270_idea
+			}
+			focuses = {
+				SOV_the_path_of_marxism_leninism
+				SOV_stalins_organ
+				SOV_war_mobilisation
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				MTG_naval_treaty_adherent
+				stiff_upper_lip_1
+				george_v
+			}
+			focuses = {
+				ENG_end_of_the_beginning
+				ENG_the_industrial_heartland
+				ENG_3_years_a_ship_300_years_a_tradition
+			}
+		}
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				triumphant_will
+				GER_barbarossa
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_legacy_of_the_luftwaffe
+				GER_danzig_or_war
+				GER_mobilise_reich
+			}
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				vittoria_mutilata
+				vittorio_emanuele
+				ITA_mare_nostrum
+			}
+			focuses = {
+				ITA_the_total_mobilization_of_society
+				ITA_roma_invicta
+				ITA_ancient_ambitions
+			}
+		}
+		"JAP"={
+			history = "JAP_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				state_shintoism
+				JAP_zaibatsus
+				JAP_militarism
+			}
+			focuses = {
+				JAP_strike_the_west
+				JAP_exploit_the_southern_resource_area
+			}
+		}
+
+		# "---"={
+		# 	history = "OTHER_GATHERING_STORM_DESC"
+		# }
+
+		# minors from DLC ####
+		"FRA"={
+			minor = yes
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_form_the_popular_front
+				FRA_dirigisme
+				FRA_devalue_the_franc
+			}
+		}
+		"CAN"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+				CAN_national_resources_mobilization_act
+			}
+			focuses = {
+				CAN_forced_quebec_conscription
+				CAN_compromise_with_quebec
+				CAN_aluminium_company_of_canada
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				# SAF_ossewabrandwag
+				# SAF_history_of_segregation
+				# SAF_cheap_labor_1
+			}
+			focuses = {
+				# SAF_secure_interests_in_africa
+				# SAF_south_african_steel
+				# SAF_armor_effort
+			}
+		}
+		"RAJ"={
+			minor = yes
+			history = "RAJ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				RAJ_agrarian_society
+				RAJ_indian_army_2
+				RAJ_risk_of_famine
+			}
+			focuses = {
+				RAJ_declare_the_republic_of_india
+				RAJ_indian_gurkhas
+				RAJ_far_east_development_plan
+			}
+		}
+		"AST"={
+			minor = yes
+			history = "AST_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				AST_great_depression_1
+				AST_rats_of_tobruk_idea
+				AST_invest_in_victory
+			}
+			focuses = {
+				AST_fight_work_or_perish
+				AST_squash_the_squanderbugs
+				AST_rats_of_tobruk
+			}
+		}
+		"MEX"={
+			minor = yes
+			history = "MEXICO_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				MEX_church_power_2
+				MEX_politicised_army
+				MEX_oil_concessions
+			}
+			focuses = {
+				MEX_focus_cold_shower
+				MEX_focus_northern_steel_plants
+				MEX_depoliticised_army
+			}
+		}
+		"BRA"={
+			minor = yes
+			history = "BRA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BRA_coffee_oligarchs
+				BRA_revolution_of_1930
+				BRA_great_depression_1
+			}
+			focuses = {
+				BRA_curtail_the_coffe_oligarchs
+				BRA_pracinhas_focus
+				BRA_bandeirantes
+			}
+		}
+		"SPR"={
+			minor = yes
+			history = "SPAIN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SPA_recovering_from_civil_war
+				SPA_carlism_1
+				SPR_political_violence
+			}
+			focuses = {
+				SPA_fascist_economic_aid
+				SPA_adopt_the_26_points
+				SPA_iberian_pact
+			}
+		}
+		"HUN"={
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"ROM"={
+			minor = yes
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"BUL"={
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BUL_second_national_catastrophe
+				BUL_army_restrictions
+				BUL_imro_01
+			}
+			focuses = {
+				BUL_the_tsars_regime
+				BUL_appoint_right_wing_ministers
+				BUL_greater_bulgaria
+			}
+		}
+		# "YUG"={
+		# 	minor = yes
+		# 	history = "YUG_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		YUG_invite_german_industrialists_ns_fake
+		# 		YUG_idea_axis_capital
+		# 		YUG_achtung_panzer
+		# 	}
+		# 	focuses = {
+		# 		YUG_study_the_arditi
+		# 		YUG_utmost_elitism
+		# 		YUG_Under_New_Regime
+		# 	}
+		# }
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				# MAN_banditry
+				# MAN_kwantung_veto
+				# MAN_low_legitimacy_5
+			}
+			focuses = {
+				# MAN_expand_opium_plantations
+				# MAN_the_two_emperors
+				# MAN_claim_the_mandate
+			}
+		}
+		"SIA"={
+			minor = yes
+			history = "SIA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				# SIA_kingdom_restored
+				# SIA_golden_era
+				# SIA_thai_empire
+			}
+			focuses = {
+				# SIA_restore_the_kingdom
+				# SIA_western_military
+				# SIA_embrace_bushido
+			}
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

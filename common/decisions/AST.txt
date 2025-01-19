@@ -1,0 +1,118 @@
+political_actions = {
+
+	AST_preplace_ins_line = {
+		name = "Place Converters on The Dutch East Indies and Papua"
+		icon = generic_operation
+
+		allowed = {
+			original_tag = AST
+		}
+
+		available = {
+			JAP = {
+				NOT = {
+					has_war_with = ENG
+					has_war_with = USA
+					has_war_with = FRA
+					has_war_with = AST
+					has_war_with = INS
+					has_war_with = RAJ
+					has_war_with = NZL
+				}
+			}
+			date > 1940.3.1
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			load_oob = "AST_INS_OOB_S"
+		}
+	}
+
+	AST_annex_nz = {
+
+		allowed = {
+			original_tag = AST
+		}
+
+		available = {
+			date > 1939.1.1
+			NZL = { is_ai = yes }
+			# NOT = { 523 = {is_core_of = AST} }
+			if = {
+				limit = {
+					has_idea = AST_no_nzl_annex
+				}
+				has_manpower > 100000
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					523 = {is_core_of = AST}
+				}
+				523 = {
+					remove_core_of = AST
+				}
+			}
+			if = {
+				limit = {
+					has_idea = AST_no_nzl_annex
+				}
+				add_manpower = -300000
+				remove_ideas = AST_no_nzl_annex
+			}
+			set_global_flag = AST_NZL_ANNEXED
+			AST = {
+				set_cosmetic_tag = AST_autonomy_dominion_NZLA
+			}
+			AST = {
+				NZL = {
+					pow_before_annex = yes
+				}
+			}
+			ENG = {
+				add_ideas = ENG_AST_annex_operative
+			}
+			annex_country = { target = NZL transfer_troops = yes }
+			add_state_core = 723
+			add_state_core = 284
+			add_state_core = 726
+		}
+	}
+
+	AST_discardian_compensation = {
+
+		allowed = {
+			original_tag = AST
+		}
+
+		available = {
+			date > 1939.1.1
+			country_exists = NZL
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_manpower = 300000
+			add_ideas = AST_no_nzl_annex
+		}
+	}
+}

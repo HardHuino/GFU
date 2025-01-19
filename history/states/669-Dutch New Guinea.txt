@@ -1,0 +1,34 @@
+state={
+	id=669
+	name="STATE_669"
+	manpower = 314300
+
+	resources = {
+		rubber = 400
+	}
+	state_category = pastoral
+
+	history= {
+		set_state_flag = ASN_ALLIES_controls
+		owner = INS
+		1936.1.1.15 = {
+			owner = WST
+		}
+		add_core_of = INS
+		victory_points = {
+			12371 1
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			4509 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		4509 4552 7529 7542 10369 10396 12371
+	}
+
+	local_supplies=1.0
+}

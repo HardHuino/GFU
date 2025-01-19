@@ -1,0 +1,58 @@
+﻿l_english:
+ 
+ ST_STATE_MARK_FOR_TRANSFER_1VS1:0 "§HMark State for Transfer§!\nMark the selected state so it can be transfered \n"
+ ST_STATE_UNMARK_FOR_TRANSFER_1VS1:0 "§HUnmark State§!\nUnmarks the selected state\n"
+ mark_state_yes_1VS1:0 ""
+ mark_state_no_1VS1:0 "\n  §RMarked!§!"
+ 
+ OBSERVER_1VS1:0 "§HObserve§!\nMoves player to observer mode\n\n"
+ OBSERVER_DELAYED_1VS1:0 ""
+ 
+ OBSERVER2_1VS1:0 "§HSwap Countries§!\nSwap Soviet and German Players\n\n"
+ OBSERVER2_DELAYED_1VS1:0 ""
+ WHITEPEACE_1VS1:0 "§HWhitepeace§!\nCountry will be whitepeaced with every enemy\n\n"
+ WHITEPEACE_DELAYED_1VS1:0 ""
+ 
+ CLEAR_ALL_MARKINGS_1VS1:0 "§HClear All Marks§!\nEvery mark on world will be removed\n\n"
+ CLEAR_ALL_MARKINGS_DELAYED_1VS1:0 ""
+
+ TRANSFER_STATES_1VS1:0 "§HTransfer States§!\nTransfer marked states to [This.Owner.GetName]\n\n"
+ TRANSFER_STATES_DELAYED_1VS1:0 ""
+ 
+ ADD_CORES_1VS1:0 "§HAdd cores§!\nAdd cores to marked states for [This.Owner.GetName]\n\n"
+ ADD_CORES_DELAYED_1VS1:0 ""
+ 
+ ANNEX_COUNTRY_1VS1:0 "§HAnnex§!\n[This.Owner.GetName] annexes the owner of the selected state\n\n"
+ ANNEX_COUNTRY_DELAYED_1VS1:0 ""
+ 
+ PUPPET_COUNTRY_1VS1:0 "§HPuppet§!\n[This.Owner.GetName] puppets the owner of the selected state\n\n"
+ PUPPET_COUNTRY_DELAYED_1VS1:0 ""
+ 
+ ADD_CHEAT_1VS1:0 "§HCheat§!\nSelection is given to the selected country\n\n"
+ ADD_CHEAT_DELAYED_1VS1:0 ""
+
+ ST_TOOLTIP_on_1VS1:0 "§HActivate 'Host Tool'§!"
+ ST_TOOLTIP_off_1VS1:0 "§HDeactivate 'Host Tool'§!"
+ transfer_states_on_1VS1:0 "Settings:£trigger_no"
+ transfer_states_off_1VS1:0 "Settings:£trigger_yes"
+
+ CHEAT_SELECT_1VS1:0   "Select cheat"
+ CHEAT1_1VS1:0   "Armor - 100%"
+ CHEAT2_1VS1:0   "Toogle 3 Speed Changes "
+ CHEAT3_1VS1:0   "Armor - 2y"
+ CHEAT4_1VS1:0   "Fighters - 100%"
+ CHEAT5_1VS1:0   "Industry - 100%"
+ CHEAT6_1VS1:0   "Add 1 Off-Mil"
+ CHEAT7_1VS1:0   "Remove 1 Off-Mil"
+ CHEAT8_1VS1:0   "Add 1 Off-Civ"
+ CHEAT9_1VS1:0   "Remove 1 Off-Civ"
+ CHEAT10_1VS1:0  "Add 50 PP"
+ CHEAT11_1VS1:0  "Earrape"
+ CHEAT12_1VS1:0  "Vape Nation"
+ CHEAT13_1VS1:0  "100 Army xp"
+ CHEAT14_1VS1:0  "100 Air xp"
+ mark_status_marked_1VS1:0   "     Unmark State "
+ mark_status_unmarked_1VS1:0 "      Mark State  "
+ disable_resources_1VS1:0 "Press this button or use the following shortcut to enable or disable topbar resources"
+
+ 

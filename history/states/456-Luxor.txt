@@ -1,0 +1,33 @@
+state=
+{
+	id=456
+	name="STATE_456" # Aswan
+	manpower = 4224516
+
+	state_category = rural
+
+	history = {
+		owner = ENG
+		add_core_of = WST
+		1936.1.1.15 = {
+			owner = WST
+		}
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			11999 10
+		}
+		victory_points = {
+			11974 1
+		}
+		victory_points = {
+			7073 3
+		}
+	}
+	provinces={
+		1028 1206 7073 7144 10097 11974 12044 12771 13377 13400 13401 13402 13403 13404 13405
+	}
+
+	local_supplies=0.0
+}

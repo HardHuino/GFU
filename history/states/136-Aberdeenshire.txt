@@ -1,0 +1,39 @@
+
+state={
+	id=136
+	name="STATE_136"
+	manpower = 745466
+
+	state_category = town
+	resources={
+		tungsten=100 # was: 6
+		aluminium=60 # was: 4
+	}
+
+	history={
+		#add_core_of = SCO
+		owner = ENG
+		1936.1.1.15 = {
+			owner = WST
+		}
+		victory_points = {
+			200 5 #Aberdeen
+		}
+		victory_points = {
+			3150 1 #Dundee
+		}
+		add_extra_state_shared_building_slots = 10
+		buildings = {
+			industrial_complex = 2
+			infrastructure = 6
+			dockyard = 1
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		200 3150 9161 11055 11136 11207 11306
+	}
+
+	local_supplies=0.0
+}

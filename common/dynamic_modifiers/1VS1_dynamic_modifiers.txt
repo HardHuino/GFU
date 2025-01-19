@@ -1,0 +1,32 @@
+
+Barb_Modifiers = {
+	icon = "GFX_idea_SPR_disbanded_army"
+	consumer_goods_factor=1
+	stability_factor = 1
+	war_support_factor = 1
+	surrender_limit = 1
+	army_armor_attack_factor =  SWE.onevsonevar
+	army_infantry_attack_factor = DEN.onevsonevar
+	army_armor_defence_factor = BUL.onevsonevar
+	army_infantry_defence_factor = LUX.onevsonevar
+	army_armor_speed_factor =  PER.onevsonevar
+	army_speed_factor = GRE.onevsonevar
+	supply_consumption_factor = HOL.onevsonevar
+	max_planning = ITA.onevsonevar
+	terrain_penalty_reduction = BEL.onevsonevar
+	army_org_factor = FRA.onevsonevar
+	max_dig_in_factor =VIC.onevsonevar
+	army_fuel_consumption_factor = -0.5
+	land_night_attack = 0.2
+	land_reinforce_rate = 0.2
+	political_power_gain = -100
+	command_power_gain = -100
+	experience_gain_army_factor = -1000
+	experience_gain_navy_factor = -1000
+	experience_gain_air_factor = -1000
+	army_strength_factor = 1
+	base_fuel_gain = 100000
+	training_time_factor = -100
+	attrition = -1
+}
+

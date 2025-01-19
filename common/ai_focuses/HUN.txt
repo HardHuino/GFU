@@ -1,0 +1,41 @@
+ai_historical_focus_list_HUN = {
+	ai_national_focuses = {
+		HUN_greatest_losers_of_the_great_war
+		HUN_embrace_the_future
+		HUN_deals_with_the_aristocracy
+		HUN_schactplan_endorsement_for_support
+		HUN_national_revolution
+		HUN_secret_rearmament
+		HUN_danubian_industry
+		HUN_invite_foreign_investors
+		HUN_MAVAG_subsidization
+		HUN_csepel_muvek_expansion
+		HUN_budapest_bauxite_expansion
+		HUN_etatism
+		HUN_purge_the_bureaucracy
+		HUN_industrial_nationalization
+		HUN_joint_aluminium_mining_company
+		HUN_production_tooling_development
+		HUN_enact_the_gyor_program
+		HUN_legacy_of_the_merchant_fleet
+		HUN_slovak_labor_force
+		HUN_german_military_science
+		HUN_renounce_the_treaty_of_trianon
+		HUN_reclaim_the_kingdom
+		HUN_exploit_our_mountains
+		HUN_BUNA_licence
+		HUN_legacy_of_the_merchant_fleet
+		HUN_a_legacy_of_failure
+		HUN_study_wehrmacht_wargames
+		HUN_conduct_wargames
+		HUN_danuvia_series
+		HUN_high_caliber_development
+		HUN_modern_war
+		HUN_develop_the_toldi
+		HUN_revolutionaries_in_the_military
+		HUN_modern_hussars
+		HUN_mobility_focus
+		HUN_hungarian_elitism
+		HUN_encore_with_the_entente
+	}
+}

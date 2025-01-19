@@ -1,0 +1,201 @@
+spriteTypes = {
+	#################################################
+	### Bebas Neue
+	#################################################
+	bitmapfont = {
+		name = "Bebas_Neue_18"
+		#path = "gfx/fonts/Bebas_Neue_18"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_18"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 125 118 118 } #custom creme
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_18_LightBrown"
+		#path = "gfx/fonts/Bebas_Neue_18_LightBrown"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_18_LightBrown"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 125 118 118 } #custom creme
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_18"
+		#path = "gfx/fonts/Bebas_Neue_18"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_18"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 125 118 118 } #custom creme
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_20"
+		#path = "gfx/fonts/Bebas_Neue_20"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_20"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+			B = { 45 54 63 } #custom blue
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_20_LightBrown"
+		#path = "gfx/fonts/Bebas_Neue_20_LightBrown"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_20_LightBrown"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+			B = { 45 54 63 } #custom blue
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_25"
+		#path = "gfx/fonts/Bebas_Neue_25"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_25"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+			B = { 45 54 63 } #custom blue
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_25_DarkBlue"
+		#path = "gfx/fonts/Bebas_Neue_25_DarkBlue"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_25_DarkBlue"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+			B = { 45 54 63 } #custom blue
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_30"
+		#path = "gfx/fonts/Bebas_Neue_30"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_30"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 125 118 118 } #custom creme
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_30_DarkBlue"
+		#path = "gfx/fonts/Bebas_Neue_30_DarkBlue"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_30_DarkBlue"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 125 118 118 } #custom creme
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_45"
+		#path = "gfx/fonts/Bebas_Neue_45"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_45"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_70"
+		#path = "gfx/fonts/Bebas_Neue_70"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_70"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+	bitmapfont = {
+		name = "Bebas_Neue_95"
+		#path = "gfx/fonts/Bebas_Neue_95"
+		fontfiles = {
+			"gfx/fonts/Bebas_Neue_95"
+		}
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+}

@@ -1,0 +1,709 @@
+technologies = {
+	MW  = {
+
+		# allow_branch = { is_debug = yes }
+
+		### BONUSES ###
+		category_all_armor = {
+			breakthrough = 0.35
+			maximum_speed = 0.15
+			max_organisation = 17
+			max_strength = 3
+			default_morale = 0.4
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		category_assault_gun = {
+			breakthrough = 0.25
+		}
+		category_army = {
+			breakthrough = 0.05
+			default_morale = 0.2
+		}
+		category_all_infantry = {
+			max_organisation = 2.5
+			max_strength = 2
+			defense = 0.15
+		}
+		category_militia = {
+			max_organisation = 2.5
+			max_strength = 2
+			defense = 0.15
+		}
+		category_light_infantry = {
+			max_organisation = 10
+			defense = 0.1
+		}
+		category_mobile_infantry = {
+			breakthrough = 0.1
+			max_organisation = 15
+			maximum_speed = 0.1
+			default_morale = 0.2
+			max_strength = 2
+		}
+		category_line_artillery = {
+			max_organisation = 7.5
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		category_mobile_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			maximum_speed = 0.1
+		}
+		category_front_line = {
+			max_organisation = 5
+		}
+
+		planning_speed = 0.15
+		org_loss_when_moving = -0.35
+		army_speed_factor = 0.05
+		max_planning = 0.05
+		land_reinforce_rate = 0.04
+		dig_in_speed_factor = 0.5
+		air_cas_present_factor = 0.15
+
+		enable_tactic = tactic_blitz
+		enable_tactic = tactic_elastic_defense
+		enable_tactic = tactic_breakthrough
+		enable_tactic = tactic_tactical_withdrawal
+		enable_tactic = tactic_overwhelming_fire
+		enable_tactic = tactic_backhand_blow
+		enable_tactic = tactic_delay
+		enable_tactic = tactic_unexpected_thrust
+
+		motorized={
+			need = {
+				motorized_equipment = -5
+			}
+		}
+		mot_anti_tank_brigade={
+			need = {
+				motorized_equipment = -5
+			}
+		}
+		mot_anti_air_brigade={
+			need = {
+				motorized_equipment = -5
+			}
+		}
+		mot_artillery_brigade={
+			need = {
+				motorized_equipment = -5
+			}
+		}
+		mechanized={
+			need = {
+				mechanized_equipment = -5
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = "Each Motorized and Mechanized Batallions require 5 less Motorized/Mechanized Equipment"
+		}
+		on_research_complete = {
+			custom_effect_tooltip = "Recon bonuses are excluded"
+		}
+		# armored_car_recon = {
+		# 	max_organisation = 3
+		# 	recon = 1
+		# 	battalion_mult = {
+		# 		category = category_mobile_infantry
+		# 		hard_attack = 0.05
+		# 		soft_attack = 0.05
+		# 	}
+		# }
+		# mot_recon = {
+		# 	max_organisation = 3
+		# 	recon = 1
+		# 	battalion_mult = {
+		# 		category = category_mobile_infantry
+		# 		hard_attack = 0.05
+		# 		soft_attack = 0.05
+		# 	}
+		# }
+		# mech_recon = {
+		# 	max_organisation = 3
+		# 	recon = 1
+		# 	battalion_mult = {
+		# 		category = category_mobile_infantry
+		# 		hard_attack = 0.05
+		# 		soft_attack = 0.05
+		# 	}
+		# }
+		# light_tank_recon = {
+		# 	max_organisation = 3
+		# 	recon = 1
+		# 	battalion_mult = {
+		# 		category = category_mobile_infantry
+		# 		hard_attack = 0.05
+		# 		soft_attack = 0.05
+		# 	}
+		# }
+		### BONUSES ###
+
+		xp_research_type = army
+		xp_unlock_cost = 99999
+
+		doctrine = yes
+		research_cost = 4.0
+
+		categories = {
+			land_doctrine_summary
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	SPF  = {
+
+		# allow_branch = { is_debug = yes }
+
+		### BONUSES ###
+		category_army = {
+			soft_attack = 0.2
+			hard_attack = 0.2
+		}
+		category_all_infantry = {
+			max_organisation = 5
+			defense = 0.1
+			default_morale = 0.05
+			max_strength = 1
+		}
+		category_militia = {
+			defense = 0.1
+			default_morale = 0.05
+			max_strength = 1
+		}
+		category_line_artillery = {
+			soft_attack = 0.2
+			hard_attack = 0.2
+		}
+		category_mobile_artillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		category_all_armor = {
+			max_strength = 3
+			max_organisation = 10
+			breakthrough = 0.10
+			default_morale = 0.15
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		category_assault_gun = {
+			breakthrough = 0.10
+		}
+		category_light_infantry = {
+			max_organisation = 5
+			defense = 0.1
+		}
+
+		land_reinforce_rate = 0.05
+		planning_speed = 0.2
+		max_planning = 0.075
+		army_morale_factor = 0.15
+		army_bonus_air_superiority_factor = 0.1
+		air_cas_present_factor = 0.1
+		coordination_bonus = 0.05
+
+		signal_company = {
+			battalion_mult = {
+				category = category_line_artillery
+				max_organisation = 1
+				add = yes
+			}
+		}
+		logistics_company = {
+			battalion_mult = {
+				category = category_army
+				max_organisation = 1
+				add = yes
+			}
+		}
+		logistics_company_mot = {
+			battalion_mult = {
+				category = category_army
+				max_organisation = 1
+				add = yes
+			}
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = "Quite extensive recon bonuses are excluded"
+		}
+
+		enable_tactic = tactic_tactical_withdrawal
+		enable_tactic = tactic_delay
+		enable_tactic = tactic_barrage
+		enable_tactic = tactic_blitz
+		enable_tactic = tactic_elastic_defense
+		enable_tactic = tactic_breakthrough
+		# RECON
+		# recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_armor
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	battalion_mult = {
+		# 		category = category_line_artillery
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	recon = 2
+		# }
+		# mot_recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_armor
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	battalion_mult = {
+		# 		category = category_line_artillery
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	recon = 2
+		# }
+		# mech_recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_armor
+		# 		soft_attack = 0.05 #0.075
+		# 		hard_attack = 0.05 #0.075
+		# 	}
+		# 	battalion_mult = {
+		# 		category = category_line_artillery
+		# 		soft_attack = 0.05 #0.075
+		# 		hard_attack = 0.05 #0.075
+		# 	}
+		# 	recon = 2
+		# }
+		# armored_car_recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_armor
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	battalion_mult = {
+		# 		category = category_line_artillery
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	recon = 2
+		# }
+		# light_tank_recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_armor
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	battalion_mult = {
+		# 		category = category_line_artillery
+		# 		soft_attack = 0.025 #0.075
+		# 		hard_attack = 0.025 #0.075
+		# 	}
+		# 	recon = 2
+		# }
+		### BONUSES ###
+
+		xp_research_type = army
+		xp_unlock_cost = 99999
+
+		doctrine = yes
+		research_cost = 4.0
+
+		categories = {
+			land_doctrine_summary
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	GBP = {
+
+		# allow_branch = { is_debug = yes }
+
+		### BONUSES ###
+		# on_research_complete = {
+		# 	custom_effect_tooltip = GBP_NO_EXPED_WARN
+		# }
+
+		category_all_infantry = {
+			soft_attack = 0.05
+			max_organisation = 10
+			defense = 0.10
+		}
+		category_militia = {
+			max_organisation = 2.5
+		}
+		category_army = {
+			breakthrough = 0.2
+			default_morale = 0.1
+			max_strength = 2
+		}
+		category_mobile_infantry = {
+			max_organisation = 10
+			max_strength = 1
+		}
+		category_all_armor = {
+			max_organisation = 10
+			default_morale = 0.2
+			max_strength = 1
+		}
+		category_light_infantry = {
+			soft_attack = 0.05
+			max_organisation = 10
+			breakthrough = 0.2
+		}
+		category_line_artillery = {
+			max_organisation = 10
+		}
+
+		field_hospital = {
+			casualty_trickleback = 0.05
+			experience_loss_factor = -0.15
+		}
+
+		max_dig_in = 5
+		supply_consumption_factor = -0.05
+		land_night_attack = 0.15
+		max_planning = 0.2
+		planning_speed = 0.3
+		attrition = -0.15
+		land_reinforce_rate = 0.02
+		intel_from_combat_factor = 1
+		coordination_bonus = 0.05
+		naval_invasion_planning_bonus_speed = 0.15
+
+		enable_tactic = tactic_elastic_defense
+		enable_tactic = tactic_infantry_charge
+		enable_tactic = tactic_breakthrough
+		enable_tactic = tactic_blitz
+		enable_tactic = tactic_elastic_defense
+		enable_tactic = tactic_planned_attack
+		enable_tactic = tactic_overwhelming_fire
+
+		on_research_complete = {
+			custom_effect_tooltip = "All recon support companies now use 10 more infantry equipment"
+		}
+		on_research_complete = {
+			custom_effect_tooltip = "Extensive terrain and recon bonuses excluded"
+		}
+
+		# TERRAIN
+		# mountaineers = {
+		# 	mountain = {
+		# 		attack = 0.05
+		# 	}
+		# 	rock = {
+		# 		attack = 0.05
+		# 	}
+		# 	hills = {
+		# 		attack = 0.05
+		# 	}
+		# 	forest = {
+		# 		attack = 0.05
+		# 	}
+		# 	jungle = {
+		# 		attack = 0.05
+		# 	}
+		# }
+		# jaeger = {
+		# 	forest = {
+		# 		attack = 0.05
+		# 	}
+		# 	jungle = {
+		# 		attack = 0.05
+		# 	}
+		# }
+		# marine = {
+		# 	marsh = {
+		# 		attack = 0.05
+		# 	}
+		# 	river = {
+		# 		attack = 0.05
+		# 	}
+		# 	amphibious = {
+		# 		attack = 0.05
+		# 	}
+		# }
+		# marine_commando = {
+		# 	marsh = {
+		# 		attack = 0.05
+		# 	}
+		# 	river = {
+		# 		attack = 0.05
+		# 	}
+		# 	amphibious = {
+		# 		attack = 0.05
+		# 	}
+		# 	jungle = {
+		# 		attack = 0.05
+		# 	}
+		# }
+		# paratrooper = {
+		# 	dense_urban = {
+		# 		attack = 0.05
+		# 	}
+		# 	urban = {
+		# 		attack = 0.05
+		# 	}
+		# 	town = {
+		# 		attack = 0.05
+		# 	}
+		# }
+		# RECON
+		# recon = {
+		# 	recon = 2
+		# 	need = {
+		# 		infantry_equipment = 10
+		# 	}
+		# }
+		# mot_recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_infantry
+		# 		defense = 0.025
+		# 		breakthrough = 0.025
+		# 		soft_attack = 0.05
+		# 		hard_attack = 0.05
+		# 	}
+		# 	recon = 2
+		# 	need = {
+		# 		infantry_equipment = 10
+		# 	}
+		# }
+		# mech_recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_infantry
+		# 		defense = 0.05
+		# 		breakthrough = 0.05
+		# 		soft_attack = 0.05
+		# 		hard_attack = 0.05
+		# 	}
+		# 	recon = 2
+		# 	need = {
+		# 		infantry_equipment = 10
+		# 	}
+		# }
+		# light_tank_recon = {
+		# 	recon = 2
+		# 	need = {
+		# 		infantry_equipment = 10
+		# 	}
+		# }
+		# armored_car_recon = {
+		# 	battalion_mult = {
+		# 		category = category_all_infantry
+		# 		defense = 0.025
+		# 		breakthrough = 0.025
+		# 		soft_attack = 0.05
+		# 		hard_attack = 0.05
+		# 	}
+		# 	recon = 2
+		# 	need = {
+		# 		infantry_equipment = 10
+		# 	}
+		# }
+		### BONUSES ###
+
+		xp_research_type = army
+		xp_unlock_cost = 99999
+
+		doctrine = yes
+		research_cost = 4.0
+
+		categories = {
+			land_doctrine_summary
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	MA = {
+
+		# allow_branch = { is_debug = yes }
+
+		### BONUSES ###
+
+
+		category_all_infantry = {
+			max_organisation = 5
+			default_morale = 0.30
+		}
+		category_light_infantry = {
+			max_organisation = 7.5
+			soft_attack = 0.05
+			breakthrough = 0.10
+			max_strength = 5
+		}
+		category_militia= {
+			max_organisation = 15
+			breakthrough = 0.10
+			default_morale = 0.30
+			max_strength = 5
+			defense = 0.1
+		}
+		category_all_armor = {
+			max_organisation = 11
+			breakthrough = 0.20
+			default_morale = 0.3
+			max_strength = 7
+		}
+		category_mobile_infantry = {
+			max_organisation = 25
+			default_morale = 0.1
+		}
+		category_line_artillery = {
+			max_organisation = 12.5
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		land_reinforce_rate = 0.06
+		org_loss_when_moving = -0.2
+		army_fuel_capacity_factor = 0.10
+		no_supply_grace = 132
+		out_of_supply_factor = -0.2
+		dig_in_speed_factor = 0.25
+		pocket_penalty = -0.3
+		resistance_growth_on_our_occupied_states = 0.1
+		army_speed_factor = 0.05
+		supply_consumption_factor = -0.2
+		training_time_factor = -0.15
+		experience_gain_army_unit_factor = 0.10
+		org_loss_at_low_org_factor = -0.25
+		minimum_training_level = -0.10
+		max_dig_in = 2.5
+		max_planning = 0.05
+		production_factory_max_efficiency_factor = 0.03
+
+		enable_tactic = tactic_breakthrough
+		enable_tactic = tactic_human_wave_tactics
+		enable_tactic = tactic_elastic_defense
+		enable_tactic = tactic_blitz
+		enable_tactic = tactic_relentless_assault
+		enable_tactic = tactic_overwhelming_fire
+		enable_tactic = tactic_backhand_blow
+		# EQUIPMENT REDUCTION
+		amphibious_mechanized = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		infantry = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		infantry_mot = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		marine = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		marine_commando = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		mountaineers = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		paratrooper = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		jaeger = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		motorized = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		mechanized = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		bicycle_battalion = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		fake_intel_unit = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		arditi = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		penal_battalion = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		irregular_infantry = {
+			need = {
+				infantry_equipment = -20
+			}
+		}
+		on_research_complete = {
+			custom_effect_tooltip = "All units in the 'All Infantry & Mech' category require 20 less Infantry Equipment"
+		}
+		### BONUSES ###
+
+		xp_research_type = army
+		xp_unlock_cost = 99999
+
+		doctrine = yes
+		research_cost = 4.0
+
+		categories = {
+			land_doctrine_summary
+		}
+
+		folder = {
+			name = land_doctrine_folder
+			position = { x = 0 y = 20 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+

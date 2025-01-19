@@ -1,0 +1,16 @@
+characters={
+	FIN_risto_heikki_ryti={
+		name=FIN_risto_ryti
+		portraits = {
+			civilian = {
+				large = GFX_portrait_FIN_risto_ryti
+				small = GFX_portrait_FIN_risto_ryti_small
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

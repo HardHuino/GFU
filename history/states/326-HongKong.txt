@@ -1,0 +1,39 @@
+state=
+{
+	id=326
+	name="STATE_326"
+	manpower = 1143516
+	state_category = large_town
+	history=
+	{
+		owner = ENG
+		1936.1.1.15 = {
+			owner = WST
+		}
+		# add_core_of = ENG
+		add_core_of = CHI
+		#add_core_of = PRC
+		victory_points = {
+			10062 3
+		}
+		buildings = {
+			industrial_complex = 2
+			infrastructure = 5
+			air_base = 1
+			13397 = {
+				coastal_bunker = 1
+				bunker = 1
+			}
+			13398 = {
+				naval_base = 6
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+	}
+	provinces={
+		10062 13397 13398
+	}
+
+	local_supplies=0.0
+}

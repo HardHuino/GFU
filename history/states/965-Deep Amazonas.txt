@@ -1,0 +1,22 @@
+state={
+	id=965
+	name="STATE_965"
+	provinces={
+		2147 5232
+	}
+	history={
+		owner = BRA
+		1936.1.1.15 = {
+			owner = WST
+		}
+		1936.1.1.14 = {
+			owner = WST
+		}
+		add_core_of = BRA
+	}
+	manpower=21987
+	impassable = yes
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=wasteland
+}

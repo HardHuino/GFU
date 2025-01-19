@@ -1,0 +1,38 @@
+
+state={
+	id=338
+	name="STATE_338"
+	manpower = 1800615
+	resources={
+		steel=90 # was: 16
+	}
+
+	state_category = city
+
+	history={
+		owner = ENG
+		1936.1.1.15 = {
+			owner = WST
+		}
+		victory_points = {
+			3369 5
+		}
+		add_extra_state_shared_building_slots = 10
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 3
+			air_base = 2
+			3369 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		3369 6221 6351 6378 9484 11471
+	}
+
+	local_supplies=0.0
+}

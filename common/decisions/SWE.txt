@@ -1,0 +1,1350 @@
+operations = {
+
+	# crowning_of_the_volk_king = {
+	# 	fire_only_once = yes
+
+	# 	icon = generic_megaphone
+
+	# 	allowed = {
+	# 		tag = SWE
+	# 	}
+
+	# 	available = {
+	# 		date > 1936.1.7
+	# 	}
+
+	# 	cost = 0
+
+	# 	complete_effect = {
+	# 		every_country = {
+	# 			limit = {
+	# 				check_variable = {
+	# 					supervents_enabled > 0
+	# 				}
+	# 			}
+	# 			set_variable = { var = super_event value = 16 }
+	# 		}
+	# 	}
+
+	# 	ai_will_do = {
+	# 		base = 1000
+	# 	}
+	# }
+
+	remove_ita_navy_buff_from_cairo_hold = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			date > 1942.7.1
+		}
+
+		cost = 0
+
+		complete_effect = {
+			set_global_flag = ita_20_navy_buff_pre_jul_1942_disabled
+			ITA = {
+				set_variable = { ITA_italian_navy_naval_damage_factor_cairo = 0 tooltip = naval_damage_factor_tt }
+				set_variable = { ITA_italian_navy_naval_defense_factor_cairo = 0 tooltip = naval_defense_factor_tt }
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	remove_volunteer_spirits = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			date > 1939.1.1
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_idea = volunteer_minimum_UK_NA
+				}
+				remove_ideas = volunteer_minimum_UK_NA
+			}
+			every_country = {
+				limit = {
+					has_idea = volunteer_minimum_major
+				}
+				remove_ideas = volunteer_minimum_major
+			}
+			every_country = {
+				limit = {
+					has_idea = volunteer_minimum_minor
+				}
+				remove_ideas = volunteer_minimum_minor
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	remove_uk_extra_vol_spirit = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+
+		}
+
+		cost = 0
+
+		complete_effect = {
+			ENG = {
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = NO_ASIA
+						}
+						has_idea = volunteer_minimum_UK_NA
+					}
+					remove_ideas = volunteer_minimum_UK_NA
+				}
+				if = {
+					limit = {
+						has_global_flag = NO_ASIA
+						has_idea = volunteer_minimum_major
+					}
+					remove_ideas = volunteer_minimum_major
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	call_in_usa_bra_mex_to_war = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			OR = {
+				AND = {
+					british_raj_1_or_more_axis_control = yes
+					USA = {
+						NOT = {
+							has_war_with = JAP
+						}
+					}
+				}
+				USA = {
+					AND = {
+						has_war_with = JAP
+						has_offensive_war = no
+					}
+				}
+				USA = {
+					AND = {
+						has_war_with = GER
+						has_offensive_war = no
+					}
+				}
+				ENG = { surrender_progress > 0.1 }
+				date > 1942.1.1
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			if = {
+				limit = {
+					JAP = {
+						has_war = no
+					}
+				}
+				USA = {
+					USA_neutrality_clear_all = yes
+					remove_ideas = no_wars_usa
+					GER = {
+						declare_war_on = {
+							target = USA
+							type = annex_everything
+						}
+					}
+					country_event = generic.68
+				}
+				BRA = {
+					remove_ideas = neutrality_idea2
+					remove_ideas = no_wars_usa
+					GER = {
+						declare_war_on = {
+							target = USA
+							type = annex_everything
+						}
+					}
+					country_event = generic.68
+				}
+				MEX = {
+					remove_ideas = no_wars_usa
+					GER = {
+						declare_war_on = {
+							target = USA
+							type = annex_everything
+						}
+					}
+					country_event = generic.68
+				}
+			}
+			if = {
+				limit = {
+					JAP = {
+						has_war = yes
+					}
+				}
+				USA = {
+					USA_neutrality_clear_all = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	cairo_GER_mils = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			OR = {
+				GER = {
+					controls_state = 907
+				}
+				SPR = {
+					controls_state = 907
+				}
+				HUN = {
+					controls_state = 907
+				}
+				ROM = {
+					controls_state = 907
+				}
+				BUL = {
+					controls_state = 907
+				}
+				YUG = {
+					controls_state = 907
+				}
+				ITA = {
+					controls_state = 907
+				}
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			custom_effect_tooltip = "If axis gets cairo before feb germany gets 20 civs and mils, if before april 15 civs and mils, if before june 10 civs and mils and if before august 5 civs and mils, after that you can get no mils or civs"
+			if = {
+				limit = {
+					date > 1940.8.1
+				}
+				custom_effect_tooltip = "NOTHING"
+			}
+			else_if = {
+				limit = {
+					date > 1940.6.1
+				}
+				GER = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 4
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 5
+						add_building_construction = {
+							type = industrial_complex
+							level = 5
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 4
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 5
+						add_building_construction = {
+							type = arms_factory
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					date > 1940.4.1
+				}
+				GER = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 9
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 10
+						add_building_construction = {
+							type = industrial_complex
+							level = 10
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 9
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 10
+						add_building_construction = {
+							type = arms_factory
+							level = 10
+							instant_build = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					date > 1940.2.1
+				}
+				GER = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 14
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 15
+						add_building_construction = {
+							type = industrial_complex
+							level = 15
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 14
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 15
+						add_building_construction = {
+							type = arms_factory
+							level = 15
+							instant_build = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					date > 1936.1.1
+				}
+				GER = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 19
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 20
+						add_building_construction = {
+							type = industrial_complex
+							level = 20
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 19
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 20
+						add_building_construction = {
+							type = arms_factory
+							level = 20
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	enable_speeches_and_super_events = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_playable_country = yes
+				}
+				set_variable = { speeches_enabled = 2 }
+				set_variable = { supervents_enabled = 2 }
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	nuke_superevent_trigger = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			any_country = {
+				is_special_project_completed = sp:sp_nuclear_bomb
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = { check_variable= { speeches_enabled > 0 } }
+				scoped_sound_effect = "se_nuclear_siren"
+			}
+			every_country = {
+				limit = {
+					check_variable = {
+						supervents_enabled > 0
+					}
+				}
+				set_variable = { var = super_event value = 15 }
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	first_nuke_speech_trigger = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			has_global_flag = first_nuke_dropped
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = { check_variable= { speeches_enabled > 0 } }
+				scoped_sound_effect = "sp_destroyer_of_worlds"
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	no_asia_japan_xp = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			date > 1938.1.1
+			has_global_flag = NO_ASIA
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_playable_country = yes
+				}
+				army_experience = 200
+				air_experience = 35
+				add_ideas = NO_ASIA_attache_war_support_idea
+				custom_effect_tooltip = "more army and air xp cause in no asia attache spirit lasted till danzig"
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	allies_no_asia_simulate = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			date > 1941.1.1
+			has_global_flag = NO_ASIA
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			ENG = {
+				ENG_economy_dynamic_modifier_tt = yes # tooltip
+				add_to_variable = { ENG_british_economy_consumer_goods_factor = 0.05 tooltip = consumer_goods_expected_value_tt }
+				add_ideas = ENG_british_fighter_no_asia_simulate
+			}
+			# AST = {
+			# 	AST_economy_dynamic_modifier_tt = yes # tooltip
+			# 	add_to_variable = { AST_australian_economy_industrial_capacity_factory = -0.5 tooltip = industrial_capacity_factory_tt }
+			# }
+			# NZL = {
+			# 	add_ideas = NZL_no_asia_simulate
+			# }
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	axis_no_asia_simulate = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+
+		available = {
+			has_global_flag = NO_ASIA
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			ITA = { #DANSTER_CHANGE
+				ITA_economy_dynamic_modifier_tt = yes # tooltip
+				add_to_variable = { ITA_italian_economy_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+				add_ideas = ITA_air_no_asia_balance
+			}
+			GER = { #DANSTER_CHANGE
+				GER_economy_dynamic_modifier_tt = yes # tooltip
+				add_to_variable = { GER_german_economy_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+				add_ideas = ITA_air_no_asia_balance
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	lower_usa_europe_debuff = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			date > 1942.1.1
+			NOT = {
+				has_global_flag = NO_ASIA
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						tag = MEX
+						tag = BRA
+					}
+				}
+				JAPANESE_THREAT_bases_level_down = yes
+				JAPANESE_THREAT_bases_level_down = yes
+				JAPANESE_THREAT_bases_level_down = yes
+				JAPANESE_THREAT_bases_level_down = yes
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	end_usa_europe_debuff = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			OR = {
+				date > 1942.6.1
+				has_global_flag = NO_ASIA
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						tag = MEX
+						tag = BRA
+					}
+				}
+				remove_ideas = USA_island_war1
+				remove_ideas = USA_island_war2
+				remove_ideas = USA_island_war3
+				remove_ideas = USA_island_war4
+				remove_ideas = USA_island_war5
+				remove_ideas = USA_island_war6
+				remove_ideas = USA_island_war7
+				remove_ideas = USA_island_war8
+				remove_ideas = USA_island_war9
+				remove_ideas = USA_island_war10
+				remove_ideas = USA_island_war11
+				remove_ideas = USA_island_war12
+				remove_ideas = USA_island_war13
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	SP_STA = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			OR = {
+				GER = {
+					controls_state = 217
+				}
+				SPR = {
+					controls_state = 217
+				}
+				HUN = {
+					controls_state = 217
+				}
+				ROM = {
+					controls_state = 217
+				}
+				BUL = {
+					controls_state = 217
+				}
+				YUG = {
+					controls_state = 217
+				}
+				ITA = {
+					controls_state = 217
+				}
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = { check_variable = { speeches_enabled > 0 } }
+					scoped_sound_effect = "sp_ger_stalingrad"
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	SP_CAIRO = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			OR = {
+				GER = {
+					controls_state = 907
+				}
+				SPR = {
+					controls_state = 907
+				}
+				HUN = {
+					controls_state = 907
+				}
+				ROM = {
+					controls_state = 907
+				}
+				BUL = {
+					controls_state = 907
+				}
+				YUG = {
+					controls_state = 907
+				}
+				ITA = {
+					controls_state = 907
+				}
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = { check_variable = { speeches_enabled > 0 } }
+					scoped_sound_effect = "sp_ger_cairo"
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	SP_DEMOCRACY = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			date > 1940.8.1
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = { check_variable= { speeches_enabled > 0 } }
+					scoped_sound_effect = "sp_usa_democracy_cooked"
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	# SP_CHAMBERLAIN = {
+	# 	fire_only_once = yes
+
+	# 	icon = generic_megaphone
+
+	# 	allowed = {
+	# 	   tag = SWE
+	# 	}
+	# 	available = {	
+	# 		has_global_flag = {
+	# 			flag = sp_pol_beck_happend
+	# 			days > 30
+	# 		}
+	# 	}
+
+	# 	cost = 0
+
+	# 	complete_effect = {
+	# 		hidden_effect = {
+	# 			every_country = {
+	# 				limit = { check_variable= { speeches_enabled > 0 } }
+	# 				scoped_sound_effect = "sp_chamberlain"
+	# 			}
+	# 		}
+	# 	}
+
+	# 	ai_will_do = {
+	# 		base = 1000
+	# 	}
+	# }
+
+	# SP_US_JAP = {
+	# 	fire_only_once = yes
+
+	# 	icon = generic_megaphone
+
+	# 	allowed = {
+	# 	   tag = SWE
+	# 	}
+	# 	available = {	
+	# 		has_global_flag = {
+	# 			flag = sp_jap_allies_happend
+	# 			days > 30
+	# 		}
+	# 	}
+
+	# 	cost = 0
+
+	# 	complete_effect = {
+	# 		hidden_effect = {
+	# 			every_country = {
+	# 				limit = { check_variable= { speeches_enabled > 0 } }
+	# 				scoped_sound_effect = "sp_usa_speech_japan_attack"
+	# 			}
+	# 		}
+	# 	}
+
+	# 	ai_will_do = {
+	# 		base = 1000
+	# 	}
+	# }
+
+	SP_ITA_WAR = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			ITA = {
+				has_war = yes
+			}
+			NOT = {
+				has_global_flag = ITA_war_speech
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {
+					limit = { check_variable= { speeches_enabled > 0 } }
+					scoped_sound_effect = "sp_ita_waronallies"
+				}
+				set_global_flag = ITA_war_speech
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	SP_eng_dday = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			GER = {
+				NOT = { has_country_flag = GER_dday_flag }
+			}
+			date > 1941.9.1
+			ENG = {
+				OR = {
+					controls_state = 806
+					controls_state = 19
+					controls_state = 23
+					controls_state = 30
+					controls_state = 14
+					controls_state = 15
+					controls_state = 785
+					controls_state = 29
+					controls_state = 6
+					controls_state = 35
+					controls_state = 7
+					controls_state = 36
+					controls_state = 56
+					controls_state = 59
+					controls_state = 58
+					controls_state = 909
+					controls_state = 912
+					controls_state = 99
+				}
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+					scoped_sound_effect = "sp_dday_cooked"
+				}
+			}
+			GER = {
+				set_country_flag = GER_dday_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+
+		}
+	}
+	SP_den_dday = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			GER = {
+				NOT = { has_country_flag = GER_dday_flag }
+			}
+			date > 1941.9.1
+			DEN = {
+				OR = {
+					controls_state = 806
+					controls_state = 19
+					controls_state = 23
+					controls_state = 30
+					controls_state = 14
+					controls_state = 15
+					controls_state = 785
+					controls_state = 29
+					controls_state = 6
+					controls_state = 35
+					controls_state = 7
+					controls_state = 36
+					controls_state = 56
+					controls_state = 59
+					controls_state = 58
+					controls_state = 909
+					controls_state = 912
+					controls_state = 99
+				}
+			}
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+					scoped_sound_effect = "sp_dday_cooked"
+				}
+			}
+			GER = {
+				set_country_flag = GER_dday_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+
+		}
+	}
+	SP_fra_dday = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+			GER = {
+				NOT = { has_country_flag = GER_dday_flag }
+			}
+			date > 1941.9.1
+			FRA = {
+				OR = {
+					controls_state = 806
+					controls_state = 19
+					controls_state = 23
+					controls_state = 30
+					controls_state = 14
+					controls_state = 15
+					controls_state = 785
+					controls_state = 29
+					controls_state = 6
+					controls_state = 35
+					controls_state = 7
+					controls_state = 36
+					controls_state = 56
+					controls_state = 59
+					controls_state = 58
+					controls_state = 909
+					controls_state = 912
+					controls_state = 99
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+					scoped_sound_effect = "sp_dday_cooked"
+				}
+			}
+			GER = {
+				set_country_flag = GER_dday_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+
+		}
+	}
+	SP_usa_dday = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+			GER = {
+				NOT = { has_country_flag = GER_dday_flag }
+			}
+			date > 1941.9.1
+			USA = {
+				OR = {
+					controls_state = 806
+					controls_state = 19
+					controls_state = 23
+					controls_state = 30
+					controls_state = 14
+					controls_state = 15
+					controls_state = 785
+					controls_state = 29
+					controls_state = 6
+					controls_state = 35
+					controls_state = 7
+					controls_state = 36
+					controls_state = 56
+					controls_state = 59
+					controls_state = 58
+					controls_state = 909
+					controls_state = 912
+					controls_state = 99
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+					scoped_sound_effect = "sp_dday_cooked"
+				}
+			}
+			GER = {
+				set_country_flag = GER_dday_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+
+		}
+	}
+	SP_bel_dday = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+			GER = {
+				NOT = { has_country_flag = GER_dday_flag }
+			}
+			date > 1941.9.1
+			BEL = {
+				OR = {
+					controls_state = 806
+					controls_state = 19
+					controls_state = 23
+					controls_state = 30
+					controls_state = 14
+					controls_state = 15
+					controls_state = 785
+					controls_state = 29
+					controls_state = 6
+					controls_state = 35
+					controls_state = 7
+					controls_state = 36
+					controls_state = 56
+					controls_state = 59
+					controls_state = 58
+					controls_state = 909
+					controls_state = 912
+					controls_state = 99
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+					scoped_sound_effect = "sp_dday_cooked"
+				}
+			}
+			GER = {
+				set_country_flag = GER_dday_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+
+		}
+	}
+	SP_hol_dday = {
+		fire_only_once = yes
+
+		icon = generic_megaphone
+
+		allowed = {
+			tag = SWE
+		}
+		available = {
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+			GER = {
+				NOT = { has_country_flag = GER_dday_flag }
+			}
+			date > 1941.9.1
+			HOL = {
+				OR = {
+					controls_state = 806
+					controls_state = 19
+					controls_state = 23
+					controls_state = 30
+					controls_state = 14
+					controls_state = 15
+					controls_state = 785
+					controls_state = 29
+					controls_state = 6
+					controls_state = 35
+					controls_state = 7
+					controls_state = 36
+					controls_state = 56
+					controls_state = 59
+					controls_state = 58
+					controls_state = 909
+					controls_state = 912
+					controls_state = 99
+				}
+			}
+		}
+
+		cost = 0
+
+		complete_effect = {
+			hidden_effect = {
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+					scoped_sound_effect = "sp_dday_cooked"
+				}
+			}
+			GER = {
+				set_country_flag = GER_dday_flag
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+
+		}
+	}
+
+	SWE_anti_ii = {
+
+		icon = generic_tank
+
+		allowed = {
+			original_tag = SWE
+		}
+
+		fire_only_once = yes
+		days_mission_timeout = 1525
+
+		available = {
+			NOT = {
+				has_global_flag = ONE_VS_ONE
+			}
+			always = no
+		}
+
+		timeout_effect = {
+			set_global_flag = SWE_anti_flag
+		}
+	}
+}

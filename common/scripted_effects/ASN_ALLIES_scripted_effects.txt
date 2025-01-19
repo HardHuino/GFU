@@ -1,0 +1,536 @@
+JAPANESE_THREAT_bases_level_down = {
+	if = {
+		limit = { has_idea = USA_island_war12 }
+		swap_ideas = {
+			remove_idea = USA_island_war12
+			add_idea = USA_island_war13
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war11 }
+		swap_ideas = {
+			remove_idea = USA_island_war11
+			add_idea = USA_island_war12
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war10 }
+		swap_ideas = {
+			remove_idea = USA_island_war10
+			add_idea = USA_island_war11
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war9 }
+		swap_ideas = {
+			remove_idea = USA_island_war9
+			add_idea = USA_island_war10
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war8 }
+		swap_ideas = {
+			remove_idea = USA_island_war8
+			add_idea = USA_island_war9
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war7 }
+		swap_ideas = {
+			remove_idea = USA_island_war7
+			add_idea = USA_island_war8
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war6 }
+		swap_ideas = {
+			remove_idea = USA_island_war6
+			add_idea = USA_island_war7
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war5 }
+		swap_ideas = {
+			remove_idea = USA_island_war5
+			add_idea = USA_island_war6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war4 }
+		swap_ideas = {
+			remove_idea = USA_island_war4
+			add_idea = USA_island_war5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war3 }
+		swap_ideas = {
+			remove_idea = USA_island_war3
+			add_idea = USA_island_war4
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war2 }
+		swap_ideas = {
+			remove_idea = USA_island_war2
+			add_idea = USA_island_war3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war1 }
+		swap_ideas = {
+			remove_idea = USA_island_war1
+			add_idea = USA_island_war2
+		}
+	}
+}
+JAPANESE_THREAT_bases_level_up = {
+	if = {
+		limit = { has_idea = USA_island_war2 }
+		swap_ideas = {
+			remove_idea = USA_island_war2
+			add_idea = USA_island_war1
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war3 }
+		swap_ideas = {
+			remove_idea = USA_island_war3
+			add_idea = USA_island_war2
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war4 }
+		swap_ideas = {
+			remove_idea = USA_island_war4
+			add_idea = USA_island_war3
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war5 }
+		swap_ideas = {
+			remove_idea = USA_island_war5
+			add_idea = USA_island_war4
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war6 }
+		swap_ideas = {
+			remove_idea = USA_island_war6
+			add_idea = USA_island_war5
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war7 }
+		swap_ideas = {
+			remove_idea = USA_island_war7
+			add_idea = USA_island_war6
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war8 }
+		swap_ideas = {
+			remove_idea = USA_island_war8
+			add_idea = USA_island_war7
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war9 }
+		swap_ideas = {
+			remove_idea = USA_island_war9
+			add_idea = USA_island_war8
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war10 }
+		swap_ideas = {
+			remove_idea = USA_island_war10
+			add_idea = USA_island_war9
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war11 }
+		swap_ideas = {
+			remove_idea = USA_island_war11
+			add_idea = USA_island_war10
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war12 }
+		swap_ideas = {
+			remove_idea = USA_island_war12
+			add_idea = USA_island_war11
+		}
+	}
+	else_if = {
+		limit = { has_idea = USA_island_war13 }
+		swap_ideas = {
+			remove_idea = USA_island_war13
+			add_idea = USA_island_war12
+		}
+	}
+}
+
+RAJ_bases_level_down = {
+	if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_4 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_4
+			add_idea = RAJ_the_sun_never_sets_idea_5
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 4 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 0 }
+	}
+	else_if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_3 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_3
+			add_idea = RAJ_the_sun_never_sets_idea_4
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 3 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 1 }
+	}
+	else_if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_2 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_2
+			add_idea = RAJ_the_sun_never_sets_idea_3
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 2 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 2 }
+	}
+	else_if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_1 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_1
+			add_idea = RAJ_the_sun_never_sets_idea_2
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 1 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 3 }
+	}
+}
+RAJ_bases_level_up = {
+	if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_2 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_2
+			add_idea = RAJ_the_sun_never_sets_idea_1
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 0 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 4 }
+	}
+	else_if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_3 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_3
+			add_idea = RAJ_the_sun_never_sets_idea_2
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 1 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 3 }
+	}
+	else_if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_4 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_4
+			add_idea = RAJ_the_sun_never_sets_idea_3
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 2 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 2 }
+	}
+	else_if = {
+		limit = { has_idea = RAJ_the_sun_never_sets_idea_5 }
+		swap_ideas = {
+			remove_idea = RAJ_the_sun_never_sets_idea_5
+			add_idea = RAJ_the_sun_never_sets_idea_4
+		}
+		set_variable = { global.EASTERN_BUFFER_GEACPS_LOCATIONS = 3 }
+		set_variable = { global.EASTERN_BUFFER_ALLIES_LOCATIONS = 1 }
+	}
+}
+
+PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_level_down = {
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_4 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_4
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_3 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_3
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_2 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_2
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_1 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_1
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_2
+		}
+	}
+}
+PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_level_up = {
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_2 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_2
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_3 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_3
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_4 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_4
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_5 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_5
+			add_idea = PACIFIC_COMMONWEALTH_reliance_on_natural_rubber_4
+		}
+	}
+}
+
+PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_level_down = {
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_7 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_7
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_8
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 7 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 0 }
+	}
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_6 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_6
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_7
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 6 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 1 }
+	}
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_5 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_5
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_6
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 5 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 2 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_4 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_4
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_5
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 4 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 3 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_3 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_3
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_4
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 3 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 4 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_2 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_2
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_3
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 2 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 5 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_1 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_1
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_2
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 1 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 6 }
+	}
+}
+PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_level_up = {
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_2 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_2
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_1
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 0 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 7 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_3 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_3
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_2
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 1 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 6 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_4 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_4
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_3
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 2 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 5 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_5 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_5
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_4
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 3 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 4 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_6 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_6
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_5
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 4 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 3 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_7 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_7
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_6
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 5 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 2 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_8 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_8
+			add_idea = PACIFIC_COMMONWEALTH_difficulty_with_rubber_supply_7
+		}
+		set_variable = { global.RUBBER_GEACPS_LOCATIONS = 6 }
+		set_variable = { global.RUBBER_ALLIES_LOCATIONS = 1 }
+	}
+}
+
+PACIFIC_COMMONWEALTH_capital_level_down = {
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_5 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_5
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_6
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 5 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 0 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_4 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_4
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_5
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 4 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 1 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_3 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_3
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_4
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 3 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 2 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_2 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_2
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_3
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 2 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 3 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_1 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_1
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_2
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 1 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 4 }
+	}
+}
+PACIFIC_COMMONWEALTH_capital_level_up = {
+	if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_2 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_2
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_1
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 0 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 5 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_3 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_3
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_2
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 1 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 4 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_4 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_4
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_3
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 2 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 3 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_5 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_5
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_4
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 3 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 2 }
+	}
+	else_if = {
+		limit = { has_idea = PACIFIC_COMMONWEALTH_controls_capitals_6 }
+		swap_ideas = {
+			remove_idea = PACIFIC_COMMONWEALTH_controls_capitals_6
+			add_idea = PACIFIC_COMMONWEALTH_controls_capitals_5
+		}
+		set_variable = { global.PACIFICCAPITAL_GEACPS_LOCATIONS = 4 }
+		set_variable = { global.PACIFICCAPITAL_ALLIES_LOCATIONS = 1 }
+	}
+}

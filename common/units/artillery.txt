@@ -1,0 +1,525 @@
+sub_units = {
+
+	artillery_support = {
+		abbreviation = "ART"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = yes
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			artillery_equipment = 20
+		}
+
+		manpower = 300
+		training_time = 60
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		weight = 0.1
+
+		supply_consumption = 0.08
+
+		# Support nerfs to combat abilities
+		# defense = -0.2
+		# breakthrough = -0.6
+		# soft_attack = -0.6
+		# hard_attack = -0.6
+
+		plains = {
+			defence = 0.01
+		}
+		desert = {
+			defence = 0.01
+		}
+		forest = {
+			defence = 0.01
+		}
+		hills = {
+			defence = 0.01
+		}
+		mountain = {
+			defence = 0.01
+		}
+		rock = {
+			defence = 0.01
+		}
+		jungle = {
+			defence = 0.01
+		}
+		marsh = {
+			defence = 0.01
+		}
+		urban = {
+			defence = 0.01
+		}
+		dense_urban = {
+			defence = 0.01
+		}
+		town = {
+			defence = 0.01
+		}
+
+		same_support_type = artillery
+		can_be_parachuted = yes
+	}
+
+	pack_artillery = {
+		abbreviation = "PART"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = yes
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			pack_artillery_equipment = 20
+		}
+
+		manpower = 300
+		training_time = 60
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		weight = 0.1
+
+		supply_consumption = 0.03
+
+		# Support nerfs to combat abilities
+		# defense = -0.2
+		# breakthrough = -0.6
+		# soft_attack = -0.6
+		# hard_attack = -0.6
+
+		hills = {
+			attack = 0.025
+		}
+		mountain = {
+			attack = 0.025
+		}
+
+		same_support_type = artillery
+		can_be_parachuted = yes
+	}
+
+	dp_artillery = {
+		abbreviation = "DART"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = yes
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			dp_artillery_equipment = 20
+		}
+
+		manpower = 300
+		training_time = 60
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		weight = 0.1
+
+		supply_consumption = 0.08
+
+		# Support nerfs to combat abilities
+		# defense = -0.2
+		# breakthrough = -0.6
+		# soft_attack = -0.6
+		# hard_attack = -0.6
+
+		plains = {
+			defence = 0.01
+		}
+		desert = {
+			defence = 0.01
+		}
+		forest = {
+			defence = 0.01
+		}
+		hills = {
+			defence = 0.01
+		}
+		mountain = {
+			defence = 0.01
+		}
+		rock = {
+			defence = 0.01
+		}
+		jungle = {
+			defence = 0.01
+		}
+		marsh = {
+			defence = 0.01
+		}
+		urban = {
+			defence = 0.01
+		}
+		dense_urban = {
+			defence = 0.01
+		}
+		town = {
+			defence = 0.01
+		}
+
+		same_support_type = artillery
+		can_be_parachuted = yes
+	}
+
+	rocket_artillery = {
+		sprite = "artillery"
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = yes
+
+		type = {
+			infantry
+			support
+		}
+
+		same_support_type = artillery
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			rocket_artillery_equipment = 20
+		}
+
+		manpower = 300
+		training_time = 60
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2 #-10
+		weight = 0.1
+
+		supply_consumption = 0.08
+
+		# Support nerfs to combat abilities
+		# defense = -0.9
+		# soft_attack = -0.6
+		# hard_attack = -0.6
+		# breakthrough = -0.6
+
+		river = {
+			attack = 0.025
+		}
+		amphibious = {
+			attack = 0.025
+		}
+
+		can_be_parachuted = yes
+	}
+
+	motorized_rocket_artillery = {
+		sprite = "artillery"
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+
+		same_support_type = artillery
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			motorized_rocket_equipment = 20
+		}
+
+		manpower = 300
+		training_time = 60
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2 #-10
+		weight = 0.1
+
+		supply_consumption = 0.08
+
+		# Support nerfs to combat abilities
+		# soft_attack = 3.5
+		# hard_attack = 3
+		# breakthrough = 1.5
+
+		can_be_parachuted = yes
+	}
+
+	heavy_artillery_support = {
+		abbreviation = "HART"
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = yes
+
+		type = {
+			infantry
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+			category_artillery
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			heavy_artillery_equipment = 20
+			motorized_equipment = 20
+		}
+
+		manpower = 300
+		training_time = 60
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		weight = 0.1
+		maximum_speed = -0.62
+
+		supply_consumption = 0.1
+
+		# Support nerfs to combat abilities
+		# defense = -0.9
+		# soft_attack = -0.6
+		# hard_attack = -0.6
+		# breakthrough = -0.6
+
+		urban = {
+			attack = 0.025
+		}
+		dense_urban = {
+			attack = 0.025
+		}
+		town = {
+			attack = 0.025
+		}
+
+		same_support_type = artillery
+		can_be_parachuted = yes
+	}
+
+	# light_sp_artillery = {
+	# 	abbreviation = "LAR"
+	# 	sprite = infantry
+	# 	map_icon_category = infantry
+	# 	priority = 0
+	# 	ai_priority = 0
+	# 	active = yes
+	# 	affects_speed = yes
+
+	# 	type = {
+	# 		infantry
+	# 		support
+	# 	}
+
+	# 	same_support_type = artillery
+	# 	group = support
+
+	# 	categories = {
+	# 		category_support_battalions
+	# 		category_all_armor
+	# 		category_mobile_artillery
+	# 		category_army
+	# 		category_support_artillery
+	# 	}		
+
+	# 	combat_width = 0
+
+	# 	need = {
+	# 		light_tank_artillery_chassis = 20
+	# 	}
+
+	# 	manpower = 300
+	# 	max_organisation = 0
+	# 	default_morale = 0.1
+	# 	max_strength = 0.6
+	# 	training_time = 180
+	# 	weight = 1
+	# 	supply_consumption = 0.3
+	# 	fuel_capacity = 10
+
+	# 	suppression = 1
+	# 	ap_attack = -0.4
+	# 	defense = -0.9
+	# 	soft_attack = -0.60
+	# 	hard_attack = -0.60
+	# 	breakthrough = -0.60
+	# 	armor_value = -0.70
+	# }
+
+	# medium_sp_artillery = {
+	# 	abbreviation = "MAR"
+	# 	sprite = infantry
+	# 	map_icon_category = infantry
+	# 	priority = 0
+	# 	ai_priority = 0
+	# 	active = yes
+	# 	affects_speed = yes
+
+	# 	type = {
+	# 		infantry
+	# 		support
+	# 	}
+	# 	same_support_type = artillery
+	# 	group = support
+
+	# 	categories = {
+	# 		category_support_battalions
+	# 		category_all_armor
+	# 		category_army
+	# 		category_mobile_artillery
+	# 		category_support_artillery
+	# 	}		
+
+	# 	combat_width = 0
+
+	# 	need = {
+	# 		medium_tank_artillery_chassis = 20
+	# 	}
+	# 	manpower = 300
+	# 	max_organisation = 0
+	# 	default_morale = 0.1
+	# 	max_strength = 0.6
+	# 	training_time = 180
+	# 	weight = 1
+	# 	supply_consumption = 0.3
+	# 	fuel_capacity = 10
+
+	# 	suppression = 1
+	# 	ap_attack = -0.4
+	# 	defense = -0.9
+	# 	soft_attack = -0.60
+	# 	hard_attack = -0.60
+	# 	breakthrough = -0.60
+	# 	armor_value = -0.70
+	# }
+
+	# heavy_sp_artillery = {
+	# 	abbreviation = "HAR"
+	# 	sprite = infantry
+	# 	map_icon_category = infantry
+	# 	priority = 0
+	# 	ai_priority = 0
+	# 	active = yes
+	# 	affects_speed = yes
+
+	# 	type = {
+	# 		infantry
+	# 		support
+	# 	}
+
+	# 	same_support_type = artillery
+	# 	group = support
+
+	# 	categories = {
+	# 		category_support_battalions
+	# 		category_all_armor
+	# 		category_army
+	# 		category_mobile_artillery
+	# 	}		
+
+	# 	combat_width = 0
+
+	# 	need = {
+	# 		heavy_tank_artillery_chassis = 20
+	# 	}
+
+	# 	manpower = 300
+	# 	max_organisation = 0
+	# 	default_morale = 0.1
+	# 	max_strength = 0.6
+	# 	training_time = 180
+	# 	weight = 1
+	# 	supply_consumption = 0.3
+	# 	fuel_capacity = 10
+
+	# 	suppression = 1
+	# 	ap_attack = -0.4
+	# 	defense = -0.9
+	# 	soft_attack = -0.60
+	# 	hard_attack = -0.60
+	# 	breakthrough = -0.60
+	# 	armor_value = -0.70
+	# }
+}

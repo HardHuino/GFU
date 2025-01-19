@@ -1,0 +1,45 @@
+
+state = {
+	id = 110
+	name = "STATE_110"
+	manpower = 1057185
+
+	state_category = large_town
+
+	resources={
+		aluminium=120 # was: 8
+	}
+
+	history={
+		victory_points = {
+			6115 13
+		}
+		victory_points = {
+			11151 2
+		}
+
+		owner = NOR
+		1936.1.1.15 = {
+			owner = WST
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 5
+			industrial_complex = 4
+			# dockyard = 5
+			air_base = 4
+			6115 = {
+				naval_base = 6
+				coastal_bunker = 3
+			}
+		}
+		add_core_of = NOR
+		add_extra_state_shared_building_slots = 21
+	}
+
+	provinces={
+		14 3007 3171 6115 9103 11078 11151 11184
+	}
+
+	local_supplies=0.0
+}

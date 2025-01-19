@@ -1,0 +1,275 @@
+# example_module = {
+# 	abbreviation = ""
+# 	category = category_example
+# 	sfx = sfx_ui_sd_module_turret
+
+# 	allow_equipment_type = { artillery }
+# 	forbid_equipment_type = { anti_tank }
+# 	forbid_equipment_type_exact_match_for_category = { mech_small_main_armament = armor }
+# 	forbid_equipment_type_exact_match = armor
+# 	parent = parent_example
+
+# 	allowed_module_categories = {
+# 		example_slot = {
+# 			example_category
+# 		}
+# 	}
+
+# 	add_stats = {
+
+# 	}
+
+# 	multiply_stats = {
+
+# 	}
+
+# 	build_cost_resources = {
+
+# 	}
+
+# 	can_convert_from = {
+# 		module_category = example_category
+# 		convert_cost_ic = 0
+# 	}
+
+# 	dismantle_cost_ic = 0
+# }
+
+equipment_modules = {
+    ### Turret Types ###
+    ### AC TURRETS ###
+
+	# Armored Car Turret 1
+	tank_ac_turret_1 = {
+		abbreviation = "l1m"
+		category = tank_ac_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = {
+			anti_air
+			anti_tank
+			artillery
+			flame
+		}
+
+		add_stats = {
+			build_cost_ic = 2
+		}
+
+		build_cost_resources = {
+			steel = 5
+		}
+		dismantle_cost_ic = 1
+	}
+
+	# Armored Car Turret 2
+	tank_ac_turret_2 = {
+		abbreviation = "l1m"
+		category = tank_ac_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = {
+			anti_air
+			anti_tank
+			artillery
+			flame
+		}
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_car_armament_tier_2
+			}
+		}
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+
+		build_cost_resources = {
+			steel = 5
+		}
+		dismantle_cost_ic = 1
+	}
+
+	# Armored Car Turret 3
+	tank_ac_turret_3 = {
+		abbreviation = "l1m"
+		category = tank_ac_advanced_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = {
+			anti_air
+			anti_tank
+			artillery
+			flame
+		}
+
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_car_armament_tier_1
+				tank_car_armament_tier_2
+				tank_car_armament_tier_3
+			}
+		}
+
+		add_stats = {
+			build_cost_ic = 4
+		}
+
+		build_cost_resources = {
+			steel = 5
+		}
+		dismantle_cost_ic = 1
+	}
+
+	#ARMORED CAR WEAPONS AND REGRETS #GOD'S GREATEST FLOWERBOX ***************************************************************************************
+
+	tank_car_heavy_machine_gun = {
+		abbreviation = "carhmg"
+		category = tank_car_armament_tier_1
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 8
+			hard_attack = 1
+			ap_attack = 5
+			build_cost_ic = 0.5
+		}
+		dismantle_cost_ic = 1
+	}
+
+	tank_car_auto_cannon = { ###1
+		abbreviation = "carauto"
+		category = tank_car_armament_tier_1
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 16
+			hard_attack = 4
+			ap_attack = 15
+			build_cost_ic = 2
+		}
+		multiply_stats = {  }
+
+		build_cost_resources = {
+			steel = 5
+		}
+		dismantle_cost_ic = 1
+	}
+
+	tank_car_quad_machine_gun = {
+		abbreviation = "quadMG"
+		category = tank_car_armament_tier_1
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 12
+			hard_attack = 2
+			ap_attack = 10
+			build_cost_ic = 1
+		}
+
+		build_cost_resources = {
+			steel = 5
+		}
+		dismantle_cost_ic = 1
+	}
+
+	tank_car_auto_cannon_2 = { ###1
+		abbreviation = "ac2"
+		category = tank_car_armament_tier_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 22
+			hard_attack = 6
+			ap_attack = 25
+			build_cost_ic = 2
+		}
+		multiply_stats = {  }
+
+		build_cost_resources = {
+			steel = 5
+			tungsten = 2
+		}
+		dismantle_cost_ic = 1
+	}
+
+	tank_flame_projectors = { ###1
+		abbreviation = "acFl"
+		category = tank_car_armament_tier_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 30
+			hard_attack = 1
+			ap_attack = 0
+			build_cost_ic = 4
+		}
+
+		add_stats = {
+			reliability = -0.2
+		}
+
+		build_cost_resources = {
+			steel = 5
+			chromium = 1
+		}
+		dismantle_cost_ic = 1
+	}
+
+	tank_car_auto_cannon_3 = { ###1
+		abbreviation = "ac3"
+		category = tank_car_armament_tier_3
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 28
+			hard_attack = 10
+			ap_attack = 40
+			build_cost_ic = 4
+		}
+		multiply_stats = {  }
+
+		build_cost_resources = {
+			steel = 5
+			tungsten = 5
+		}
+		dismantle_cost_ic = 1
+	}
+
+	tank_car_small_squeeze = { ###2
+		abbreviation = "carsqz"
+		category = tank_car_armament_tier_3
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 5
+			hard_attack = 40
+			ap_attack = 60
+			build_cost_ic = 8
+		}
+
+		build_cost_resources = {
+			tungsten = 15
+			steel = 10
+		}
+		dismantle_cost_ic = 1
+	}
+
+	tank_car_at_cannon = { ###2
+		abbreviation = "carAT"
+		category = tank_car_armament_tier_3
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			soft_attack = 20
+			hard_attack = 30
+			ap_attack = 50
+			build_cost_ic = 10
+		}
+
+		build_cost_resources = {
+			tungsten = 20
+			steel = 20
+		}
+		dismantle_cost_ic = 1
+	}
+}

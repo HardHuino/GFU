@@ -1,0 +1,44 @@
+
+state={
+	id=452
+	name="STATE_452"
+	manpower = 52556
+
+	state_category = wasteland
+
+	history={
+		owner = ENG
+		1936.1.1.15 = {
+			owner = WST
+		}
+		buildings = {
+			infrastructure = 3
+			13410 = {
+				naval_base = 5
+			}
+
+		}
+
+		victory_points = {
+			13410 2 # Mersa Matruh
+		}
+		victory_points = {
+			7079 1
+		}
+		victory_points = {
+			13376 1
+		}
+		victory_points = {
+			13378 1
+		}
+
+		add_core_of = WST
+	}
+
+	provinces={
+		7079 9989 10061 5078 12033 12091 7148 12764 1143 13373 13374 13375 13376 13378 13379 13380 13383 13409 13410
+	}
+
+
+	local_supplies=9.0
+}

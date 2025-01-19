@@ -1,0 +1,191 @@
+political_actions = {
+
+	HUN_reclaim_south = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = HUN
+		}
+
+		fire_only_once = yes
+		priority = 100
+
+		available = {
+			controls_state = 45
+			has_completed_focus = HUN_reclaim_the_kingdom
+		}
+
+		# visible = {
+		# 	has_completed_focus = HUN_reclaim_the_kingdom
+		# }
+
+		complete_effect = {
+			transfer_state = 45
+			add_state_core = 45
+			remove_state_claim = 45
+		}
+	}
+
+	# HUN_reclaim_south_2 = {
+
+	# 	icon = generic_nationalism
+
+	# 	allowed = {
+	# 		original_tag = HUN
+	# 	}
+
+	# 	fire_only_once = yes
+	# 	priority = 100
+
+	# 	available = {
+	# 		controls_state = 82
+	# 		has_completed_focus = HUN_reclaim_the_kingdom
+	# 	}
+
+	# 	# visible = {
+	# 	# 	has_completed_focus = HUN_reclaim_the_kingdom
+	# 	# }
+
+	# 	complete_effect = {
+	# 		add_state_core = 82
+	# 	}
+	# }
+
+	HUN_reclaim_south_3 = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = HUN
+		}
+
+		fire_only_once = yes
+		priority = 100
+
+		available = {
+			controls_state = 764
+			has_completed_focus = HUN_reclaim_the_kingdom
+		}
+
+		# visible = {
+		# 	has_completed_focus = HUN_reclaim_the_kingdom
+		# }
+
+		complete_effect = {
+			transfer_state = 764
+			add_state_core = 764
+			remove_state_claim = 764
+		}
+	}
+
+	HUN_reclaim_north = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = HUN
+		}
+
+		fire_only_once = yes
+		priority = 100
+
+		available = {
+			controls_state = 664
+			has_completed_focus = HUN_reclaim_the_kingdom
+		}
+
+		# visible = {
+		# 	has_completed_focus = HUN_reclaim_the_kingdom
+		# }
+
+		complete_effect = {
+			transfer_state = 664
+			add_state_core = 664
+			remove_state_claim = 664
+		}
+	}
+
+	HUN_reclaim_north_2 = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = HUN
+		}
+
+		fire_only_once = yes
+		priority = 100
+
+		available = {
+			controls_state = 73
+			has_completed_focus = HUN_reclaim_the_kingdom
+		}
+
+		# visible = {
+		# 	has_completed_focus = HUN_reclaim_the_kingdom
+		# }
+
+		complete_effect = {
+			transfer_state = 73
+			add_state_core = 73
+			remove_state_claim = 73
+		}
+	}
+
+	HUN_reclaim_east = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = HUN
+		}
+
+		fire_only_once = yes
+		priority = 100
+
+		available = {
+			controls_state = 76
+			has_completed_focus = HUN_reclaim_the_kingdom
+		}
+
+		# visible = {
+		# 	has_completed_focus = HUN_reclaim_the_kingdom
+		# }
+
+		complete_effect = {
+			transfer_state = 76
+			add_state_core = 76
+			remove_state_claim = 76
+		}
+	}
+
+	# HUN_reclaim_east_2 = {
+
+	# 	icon = generic_nationalism
+
+	# 	allowed = {
+	# 		original_tag = HUN
+	# 	}
+
+	# 	fire_only_once = yes
+	# 	priority = 100
+
+	# 	available = {
+	# 		controls_state = 83
+	# 		controls_state = 84
+	# 		has_completed_focus = HUN_reclaim_the_kingdom
+	# 	}
+
+	# 	# visible = {
+	# 	# 	has_completed_focus = HUN_reclaim_the_kingdom
+	# 	# }
+
+	# 	complete_effect = {
+	# 		add_state_core = 83
+	# 		remove_state_claim = 83
+	# 		add_state_core = 84
+	# 		remove_state_claim = 84
+	# 	}
+	# }
+}

@@ -1,0 +1,944 @@
+technologies = {
+
+
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 7
+	@1941 = 8
+	@1942 = 9
+	@1943 = 10
+	@1944 = 11
+	@1945 = 12
+	@1946 = 20
+
+	all_light_turrets = {
+
+		allow = {
+			always = no
+		}
+
+		start_year = 1942
+
+		research_cost = 1
+
+		enable_equipment_modules = {
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_casemate_turret
+			tank_light_open_superstructure_turret
+			tank_light_open_turret
+		}
+	}
+
+	all_medium_turrets = {
+
+		allow = {
+			always = no
+		}
+
+		start_year = 1942
+
+		research_cost = 1
+
+		enable_equipment_modules = {
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+			tank_medium_fixed_casemate_turret
+			tank_medium_open_superstructure_turret
+			tank_medium_open_turret
+		}
+	}
+
+	all_heavy_turrets = {
+
+		allow = {
+			always = no
+		}
+
+		start_year = 1942
+
+		research_cost = 1
+
+		enable_equipment_modules = {
+			tank_heavy_one_man_tank_turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_casemate_turret
+			tank_heavy_open_superstructure_turret
+		}
+	}
+
+	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
+	gwtank_chassis = { #Leichttraktor
+
+		show_equipment_icon = yes
+
+		enable_equipments = {
+			light_tank_chassis_1
+		}
+
+		enable_equipment_modules = {
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+			tank_light_three_man_tank_turret
+			tank_light_fixed_casemate_turret
+			tank_light_open_superstructure_turret
+			tank_light_open_turret
+			tank_riveted_armor
+			tank_welded_armor
+			tank_cast_armor
+			tank_gasoline_engine
+			tank_diesel_engine
+			tank_petrol_electric_engine
+			tank_christie_suspension
+			tank_bogie_suspension
+			tank_interleaved_suspension
+			tank_horstmann_suspension
+			tank_torsion_bar_suspension
+			easy_maintenance
+			smoke_launchers
+			grousers
+			apcr_round
+			he_round
+			extra_ammo_storage
+			wet_ammo_storage
+			armor_skirts
+			compact_armoring
+			external_lmg
+			coaxial_machine_gun
+			dozer_blade
+			expanded_fuel_tank
+		}
+
+		path = {
+			leads_to_tech = basic_light_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = basic_medium_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = basic_heavy_tank_chassis
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 2
+		start_year = 1936
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 0 }
+		}
+
+		allow_branch = {
+			NOT = {
+				OR = {
+					tag = ITA
+					tag = JAP
+					tag = HUN
+					tag = MAN
+					tag = SIA
+					tag = VIC
+				}
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1936
+		}
+	}
+
+	basic_light_tank_chassis = { #Panzer I
+
+		enable_equipments = {
+			light_tank_chassis_2
+		}
+
+		enable_equipment_modules = {
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = improved_light_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1939
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 6 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1939
+		}
+	}
+
+	improved_light_tank_chassis = { #Panzer II
+
+		enable_equipments = {
+			light_tank_chassis_3
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = advanced_light_tank_upgrade
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1941
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 10 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1941
+		}
+	}
+
+	advanced_light_tank_upgrade = {
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1943
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_light_armor
+			mio_cat_tech_light_armor_and_modules
+			year_1943
+		}
+	}
+
+	basic_medium_tank_chassis = {
+
+		enable_equipments = {
+			medium_tank_chassis_1
+		}
+
+		enable_equipment_modules = {
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_three_man_tank_turret
+			tank_medium_fixed_casemate_turret
+			tank_medium_open_superstructure_turret
+			tank_medium_open_turret
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = improved_medium_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1938
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 4 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1938
+		}
+	}
+
+	improved_medium_tank_chassis = {
+
+		enable_equipments = {
+			medium_tank_chassis_2
+		}
+
+		enable_equipment_modules = {
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = advanced_medium_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1941
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 10 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1941
+		}
+	}
+
+	advanced_medium_tank_chassis = { #Panther
+
+		enable_equipments = {
+			medium_tank_chassis_3
+		}
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1943
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_medium_armor
+			mio_cat_tech_medium_armor_and_modules
+			year_1943
+		}
+	}
+
+	basic_heavy_tank_chassis = {
+
+		enable_equipments = {
+			generic_heavy_tank_chassis_1
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_one_man_tank_turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_casemate_turret
+			tank_heavy_open_superstructure_turret
+			tank_radio_1
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = improved_heavy_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1939
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 7 y = 6 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1939
+		}
+	}
+
+	improved_heavy_tank_chassis = {
+
+		enable_equipments = {
+			generic_heavy_tank_chassis_2
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_one_man_tank_turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			tank_heavy_fixed_casemate_turret
+			tank_heavy_open_superstructure_turret
+			improved_optics
+			squeeze_bore_adaptor
+			stabilizer
+			sloped_armor
+			external_hmg
+			hull_mounted_rocket_rails
+			commanders_cupola
+			tank_radio_2
+		}
+
+		path = {
+			leads_to_tech = advanced_heavy_tank_chassis
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1941
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 7 y = @1943 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1941
+		}
+	}
+
+	advanced_heavy_tank_chassis = {
+
+		enable_equipments = {
+			generic_heavy_tank_chassis_3
+		}
+
+		enable_equipment_modules = {
+			auto_loader
+			optical_range_finder
+			electro_mechanical_firecontrol
+			tank_radio_3
+		}
+
+		research_cost = 2
+		start_year = 1943
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 7 y = 14 }
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+			year_1943
+		}
+	}
+
+
+	########################
+	### SPECIAL PROJECTS ###
+	########################
+
+	# sp_armored_advanced_flamethrower_tech = {
+
+	# 	allow = {
+	# 		ROOT = {
+	# 			is_special_project_completed = sp:sp_land_flamethrower_tank
+	# 		}
+	# 	}
+
+	# 	is_special_project_tech = yes
+
+	# 	research_cost = 1
+	# 	start_year = 1941
+
+	# 	folder = {
+	# 		name = nsb_armour_folder
+	# 		position = { x = 12 y = @1941 }
+	# 	}
+
+	# 	enable_equipment_modules = {
+	# 		advanced_flamethrower			
+	# 	}
+
+	# 	category_assault_gun = {
+	# 		forest = {
+	# 			attack = 0.05
+	# 		}
+	# 		hills = {
+	# 			attack = 0.05
+	# 		}
+	# 		jungle = {
+	# 			attack = 0.05
+	# 		}
+	# 		urban = {
+	# 			attack = 0.05
+	# 		}
+	# 		fort = {
+	# 			attack = 0.05
+	# 		}
+	# 	}
+
+	# 	show_effect_as_desc = yes
+	# 	ai_will_do = {
+	# 		factor = 2
+
+	# 		modifier = {
+	# 			factor = 2
+	# 			is_major = yes
+	# 		}
+	# 		modifier = {
+	# 			has_war = yes
+	# 			factor = 2
+	# 		}
+
+	# 		modifier = {
+	# 			factor = 1.1
+	# 			date > "1943.1.1"
+	# 		}
+
+	# 		modifier = {
+	# 			factor = 1.1
+	# 			date > "1944.1.1"
+	# 		}
+
+	# 		modifier = {
+	# 			factor = 1.1
+	# 			date > "1945.1.1"
+	# 		}
+	# 	}
+
+	# 	special_project_specialization = { specialization_land }
+	# 	categories = {
+	# 		armor
+	# 		mio_cat_tech_all_armor_and_modules
+	# 		mio_cat_tech_light_armor_and_modules
+	# 		mio_cat_tech_medium_armor_and_modules
+	# 		mio_cat_tech_heavy_armor_and_modules
+	# 	}
+	# 	special_project_specialization = { specialization_land }
+	# }
+
+	sp_armored_lc_naval_engine_conversion_tech = {
+		allow_branch = {
+			has_dlc = "Gotterdammerung"
+		}
+
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_land_land_cruiser
+			}
+		}
+
+		path = {
+			leads_to_tech = sp_armored_lc_weapon_fire_control_tech
+			research_cost_coeff = 1
+		}
+
+		is_special_project_tech = yes
+
+		land_cruiser = {
+			maximum_speed  = 0.05
+			supply_consumption  = -0.02
+		}
+
+		super_heavy_armor = {
+			maximum_speed  = 0.05
+			supply_consumption  = -0.02
+		}
+
+		research_cost = 1
+		start_year = 1943
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 7 y = @1943 }
+		}
+
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = @1943 }
+		}
+
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1945.1.1"
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+	sp_armored_lc_transmission_improvements_tech = {
+		allow_branch = {
+			has_dlc = "Gotterdammerung"
+		}
+
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_land_land_cruiser
+			}
+		}
+
+		path = {
+			leads_to_tech = sp_armored_lc_weapon_fire_control_tech
+			research_cost_coeff = 1
+		}
+
+		is_special_project_tech = yes
+
+		land_cruiser = {
+			reliability = 0.05
+			supply_consumption = -0.02
+
+			forest = {
+				movement = 0.2
+			}
+			hills = {
+				movement = 0.2
+			}
+			mountain = 	{
+				movement = 0.2
+			}
+			jungle = {
+				movement = 0.2
+			}
+		}
+
+		super_heavy_armor = {
+			reliability = 0.05
+			supply_consumption = -0.02
+
+			forest = {
+				movement = 0.2
+			}
+			hills = {
+				movement = 0.2
+			}
+			mountain = 	{
+				movement = 0.2
+			}
+			jungle = {
+				movement = 0.2
+			}
+		}
+
+		research_cost = 1
+		start_year = 1943
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = @1943 }
+		}
+
+		folder = {
+			name = armour_folder
+			position = { x = 9 y = @1943 }
+		}
+
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1945.1.1"
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+	sp_armored_lc_specialized_field_manuals_tech = {
+		allow_branch = {
+			has_dlc = "Gotterdammerung"
+		}
+
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_land_land_cruiser
+			}
+		}
+
+		path = {
+			leads_to_tech = sp_armored_lc_weapon_fire_control_tech
+			research_cost_coeff = 1
+		}
+
+		is_special_project_tech = yes
+
+		land_cruiser = {
+			entrenchment = 0.05
+			max_strength = 0.05
+			max_organisation = 10
+		}
+
+		research_cost = 1
+		start_year = 1943
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 11 y = @1943 }
+		}
+
+		folder = {
+			name = armour_folder
+			position = { x = 11 y = @1943 }
+		}
+
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1945.1.1"
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+	sp_armored_lc_weapon_fire_control_tech = {
+		allow_branch = {
+			has_dlc = "Gotterdammerung"
+		}
+
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_land_land_cruiser
+			}
+		}
+
+		is_special_project_tech = yes
+
+		land_cruiser = {
+			breakthrough = 0.1
+			defense = 0.1
+		}
+
+		research_cost = 1
+		start_year = 1945
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = @1945 }
+		}
+
+		folder = {
+			name = armour_folder
+			position = { x = 9 y = @1945 }
+		}
+
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1945.1.1"
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+	sp_armored_lc_high_impact_obliterator_cannon_tech = {
+		allow_branch = {
+			has_dlc = "Gotterdammerung"
+		}
+
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_land_land_cruiser
+			}
+		}
+
+		is_special_project_tech = yes
+
+		research_cost = 1
+		start_year = 1943
+
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 13 y = @1943 }
+		}
+
+		enable_equipment_modules = {
+			lc_high_impact_obliterator_cannon
+		}
+
+		show_effect_as_desc = yes
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1944.1.1"
+			}
+
+			modifier = {
+				factor = 1.1
+				date > "1945.1.1"
+			}
+		}
+
+		special_project_specialization = { specialization_land }
+		categories = {
+			armor
+			mio_cat_tech_all_armor_and_modules
+			cat_heavy_armor
+			mio_cat_tech_heavy_armor_and_modules
+		}
+		special_project_specialization = { specialization_land }
+	}
+
+}

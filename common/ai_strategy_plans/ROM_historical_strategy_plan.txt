@@ -1,0 +1,78 @@
+ROM_historical = {
+	name = "Romanian historical plan"
+	desc = ""
+
+	enable = {
+		original_tag = ROM
+		has_dlc = "Death or Dishonor"
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		ROM_reintegrate_bessarabia
+		ROM_integrate_odesa
+		ROM_the_kleptocratic_royal_dictatorship
+		ROM_MALAXA
+		ROM_danubian_transport_network
+		ROM_industrial_investments
+		ROM_fortify_the_borders
+		ROM_initialize_agrarian_reforms
+		ROM_further_agrarian_reforms
+		ROM_finalize_agrarian_reforms
+		ROM_romanian_arms_industry
+		ROM_rapid_rearmament
+		ROM_corporatist_war_machine
+		ROM_romanian_oil_industry
+		ROM_nationalized_oil_development
+		ROM_resource_export_economy
+		ROM_prut_defensive_line
+		ROM_forward_operating_bases
+		ROM_military_research_complex
+		ROM_experimental_synthetics
+		ROM_iron_guard_consolidation
+		ROM_attract_fascist_industrialists
+		ROM_seize_royal_assets
+		ROM_refugees_of_greater_romania
+		ROM_crown_king_michael
+		ROM_fanatical_revanchism
+	}
+
+	research = {
+		industry = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+		partial_economic_mobilisation = 1000
+		war_economy = 2000
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPR
+		value = 100000
+	}
+}
+

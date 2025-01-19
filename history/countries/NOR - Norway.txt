@@ -1,0 +1,36 @@
+﻿capital = 110
+
+#Country Leaders 
+recruit_character = NOR_johan_nygaardsvold
+
+
+set_global_flag = NOR_trotsky_in_norway
+
+# add_timed_idea = { idea = peacetime_economics days = 1339 }
+set_rule = { can_be_spymaster = no }
+
+set_research_slots = 0 #3
+
+add_ideas = {
+	limited_conscription
+	# peace_training
+	neutrality_idea
+	neutrality_idea2
+	stupid_ai
+}
+
+set_stability = 0.60
+set_war_support = 0.1
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1933.10.16"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 96
+	fascism = 2
+	communism = 2
+}
+

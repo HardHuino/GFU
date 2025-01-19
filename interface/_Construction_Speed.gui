@@ -1,0 +1,271 @@
+# guiTypes = {
+# 	containerWindowType = {
+# 		name = "cons_speed_opener_container"
+# 		position = { x = 438 y = 48 }
+# 		size = { width = 108 height = 48 }
+
+# 		background = {
+# 			name = "background"
+# 			spriteType = "GFX_construction_clock_window"
+# 		}
+
+# 		buttonType = {
+# 			name = "show_construction_speed_button"
+# 			position = { x = 40 y = 14 }
+# 			spriteType = "GFX_construction_clock_button"
+# 			frame = 1
+# 			pdx_tooltip = SHOW_CONSTRUCTION_SPEED_BUTTON_TT
+# 			shortcut = "c"
+# 			clicksound = click_ok
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "show_construction_speed_button_text"
+# 			position = { x = 59 y = 17 }
+# 			font = "hoi_18mbs"
+# 			text = "OFF"
+# 			maxWidth = 35
+# 			maxHeight = 10
+# 			format = center
+# 			fixedsize = yes
+# 			alwaystransparent = yes
+# 		}
+
+# 		buttonType = {
+# 			name = "hide_construction_speed_button"
+# 			position = { x = 41 y = 14 }
+# 			spriteType = "GFX_construction_clock_button"
+# 			frame = 2
+# 			pdx_tooltip = HIDE_CONSTRUCTION_SPEED_BUTTON_TT
+# 			shortcut = "c"
+# 			clicksound = click_ok
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "hide_construction_speed_button_text"
+# 			position = { x = 59 y = 17 }
+# 			font = "hoi_18mbs"
+# 			text = "ON"
+# 			maxWidth = 35
+# 			maxHeight = 10
+# 			format = center
+# 			fixedsize = yes
+# 			alwaystransparent = yes
+# 		}
+# 	}
+
+# 	containerWindowType = {
+# 		name = "cons_speed_container"
+# 		position = { x = 51 y = 242 }
+# 		size = { width = 100%% height = 100%% }
+
+# 		instantTextBoxType = {
+# 			name = "infrastructure_speed"
+# 			position = { x = 386 y = -66 }
+# 			font = "cg_16b"
+# 			text = "[?infrastructure_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "air_base_speed"
+# 			position = { x = 432 y = -66 }
+# 			font = "cg_16b"
+# 			text = "[?air_base_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "anti_air_building_speed"
+# 			position = { x = 386 y = -23 }
+# 			font = "cg_16b"
+# 			text = "[?anti_air_building_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "synthetic_refinery_speed"
+# 			position = { x = 432 y = -23 }
+# 			font = "cg_16b"
+# 			text = "[?synthetic_refinery_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "steel_refinery_speed"
+# 			position = { x = 386 y = 21 }
+# 			font = "cg_16b"
+# 			text = "[?steel_refinery_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "fuel_silo_speed"
+# 			position = { x = 432 y = 21 }
+# 			font = "cg_16b"
+# 			text = "[?fuel_silo_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "radar_station_speed"
+# 			position = { x = 386 y = 65 }
+# 			font = "cg_16b"
+# 			text = "[?radar_station_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "rocket_site_speed"
+# 			position = { x = 432 y = 65 }
+# 			font = "cg_16b"
+# 			text = "[?rocket_site_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "nuclear_reactor_speed"
+# 			position = { x = 386 y = 109 }
+# 			font = "cg_16b"
+# 			text = "[?nuclear_reactor_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "arms_factory_speed"
+# 			position = { x = 386 y = 214 }
+# 			font = "cg_16b"
+# 			text = "[?arms_factory_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "industrial_complex_speed"
+# 			position = { x = 432 y = 214 }
+# 			font = "cg_16b"
+# 			text = "[?industrial_complex_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "dockyard_speed"
+# 			position = { x = 386 y = 258 }
+# 			font = "cg_16b"
+# 			text = "[?dockyard_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "supply_node_speed"
+# 			position = { x = 386 y = 370 }
+# 			font = "cg_16b"
+# 			text = "[?supply_node_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "rail_way_speed"
+# 			position = { x = 432 y = 370 }
+# 			font = "cg_16b"
+# 			text = "[?rail_way_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "naval_base_speed"
+# 			position = { x = 386 y = 414 }
+# 			font = "cg_16b"
+# 			text = "[?naval_base_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "bunker_speed"
+# 			position = { x = 432 y = 414 }
+# 			font = "cg_16b"
+# 			text = "[?bunker_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "fortress_speed"
+# 			position = { x = 386 y = 458 }
+# 			font = "cg_16b"
+# 			text = "[?fortress_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "coastal_bunker_speed"
+# 			position = { x = 432 y = 458 }
+# 			font = "cg_16b"
+# 			text = "[?coastal_bunker_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+
+# 		instantTextBoxType = {
+# 			name = "coastal_fortress_speed"
+# 			position = { x = 386 y = 502 }
+# 			font = "cg_16b"
+# 			text = "[?coastal_fortress_speed_var|%0=+]"
+# 			maxWidth = 50
+# 			maxHeight = 20
+# 			format = right
+# 			alwaystransparent = yes
+# 		}
+# 	}
+# }

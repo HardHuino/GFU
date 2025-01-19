@@ -1,0 +1,25 @@
+state={
+	id=863
+	name="STATE_863"
+	provinces={
+		1356 4419 4769 7893 12223 13160
+	}
+	resources = {
+		aluminium = 200
+	}
+	history = {
+		owner = CAN
+		1936.1.1.15 = {
+			owner = WST
+		}
+		add_core_of = CAN
+
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower=70000
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

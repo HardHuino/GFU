@@ -1,0 +1,2056 @@
+economy_decisions = {
+	ITA_develop_yugoslavia = {
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_veni_vidi_vici
+			any_state = {
+				is_core_of = YUG
+				is_controlled_by = ITA
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		remove_effect = {
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+					is_controlled_by = ITA
+					is_core_of = YUG
+					NOT = {
+						state = 736
+						state = 852
+						state = 163
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 4
+						include_locked = yes
+					}
+					is_controlled_by = ITA
+					is_core_of = YUG
+					NOT = {
+						state = 736
+						state = 852
+						state = 163
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_core_of = YUG
+					NOT = {
+						state = 736
+						state = 852
+						state = 163
+					}
+				}
+				add_compliance = 10
+			}
+		}
+	}
+
+	ITA_develop_former_french_territory = {
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_veni_vidi_vici
+			any_state = {
+				is_core_of = FRA
+				is_controlled_by = ITA
+			}
+			has_global_flag = GLOBAL_france_capped
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		remove_effect = {
+			random_controlled_state = {
+				prioritize = { 32 }
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+						include_locked = yes
+					}
+					is_controlled_by = ITA
+					is_core_of = FRA
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_controlled_state = {
+				prioritize = { 21 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 4
+						include_locked = yes
+					}
+					is_controlled_by = ITA
+					is_core_of = FRA
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_controlled_by = ITA
+					is_core_of = FRA
+					NOT = {
+						state = 458
+						state = 665
+					}
+				}
+				add_compliance = 10
+			}
+		}
+	}
+
+	ITA_develop_the_levant = {
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_veni_vidi_vici
+			454 = { is_controlled_by = ITA }
+			455 = { is_controlled_by = ITA }
+			675 = { is_controlled_by = ITA }
+			656 = { is_controlled_by = ITA }
+			291 = { is_controlled_by = ITA }
+			676 = { is_controlled_by = ITA }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		remove_effect = {
+			455 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			676 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 454
+						state = 455
+						state = 675
+						state = 656
+						state = 291
+						state = 676
+					}
+				}
+				add_compliance = 10
+			}
+		}
+	}
+
+	ITA_develop_egypt = {
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_veni_vidi_vici
+			452 = { is_controlled_by = ITA }
+			983 = { is_controlled_by = ITA }
+			447 = { is_controlled_by = ITA }
+			907 = { is_controlled_by = ITA }
+			456 = { is_controlled_by = ITA }
+			457 = { is_controlled_by = ITA }
+			446 = { is_controlled_by = ITA }
+			994 = { is_controlled_by = ITA }
+			453 = { is_controlled_by = ITA }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		remove_effect = {
+			453 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			983 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 452
+						state = 983
+						state = 447
+						state = 907
+						state = 456
+						state = 457
+						state = 446
+						state = 994
+						state = 453
+					}
+				}
+				add_compliance = 10
+			}
+		}
+	}
+
+	ITA_develop_tunisia = {
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_veni_vidi_vici
+			665 = { is_controlled_by = ITA }
+			458 = { is_controlled_by = ITA }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		remove_effect = {
+			665 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			458 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 665
+						state = 458
+					}
+				}
+				add_compliance = 10
+			}
+		}
+	}
+
+	ITA_develop_libya = {
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_veni_vidi_vici
+			448 = { is_controlled_by = ITA }
+			661 = { is_controlled_by = ITA }
+			662 = { is_controlled_by = ITA }
+			449 = { is_controlled_by = ITA }
+			663 = { is_controlled_by = ITA }
+			450 = { is_controlled_by = ITA }
+			451 = { is_controlled_by = ITA }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 0
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 15
+		}
+
+		remove_effect = {
+			661 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			662 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 5
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 448
+						state = 661
+						state = 662
+						state = 449
+						state = 663
+						state = 450
+						state = 451
+					}
+				}
+				add_compliance = 10
+			}
+		}
+	}
+
+	ITA_appropriate_additional_land = {
+
+		cost = 0
+		fire_only_once = no
+
+		available = {
+			has_completed_focus = ITA_land_appropriation_programs
+		}
+
+		visible = {
+
+		}
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		complete_effect = {
+			ITA_economy_dynamic_modifier_tt = yes # tooltip
+			add_to_variable = { ITA_italian_economy_global_building_slots_factor = 0.10 tooltip = global_building_slots_factor_tt }
+			add_to_variable = { ITA_italian_economy_stability_factor = -0.1 tooltip = stability_factor_tt }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+political_actions = {
+	ITA_preplace_atlantikwall = {
+		name = "Place Converters on The Atlantikwall"
+		icon = generic_operation
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_global_flag = GLOBAL_france_capped
+			date > 1941.1.1
+			NOT = {
+				any_state = {
+					hidden_trigger = {
+						europe_dday_coastline = yes
+					}
+					custom_trigger_tooltip = {
+						tooltip = "European Coastline"
+					}
+					OR = {
+						is_controlled_by = ENG
+						is_controlled_by = USA
+						is_controlled_by = FRA
+						is_controlled_by = SAF
+						is_controlled_by = CAN
+						is_controlled_by = AST
+						is_controlled_by = RAJ
+						is_controlled_by = NZL
+						is_controlled_by = MEX
+						is_controlled_by = BRA
+						is_controlled_by = HOL
+					}
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			load_oob = "DDAY_WALL_OOB"
+		}
+	}
+
+	demilitarize_ethiopia = {
+		days_mission_timeout = 90
+		allowed = {
+			always = no
+		}
+
+		available = {
+			always = no
+
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			always = no
+		}
+		fire_only_once = yes
+		complete_effect = {
+
+
+		}
+		timeout_effect = {
+			550 = { set_demilitarized_zone = yes }
+			842 = { set_demilitarized_zone = yes }
+			841 = { set_demilitarized_zone = yes }
+			843 = { set_demilitarized_zone = yes }
+			908 = { set_demilitarized_zone = yes }
+			840 = { set_demilitarized_zone = yes }
+			839 = { set_demilitarized_zone = yes }
+			838 = { set_demilitarized_zone = yes }
+			837 = { set_demilitarized_zone = yes }
+			271 = { set_demilitarized_zone = yes }
+			836 = { set_demilitarized_zone = yes }
+			835 = { set_demilitarized_zone = yes }
+			844 = { set_demilitarized_zone = yes }
+			559 = { set_demilitarized_zone = yes }
+		}
+	}
+}
+
+operations = {
+	ITA_go_to_war = {
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			GER = {
+				OR = {
+					has_war_with = FRA
+					has_war_with = ENG
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			ENG = {
+				declare_war_on_enemy_faction = yes
+			}
+		}
+	}
+
+	ITA_go_to_war_with_france = {
+		priority = 100
+		allowed = { tag = ITA }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 180
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			OR = {
+				has_war_with = FRA
+				has_war_with = ENG
+			}
+		}
+
+		visible = {
+			always = yes
+		}
+
+		activation = {
+			GER = { has_war_with = FRA }
+		}
+
+		timeout_effect = {
+			add_war_support = -0.20
+			add_stability =  -0.20
+			# activate_decision = ITA_go_to_war_with_france2
+			set_global_flag = ITA_not_at_war
+			ITA = {country_event = { id = italy.503 }}
+			ENG = {
+				effect_tooltip = {
+					ENG = {
+						declare_war_on = {
+							target = ITA
+							type = annex_everything
+						}
+					}
+				}
+			}
+			ENG = {country_event = { id = britain.504 }}
+		}
+	}
+
+	# ITA_go_to_war_with_france2 = {
+	# 	priority = 100
+	# 	allowed = { tag = ITA }
+
+	# 	icon = generic_prepare_civil_war
+
+	# 	available = {
+	# 		hidden_trigger = { always = no }
+	# 	}
+
+	# 	days_mission_timeout = 60
+	# 	is_good = no
+	# 	fire_only_once = yes
+
+	# 	cancel_trigger = {
+	# 		has_war_with = FRA
+	# 	}
+
+	# 	visible = {
+	# 		always = yes
+	# 	}
+
+	# 	activation = {
+	# 		has_global_flag = ITA_not_at_war
+	# 	}
+
+	# 	timeout_effect = {
+	# 		ENG = {
+	# 			create_wargoal = {
+	# 				type = topple_government
+	# 				target = ITA
+	# 			}
+	# 		}
+	# 		ENG = {country_event = { id = britain.504 }}
+	# 	}
+	# }
+
+	ITA_go_to_war_with_france_event = {
+		priority = 100
+		allowed = { tag = ITA }
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 0
+		fire_only_once = yes
+
+		visible = {
+			always = no
+		}
+
+		activation = {
+			GER = { has_war_with = FRA }
+		}
+
+		timeout_effect = {
+			ITA = {country_event = { id = italy.502 }}
+		}
+	}
+
+	ITA_annex_bul = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA = { has_war_with = ENG }
+			BUL = {is_ai = yes}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			always = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			ITA = {
+				BUL = {
+					pow_before_annex = yes
+				}
+			}
+			annex_country = { target = BUL transfer_troops = yes }
+			add_state_core = 48
+			add_state_core = 211
+			add_state_core = 212
+			add_state_core = 801
+
+		}
+	}
+
+	ITA_send_the_ultimatum_to_king_zog = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_stake_our_claims
+			date > 1937.6.1
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			annex_country = { target = ALB }
+			add_named_threat = { threat = 2 name = ITA_albania_war_goal }
+			USA = {
+				set_country_flag = { flag = USA_albania_window days = 60 value = 1 }
+			}
+			hidden_effect = {
+				country_event = { days = 1 id = news.22 }
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 1500
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 50
+					producer = ITA
+				}
+			}
+		}
+	}
+
+	ITA_demand_yugoslav_submission = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_stake_our_claims
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+
+		visible = {
+			always = yes
+		}
+
+		available = {
+			has_global_flag = GLOBAL_france_capped
+			ITA = {
+				has_war_with = ENG
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			annex_country = { target = YUG }
+			add_named_threat = { threat = 10 name = "Yugoslavia Annexed" }
+			every_state = {
+				limit = {
+					OR = {
+						state = 106
+						state = 803
+						state = 970
+					}
+				}
+				transfer_state_to = BUL
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 45
+						state = 764
+					}
+				}
+				transfer_state_to = HUN
+			}
+		}
+	}
+
+	ITA_demand_greek_submission = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_stake_our_claims
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+
+		visible = {
+			always = yes
+		}
+
+		available = {
+			has_global_flag = GLOBAL_france_capped
+			ITA = {
+				has_war_with = ENG
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			annex_country = { target = GRE }
+			add_named_threat = { threat = 10 name = "Greece Annexed" }
+			if = {
+				limit = {
+					BUL = {
+						exists = yes
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 731
+							state = 184
+						}
+					}
+					transfer_state_to = BUL
+				}
+			}
+			182 = {
+				transfer_state_to = ENG
+			}
+		}
+	}
+
+	ITA_demand_our_french_claims = {
+
+		icon = generic_nationalism
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			has_completed_focus = ITA_stake_our_claims
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+
+		visible = {
+			always = yes
+		}
+
+		available = {
+			has_global_flag = GLOBAL_france_capped
+			ITA = {
+				has_war_with = ENG
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_named_threat = { threat = 10 name = "Italy Takes French Territory" }
+			every_state = {
+				limit = {
+					OR = {
+						state = 458
+						state = 665
+						state = 1
+						state = 32
+						state = 735
+						state = 851
+						state = 21
+					}
+				}
+				transfer_state_to = ITA
+			}
+		}
+	}
+
+	# ITA_invade_iran = {
+
+	# 	icon = generic_nationalism
+
+	# 	allowed = {
+	# 		original_tag = ITA
+	# 	}
+
+	# 	fire_only_once = yes
+
+	# 	available = {
+	# 		291 = {
+	# 			CONTROLLER = {
+	# 				OR = {
+	# 					tag = ITA
+	# 					is_subject_of = ITA
+	# 					is_in_faction_with = ITA
+	# 				}
+	# 			}
+	# 		}
+	# 		country_exists = PER
+	# 	}
+
+	# 	complete_effect = {
+	# 		hidden_effect = {
+	# 			every_country = {
+	# 				news_event = generic.33
+	# 			}
+	# 		}
+	# 		ENG = {
+	# 			hidden_effect = { set_technology = { countenance_dp = 1 popup = no } }
+	# 			ENG = {
+	# 				annex_country = { target = PER transfer_troops = no }
+	# 			}
+	# 			division_template = {
+	# 				name = "Colonial Infantry (Iran)"
+	# 				division_names_group = ENG_INF_01
+
+	# 				regiments = {
+	# 					infantry = { x = 0 y = 0 }
+	# 					infantry = { x = 0 y = 1 }
+	# 					infantry = { x = 0 y = 2 }
+	# 					infantry = { x = 0 y = 3 }
+
+	# 					infantry = { x = 1 y = 0 }
+	# 					infantry = { x = 1 y = 1 }
+	# 					infantry = { x = 1 y = 2 }
+	# 					infantry = { x = 1 y = 3 }
+
+	# 					infantry = { x = 2 y = 0 }
+	# 					infantry = { x = 2 y = 1 }
+	# 					infantry = { x = 2 y = 2 }
+
+	# 					dp_artillery_brigade = { x = 3 y = 0 }
+	# 					dp_artillery_brigade = { x = 3 y = 1 }
+	# 					dp_artillery_brigade = { x = 3 y = 2 }
+	# 					dp_artillery_brigade = { x = 3 y = 3 }
+
+	# 					dp_artillery_brigade = { x = 4 y = 0 }
+	# 					dp_artillery_brigade = { x = 4 y = 1 }
+	# 					dp_artillery_brigade = { x = 4 y = 2 }
+	# 					dp_artillery_brigade = { x = 4 y = 3 }
+	# 				}
+	# 				support = {
+	# 					light_tank_recon = { x = 0 y = 0 }
+	# 					engineer = { x = 0 y = 1 }
+	# 					signal_company = { x = 0 y = 2 }
+	# 					logistics_company_mot = { x = 0 y = 3 }
+	# 					anti_air = { x = 1 y = 0 }
+	# 					military_police = { x = 1 y = 1 }
+	# 					field_hospital = { x = 1 y = 2 }
+	# 				}
+	# 			}
+	# 			444 = {
+	# 				for_loop_effect = {
+	# 					end = 9
+	# 					create_unit = {
+	# 						division = "name = \"Colonial Infantry (Iran)\" division_template = \"Colonial Infantry (Iran)\" start_experience_factor = 0.5"
+	# 						owner = ENG
+	# 					}
+	# 				}
+	# 			}
+	# 			give_resource_rights = { receiver = SOV state = 411 }
+	# 			give_resource_rights = { receiver = SOV state = 412 }
+	# 			hidden_effect = {
+	# 				ENG = { country_event = { id = NSB_soviet_foreign_politics_events.270 days = 1 } } #Hidden Effect to transfer states and give resource rights
+	# 			}
+	# 			custom_effect_tooltip = ENG_iran_spawn_in_tt
+	# 		}
+	# 	}
+	# }
+
+	ITA_prepare_coastal_defenses_mainland = {
+
+		cost = 0
+		fire_only_once = no
+
+		available = {
+			has_completed_focus = ITA_prepare_the_coastal_defenses
+		}
+
+		visible = {
+
+		}
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 21
+						state = 851
+						state = 735
+						state = 158
+						state = 162
+						state = 2
+						state = 117
+						state = 156
+						state = 115
+						state = 849
+						state = 157
+						state = 161
+						state = 160
+						state = 736
+						state = 852
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+				set_building_level  = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ITA_prepare_coastal_defenses_med_islands = {
+
+		cost = 0
+		fire_only_once = no
+
+		available = {
+			has_completed_focus = ITA_prepare_the_coastal_defenses
+		}
+
+		visible = {
+
+		}
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 1
+						state = 114
+						state = 116
+						state = 182
+						state = 183
+						state = 187
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+				set_building_level  = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ITA_prepare_coastal_defenses_greece = {
+
+		cost = 0
+		fire_only_once = no
+
+		available = {
+			has_completed_focus = ITA_prepare_the_coastal_defenses
+		}
+
+		visible = {
+
+		}
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 185
+						state = 186
+						state = 47
+						state = 731
+						state = 184
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+				set_building_level  = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ITA_prepare_coastal_defenses_yugoslavia = {
+
+		cost = 0
+		fire_only_once = no
+
+		available = {
+			has_completed_focus = ITA_prepare_the_coastal_defenses
+		}
+
+		visible = {
+
+		}
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 103
+						state = 105
+						state = 934
+						state = 44
+						state = 805
+					}
+				}
+				set_building_level  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+					}
+					level = 3
+					instant_build = yes
+				}
+				set_building_level  = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	# ITA_add_somalia = {
+
+	# 	icon = generic_nationalism
+
+	# 	allowed = {
+	# 		original_tag = ITA
+	# 	}
+
+	# 	fire_only_once = yes
+
+	# 	available = {
+	# 		269 = {
+	# 			CONTROLLER = {
+	# 				OR = {
+	# 					tag = ITA
+	# 					is_subject_of = ITA
+	# 				}
+	# 			}
+	# 		}
+
+	# 	}
+
+	# 	visible = {
+	# 		550 = {
+	# 			CONTROLLER = {
+	# 				is_subject_of = ITA
+	# 			}
+	# 		}
+	# 		271 = {
+	# 			CONTROLLER = {
+	# 				is_subject_of = ITA
+	# 			}
+	# 		}
+	# 		559 = {
+	# 			CONTROLLER = {
+	# 				is_subject_of = ITA
+	# 			}
+	# 		}
+	# 	}
+
+	# 	complete_effect = {
+	# 		add_political_power = 100
+	# 		ETH = {
+	# 			transfer_state = 268
+	# 			transfer_state = 269
+	# 			add_state_core = 268
+	# 			add_state_core = 269
+	# 		}
+	# 	}
+	# }
+
+	# ITA_unify_colonies = {
+
+	# 	icon = generic_nationalism
+
+	# 	allowed = {
+	# 		original_tag = ITA
+	# 	}
+
+	# 	fire_only_once = yes
+
+	# 	available = {
+	# 		NOT = { has_war_with = ETH}
+	# 	}
+
+	# 	visible = {
+	# 		550 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		842 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		841 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		843 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		908 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		840 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		839 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		838 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		837 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		271 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		836 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		835 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		844 = { is_controlled_by_ROOT_or_ally = yes }
+	# 		559 = { is_controlled_by_ROOT_or_ally = yes }
+	# 	}
+
+	# 	complete_effect = {
+	# 		add_political_power = 100
+	# 		ETH = {
+	# 			# transfer_state = 550
+	# 			# transfer_state = 271
+	# 			# transfer_state = 559
+	# 			transfer_state = 550
+	# 			transfer_state = 842
+	# 			transfer_state = 841
+	# 			transfer_state = 843
+	# 			transfer_state = 908
+	# 			transfer_state = 840
+	# 			transfer_state = 839
+	# 			transfer_state = 838
+	# 			transfer_state = 837
+	# 			transfer_state = 271
+	# 			transfer_state = 836
+	# 			transfer_state = 835
+	# 			transfer_state = 844
+	# 			transfer_state = 559
+	# 			set_cosmetic_tag = ETH_ITA
+	# 			create_country_leader = {
+	# 				name = "Fresh Prince Amedeo"
+	# 				picture = "gfx/leaders/ITA/Portrait_Duke_of_Aosta.dds"
+	# 				expire = "1965.1.1"
+	# 				ideology = fascism_ideology
+	# 				traits = {
+	# 					prince_of_terror
+	# 				}
+	# 			}
+	# 			add_equipment_to_stockpile = {
+	# 				type = infantry_equipment_1
+	# 				amount = 25000
+	# 				producer = ITA
+	# 			}
+	# 			# add_equipment_to_stockpile = {
+	# 			# 	type = squad_equipment_0
+	# 			# 	amount = 5000
+	# 			# 	producer = ITA
+	# 			# }
+	# 			add_equipment_to_stockpile = {
+	# 				type = support_equipment_1
+	# 				amount = 1000
+	# 				producer = ITA
+	# 			}
+	# 		}
+	# 		set_autonomy = { target = ETH autonomy_state = autonomy_reichskommissariat }
+	# 		create_corps_commander = {
+	# 			name = "Fresh Prince Amedeo"
+	# 			picture = "Portrait_Duke_of_Aosta.dds"
+	# 			traits = { jungle_rat infantry_leader media_personality offensive_doctrine trickster }
+	# 			skill = 4
+	# 			attack_skill = 4
+	# 			defense_skill = 3
+	# 			planning_skill = 3
+	# 			logistics_skill = 4
+	# 		}
+	# 	}
+	# }
+	# ITA_demand_tunisia = {
+	# 	icon = generic_nationalism
+
+	# 	allowed = {
+	# 		original_tag = ITA
+	# 	}
+
+	# 	fire_only_once = yes
+
+	# 	visible = { has_completed_focus = ITA_claims_on_france }
+	# 	available ={
+	# 		has_completed_focus = ITA_claims_on_france
+	# 		controls_state = 448
+	# 		controls_state = 450
+
+	# 	}
+	# 	complete_effect = {
+	# 		transfer_state = 458
+	# 		transfer_state = 665
+	# 	}
+
+	# }
+	ITA_return_france = {
+		visible = {
+			country_exists = VIC
+			controls_state = 21
+			controls_state = 32
+		}
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		fire_only_once = yes
+
+		available = {
+			country_exists = VIC
+			controls_state = 21
+			controls_state = 32
+		}
+		complete_effect = {
+			VIC = {
+				transfer_state = 21
+				transfer_state = 32
+			}
+		}
+	}
+
+}
+
+ITA_propaganda_campaigns = {
+	ITA_flamma_prop = { # ID = 2
+		priority = 12
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			experience_loss_factor = -0.1
+			experience_gain_army_factor = 0.1
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 2 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 2 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_navy_prop = { # ID = 3
+		priority = 11
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			industrial_capacity_dockyard = 0.05
+			production_speed_dockyard_factor = 0.1
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 3 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 3 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_africa_prop = { # ID = 4
+		priority = 10
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			supply_node_range = 0.1
+			acclimatization_hot_climate_gain_factor = 0.25
+			army_morale_factor = 0.05
+			supply_consumption_factor = -0.1
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 4 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 4 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_vincere_prop = { # ID = 5
+		priority = 9
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+			has_completed_focus = ITA_pact_of_steel
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			research_sharing_per_country_bonus_factor = 0.5
+			command_power_gain_mult = 1.0
+			offensive_war_stability_factor = 0.1
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 5 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 5 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_liberatori_prop = { # ID = 6
+		priority = 8
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+			OR = {
+				has_war_with = ENG
+				has_war_with = USA
+			}
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			industry_air_damage_factor = -0.2
+			production_speed_anti_air_building_factor = 0.1
+			static_anti_air_hit_chance_factor = 0.25
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 6 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 6 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_return_prop = { # ID = 7
+		priority = 7
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+			NOT = {
+				any_state = {
+					is_controlled_by = ITA
+					is_on_continent = africa
+				}
+			}
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			army_core_attack_factor = 0.1
+			army_core_defence_factor = 0.1
+			supply_combat_penalties_on_core_factor = -0.2
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 7 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 7 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_navy2_prop = { # ID = 8
+		priority = 6
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			experience_gain_navy = 0.1
+			navy_advisor_cost_factor = -0.25
+			repair_speed_factor = 0.1
+
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 8 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 8 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_artillery_prop = { # ID = 9
+		priority = 5
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			railway_gun_bombardment_factor = 0.25
+			army_artillery_attack_factor = 0.05
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 9 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 9 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_warsupport_prop = { # ID = 10
+		priority = 4
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+			has_war_with = ENG
+			has_war_with = USA
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			war_support_factor = 0.1
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 10 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 10 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_credito_prop = { # ID = 11
+		priority = 3
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+			date > 1942.1.1
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			consumer_goods_expected_value = -0.03
+			state_production_speed_buildings_factor = 0.05
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 11 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 11 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_license_prop = { # ID = 12
+		priority = 2
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+			is_in_faction_with = GER
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			research_speed_factor = 0.05
+		}
+
+		complete_effect = {
+			GER = {
+				add_ideas = italy_trade_prop
+			}
+			set_variable = { ITA_new_propaganda_campaign = 12 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			GER = {
+				remove_ideas = italy_trade_prop
+			}
+			set_variable = { ITA_propaganda_campaign_to_remove = 12 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+
+	ITA_serivizio_prop = { # ID = 13
+		priority = 1
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			ITA_propaganda_poster_slot_available = yes
+			GER = {
+				has_completed_focus = GER_italian_social_republic
+			}
+		}
+
+		days_remove = 365
+
+		days_re_enable = 360
+
+		cost = 25
+
+		modifier = {
+			# recruitable_population = 0.05
+			industrial_capacity_factory = 0.1
+			consumer_goods_expected_value = 0.05
+		}
+
+		complete_effect = {
+			set_variable = { ITA_new_propaganda_campaign = 13 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { ITA_propaganda_campaign_to_remove = 13 }
+			ITA_reset_propaganda_campaign_slot_effect = yes
+			hidden_effect = { FROM = { country_event = { id = generic.26 hours = 1} } }
+		}
+	}
+}
+
+prospect_for_resources = {
+
+	ITA_search_for_oil = {
+
+		icon = oil
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+			# has_completed_focus = ITA_oil_prospecting
+			OR = {
+				NOT = { has_country_flag = ITA_lib_3 }
+				has_tech = excavation1
+			}
+			OR = {
+				NOT = { has_country_flag = ITA_lib_4 }
+				has_tech = excavation2
+			}
+			OR = {
+				NOT = { has_country_flag = ITA_lib_5 }
+				has_tech = excavation3
+			}
+		}
+
+		visible = {
+			450 = {
+				CONTROLLER = {
+					OR = {
+						tag = ITA
+						is_subject_of = ITA
+					}
+				}
+			}
+			NOT = { has_country_flag = ITA_lib_6 }
+		}
+
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_country_flag = ITA_lib_1
+				}
+				set_country_flag = ITA_lib_2
+				clr_country_flag = ITA_lib_1
+				add_resource = {
+					type = oil
+					amount = 120
+					state = 450
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ITA_lib_2
+				}
+				set_country_flag = ITA_lib_3
+				clr_country_flag = ITA_lib_2
+				add_resource = {
+					type = oil
+					amount = 140
+					state = 450
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ITA_lib_3
+				}
+				set_country_flag = ITA_lib_4
+				clr_country_flag = ITA_lib_3
+				add_resource = {
+					type = oil
+					amount = 160
+					state = 450
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ITA_lib_4
+				}
+				set_country_flag = ITA_lib_5
+				clr_country_flag = ITA_lib_4
+				add_resource = {
+					type = oil
+					amount = 180
+					state = 450
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = ITA_lib_5
+				}
+				set_country_flag = ITA_lib_6
+				clr_country_flag = ITA_lib_5
+				add_resource = {
+					type = oil
+					amount = 200
+					state = 450
+				}
+			}
+			else = {
+				set_country_flag = ITA_lib_1
+				add_resource = {
+					type = oil
+					amount = 100
+					state = 450
+				}
+			}
+
+		}
+
+	}
+}

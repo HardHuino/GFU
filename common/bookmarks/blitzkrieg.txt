@@ -1,0 +1,353 @@
+bookmarks = {
+	bookmark = {
+		name = "NO_ASIA_NAME"
+		desc = "NO_ASIA_DESC"
+		date = 1936.1.1.14
+		picture = "GFX_select_date_no_asia"
+		default_country = "GER"
+		default = yes
+
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				new_deal
+				great_depression
+				undisturbed_isolation
+			}
+			focuses = {
+				USA_new_deal_2
+				USA_build_the_pentagon
+				USA_victory_plan
+			}
+		}
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				trotskyite_plot_nsb
+				home_of_revolution
+				SOV_order_270_idea
+			}
+			focuses = {
+				SOV_the_path_of_marxism_leninism
+				SOV_stalins_organ
+				SOV_war_mobilisation
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				MTG_naval_treaty_adherent
+				stiff_upper_lip_1
+				george_v
+			}
+			focuses = {
+				ENG_end_of_the_beginning
+				ENG_the_industrial_heartland
+				ENG_3_years_a_ship_300_years_a_tradition
+			}
+		}
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				triumphant_will
+				GER_barbarossa
+				GER_mefo_bills_1
+			}
+			focuses = {
+				GER_legacy_of_the_luftwaffe
+				GER_danzig_or_war
+				GER_mobilise_reich
+			}
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				vittoria_mutilata
+				vittorio_emanuele
+				ITA_mare_nostrum
+			}
+			focuses = {
+				ITA_the_total_mobilization_of_society
+				ITA_roma_invicta
+				ITA_ancient_ambitions
+			}
+		}
+
+		# "---"={
+		# 	history = "OTHER_GATHERING_STORM_DESC"
+		# }
+
+		# minors from DLC ####
+		"FRA"={
+			minor = yes
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				FRA_victors_of_wwi
+				FRA_disjointed_government
+				FRA_protected_by_the_maginot_line
+			}
+			focuses = {
+				FRA_form_the_popular_front
+				FRA_dirigisme
+				FRA_devalue_the_franc
+			}
+		}
+		"CAN"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+				CAN_national_resources_mobilization_act
+			}
+			focuses = {
+				CAN_forced_quebec_conscription
+				CAN_compromise_with_quebec
+				CAN_aluminium_company_of_canada
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				# SAF_ossewabrandwag
+				# SAF_history_of_segregation
+				# SAF_cheap_labor_1
+			}
+			focuses = {
+				# SAF_secure_interests_in_africa
+				# SAF_south_african_steel
+				# SAF_armor_effort
+			}
+		}
+		"AST"={
+			minor = yes
+			history = "AST_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				AST_great_depression_1
+				AST_rats_of_tobruk_idea
+				AST_invest_in_victory
+			}
+			focuses = {
+				AST_fight_work_or_perish
+				AST_squash_the_squanderbugs
+				AST_rats_of_tobruk
+			}
+		}
+		# "NZL"={
+		# 	minor = yes
+		# 	history = "NZL_GATHERING_STORM_DESC"
+		# 	ideology = democratic
+		# 	ideas = {
+		# 		NZL_bob_semple_tank
+		# 		NZL_maori_conscription
+		# 		NZL_stomp_out_pacifism
+		# 	}
+		# 	focuses = {
+		# 		NZL_bob_semple_tank
+		# 		NZL_think_big
+		# 		NZL_maori_volunteers
+		# 	}
+		# }
+		# "MEX"={
+		# 	minor = yes
+		# 	history = "MEXICO_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		MEX_church_power_2
+		# 		MEX_politicised_army
+		# 		MEX_oil_concessions
+		# 	}
+		# 	focuses = {
+		# 		MEX_focus_cold_shower
+		# 		MEX_focus_northern_steel_plants
+		# 		MEX_depoliticised_army
+		# 	}
+		# }
+		# "BRA"={
+		# 	minor = yes
+		# 	history = "BRA_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		BRA_coffee_oligarchs
+		# 		BRA_revolution_of_1930
+		# 		BRA_great_depression_1
+		# 	}
+		# 	focuses = {
+		# 		BRA_curtail_the_coffe_oligarchs
+		# 		BRA_pracinhas_focus
+		# 		BRA_bandeirantes
+		# 	}
+		# }
+		# "HOL"={
+		# 	minor = yes
+		# 	history = "NETHERLANDS_GATHERING_STORM_DESC"
+		# 	ideology = democratic
+		# 	ideas = {
+		# 		HOL_wilhelmina
+		# 		HOL_shell_shocked_spectator_5
+		# 		HOL_de_crisisjaren_5
+		# 	}
+		# 	focuses = {
+		# 		HOL_continue_the_war_in_batavia
+		# 		HOL_liberation
+		# 		HOL_prepare_the_inundation_lines
+		# 	}
+		# }
+		# "POL"={
+		# 	minor = yes
+		# 	history = "POL_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		POL_influx_of_exiles
+		# 		POL_april_constitution_1
+		# 		POL_looming_peasants_strike
+		# 	}
+		# 	focuses = {
+		# 		POL_complete_april_constitution
+		# 		POL_niech_zyje_opor
+		# 		POL_the_four_year_plan
+		# 	}
+		# }
+		# "CHI"={
+		# 	minor = yes
+		# 	history = "CHI_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		CHI_army_corruption_1
+		# 		CHI_hyper_inflation_1
+		# 		CHI_nine_power_treaty
+		# 	}
+		# 	focuses = {
+		# 		CHI_scorched_earth_tactics
+		# 		CHI_army_reform
+		# 		CHI_invite_the_flying_tigers
+		# 	}
+		# }
+		"SPR"={
+			minor = yes
+			history = "SPAIN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				SPA_recovering_from_civil_war
+				SPA_carlism_1
+				SPR_political_violence
+			}
+			focuses = {
+				SPA_fascist_economic_aid
+				SPA_adopt_the_26_points
+				SPA_iberian_pact
+			}
+		}
+		"HUN"={
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"ROM"={
+			minor = yes
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+
+			}
+			focuses = {
+
+			}
+		}
+		"BUL"={
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BUL_second_national_catastrophe
+				BUL_army_restrictions
+				BUL_imro_01
+			}
+			focuses = {
+				BUL_the_tsars_regime
+				BUL_appoint_right_wing_ministers
+				BUL_greater_bulgaria
+			}
+		}
+		# NEW DLC
+		# FIN={
+		# 	minor = yes
+		# 	history = FIN_GATHERING_STORM_DESC
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		FIN_sisu_2
+		# 	}
+		# 	focuses = {
+		# 		FIN_winter_warfare
+		# 		FIN_greater_finland
+		# 		FIN_oy_alkoholiliike
+		# 	}
+		# }		
+		# OLD - used
+		# "FIN"={
+		# 	minor = yes
+		# 	history = "FIN_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		sisu
+		# 		FIN_lahti
+		# 		FIN_winter_war
+		# 	}
+		# 	focuses = {
+		# 		FIN_winter_war
+		# 		FIN_motti
+		# 		FIN_finish_mannerheim
+		# 	}
+		# }
+		# "YUG"={
+		# 	minor = yes
+		# 	history = "YUG_GATHERING_STORM_DESC"
+		# 	ideology = neutrality
+		# 	ideas = {
+		# 		YUG_invite_german_industrialists_ns_fake
+		# 		YUG_idea_axis_capital
+		# 		YUG_achtung_panzer
+		# 	}
+		# 	focuses = {
+		# 		YUG_study_the_arditi
+		# 		YUG_utmost_elitism
+		# 		YUG_Under_New_Regime
+		# 	}
+		# }
+		# "VIC"={
+		# 	minor = yes
+		# 	history = "VIC_GATHERING_STORM_DESC"
+		# 	ideology = fascism
+		# 	ideas = {
+		# 		VIC_concentrate_on_tanks
+		# 		VIC_adjusting_the_industry
+		# 		VIC_shifted_production
+		# 	}
+		# 	focuses = {
+		# 		VIC_Hand_over_the_Navy
+		# 		VIC_Defend_Core_Land
+		# 		VIC_Beginning_of_Reunification
+		# 	}
+		# }
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

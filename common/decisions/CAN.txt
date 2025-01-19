@@ -1,0 +1,139 @@
+operations = {
+	CAN_annex_saf = { #DANSTER_CHANGE
+
+		allowed = {
+			original_tag = CAN
+		}
+
+		available = {
+			SAF = { is_ai = yes }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			CAN = {
+				SAF = {
+					pow_before_annex = yes
+				}
+			}
+			annex_country = { target = SAF transfer_troops = yes }
+			add_state_core = 275
+			add_state_core = 541
+			add_state_core = 681
+			add_state_core = 719
+		}
+	}
+
+	# CAN_mech_deal_start = {
+
+	# 	icon = generic_operation
+
+	# 	allowed = {
+	# 		original_tag = CAN
+	# 	}
+
+	# 	available = {
+	# 		has_tech = mechanised_infantry
+	# 		date > 1939.1.1
+	# 		NOT = {
+	# 			has_global_flag = US_mech_purchase
+	# 		}
+	# 	}
+
+	# 	visible = {
+	# 		NOT = {
+	# 			has_global_flag = US_mech_purchase
+	# 		}
+	# 	}
+
+	# 	fire_only_once = no
+
+	# 	complete_effect = {
+	# 		set_global_flag = US_mech_purchase
+	# 		add_ideas = mech_purchase
+	# 		activate_mission = CAN_mech_deal_purchase
+	# 	}
+	# }
+
+	# CAN_mech_deal_stop = {
+
+	# 	icon = generic_operation
+
+	# 	allowed = {
+	# 		original_tag = CAN
+	# 	}
+
+	# 	available = {
+	# 		has_global_flag = US_mech_purchase
+	# 	}
+
+	# 	visible = {
+	# 		has_global_flag = US_mech_purchase
+	# 	}
+
+	# 	fire_only_once = no
+
+	# 	complete_effect = {
+	# 		clr_global_flag = US_mech_purchase
+
+	# 	}
+	# }
+
+	# CAN_mech_deal_purchase = {
+
+	# 	icon = generic_operation
+
+	# 	is_good = yes
+
+	# 	allowed = {
+	# 		always = no
+	# 	}
+
+	# 	activation = {
+
+	# 	}
+
+	# 	available = {
+	# 		always = no
+	# 	}
+
+	# 	fire_only_once = no
+
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+
+	# 	days_mission_timeout = 30
+
+	# 	timeout_effect = {
+	# 		add_equipment_to_stockpile = {
+	# 			type = mechanized_equipment_1
+	# 			amount = 100
+	# 			producer = CAN
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				has_global_flag = US_mech_purchase
+	# 			}
+	# 			activate_mission = CAN_mech_deal_purchase
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				NOT = {
+	# 					has_global_flag = US_mech_purchase
+	# 				}
+	# 			}
+	# 			remove_ideas = mech_purchase
+	# 		}
+	# 	}
+	# }
+}

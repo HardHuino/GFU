@@ -1,0 +1,573 @@
+scripted_gui = {
+	free_template_menu_toggle = {
+		context_type = player_context
+		parent_window_name = "countrydeploymentview"
+		window_name = "free_template_toggle_container"
+		visible = {
+			always = yes
+		}
+		effects = {
+			free_template_menu_toggle_click = {
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = FREE_TEMPLATE_MENU_TOGGLE } } }
+					ROOT = { set_country_flag = FREE_TEMPLATE_MENU_TOGGLE }
+				}
+				else = {
+					ROOT = { clr_country_flag = FREE_TEMPLATE_MENU_TOGGLE }
+				}
+			}
+		}
+		triggers = {
+			free_template_menu_toggle_click_enabled = {
+				always = yes
+			}
+		}
+	}
+
+	menu_templ = {
+		context_type = player_context
+		parent_window_name = "countrydeploymentview"
+		window_name = "menu_templ"
+		visible = {
+			has_country_flag = FREE_TEMPLATE_MENU_TOGGLE
+		}
+
+		effects = {
+			template_add_1_click = {
+				division_template = {
+					name = "11/8 Artillery"
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+
+						artillery_brigade = { x = 3 y = 0 }
+						artillery_brigade = { x = 3 y = 1 }
+						artillery_brigade = { x = 3 y = 2 }
+						artillery_brigade = { x = 3 y = 3 }
+
+						artillery_brigade = { x = 4 y = 0 }
+						artillery_brigade = { x = 4 y = 1 }
+						artillery_brigade = { x = 4 y = 2 }
+						artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						artillery_support = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_2_click = {
+				division_template = {
+					name = "11/8 Dual Purpose"
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+
+						dp_artillery_brigade = { x = 3 y = 0 }
+						dp_artillery_brigade = { x = 3 y = 1 }
+						dp_artillery_brigade = { x = 3 y = 2 }
+						dp_artillery_brigade = { x = 3 y = 3 }
+
+						dp_artillery_brigade = { x = 4 y = 0 }
+						dp_artillery_brigade = { x = 4 y = 1 }
+						dp_artillery_brigade = { x = 4 y = 2 }
+						dp_artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						dp_artillery = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_3_click = {
+				division_template = {
+					name = "11/8 Pack Artillery"
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+
+						pack_artillery_brigade = { x = 3 y = 0 }
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
+
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 2 }
+						pack_artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						pack_artillery = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_4_click = {
+				division_template = {
+					name = "11/8 Heavy Artillery"
+					is_locked = no
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+
+						heavy_artillery_brigade = { x = 3 y = 0 }
+						heavy_artillery_brigade = { x = 3 y = 1 }
+						heavy_artillery_brigade = { x = 3 y = 2 }
+						heavy_artillery_brigade = { x = 3 y = 3 }
+
+						heavy_artillery_brigade = { x = 4 y = 0 }
+						heavy_artillery_brigade = { x = 4 y = 1 }
+						heavy_artillery_brigade = { x = 4 y = 2 }
+						heavy_artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						heavy_anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						heavy_artillery_support = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_5_click = {
+				division_template = {
+					name = "11/8 Assault Troops"
+					is_locked = no
+					regiments = {
+						paratrooper = { x = 0 y = 0 }
+						paratrooper = { x = 0 y = 1 }
+						paratrooper = { x = 0 y = 2 }
+						paratrooper = { x = 0 y = 3 }
+
+						paratrooper = { x = 1 y = 0 }
+						paratrooper = { x = 1 y = 1 }
+						paratrooper = { x = 1 y = 2 }
+						paratrooper = { x = 1 y = 3 }
+
+						paratrooper = { x = 2 y = 0 }
+						paratrooper = { x = 2 y = 1 }
+						paratrooper = { x = 2 y = 2 }
+
+						heavy_artillery_brigade = { x = 3 y = 0 }
+						heavy_artillery_brigade = { x = 3 y = 1 }
+						heavy_artillery_brigade = { x = 3 y = 2 }
+						heavy_artillery_brigade = { x = 3 y = 3 }
+
+						heavy_artillery_brigade = { x = 4 y = 0 }
+						heavy_artillery_brigade = { x = 4 y = 1 }
+						heavy_artillery_brigade = { x = 4 y = 2 }
+						heavy_artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						heavy_anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						heavy_artillery_support = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_6_click = {
+				division_template = {
+					name = "11/8 Marines"
+					is_locked = no
+					regiments = {
+						marine = { x = 0 y = 0 }
+						marine = { x = 0 y = 1 }
+						marine = { x = 0 y = 2 }
+						marine = { x = 0 y = 3 }
+
+						marine = { x = 1 y = 0 }
+						marine = { x = 1 y = 1 }
+						marine = { x = 1 y = 2 }
+						marine = { x = 1 y = 3 }
+
+						marine = { x = 2 y = 0 }
+						marine = { x = 2 y = 1 }
+						marine = { x = 2 y = 2 }
+
+						rocket_artillery_brigade = { x = 3 y = 0 }
+						rocket_artillery_brigade = { x = 3 y = 1 }
+						rocket_artillery_brigade = { x = 3 y = 2 }
+						rocket_artillery_brigade = { x = 3 y = 3 }
+
+						rocket_artillery_brigade = { x = 4 y = 0 }
+						rocket_artillery_brigade = { x = 4 y = 1 }
+						rocket_artillery_brigade = { x = 4 y = 2 }
+						rocket_artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						heavy_anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						rocket_artillery = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_7_click = {
+				division_template = {
+					name = "11/8 Mountaineers"
+					is_locked = no
+					regiments = {
+						mountaineers = { x = 0 y = 0 }
+						mountaineers = { x = 0 y = 1 }
+						mountaineers = { x = 0 y = 2 }
+						mountaineers = { x = 0 y = 3 }
+
+						mountaineers = { x = 1 y = 0 }
+						mountaineers = { x = 1 y = 1 }
+						mountaineers = { x = 1 y = 2 }
+						mountaineers = { x = 1 y = 3 }
+
+						mountaineers = { x = 2 y = 0 }
+						mountaineers = { x = 2 y = 1 }
+						mountaineers = { x = 2 y = 2 }
+
+						pack_artillery_brigade = { x = 3 y = 0 }
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
+
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 2 }
+						pack_artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						heavy_anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						pack_artillery = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_8_click = {
+				division_template = {
+					name = "11/8 Rangers"
+					is_locked = no
+					regiments = {
+						jaeger = { x = 0 y = 0 }
+						jaeger = { x = 0 y = 1 }
+						jaeger = { x = 0 y = 2 }
+						jaeger = { x = 0 y = 3 }
+
+						jaeger = { x = 1 y = 0 }
+						jaeger = { x = 1 y = 1 }
+						jaeger = { x = 1 y = 2 }
+						jaeger = { x = 1 y = 3 }
+
+						jaeger = { x = 2 y = 0 }
+						jaeger = { x = 2 y = 1 }
+						jaeger = { x = 2 y = 2 }
+
+						pack_artillery_brigade = { x = 3 y = 0 }
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
+
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 2 }
+						pack_artillery_brigade = { x = 4 y = 3 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						heavy_anti_air = { x = 0 y = 1 }
+						recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						pack_artillery = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						military_police = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_9_click = {
+				division_template = {
+					name = "3/3/3 Light Tank"
+					is_locked = no
+					regiments = {
+						mechanized = { x = 0 y = 0 }
+						mechanized = { x = 0 y = 1 }
+						mechanized = { x = 0 y = 2 }
+
+						mechanized = { x = 1 y = 0 }
+						mechanized = { x = 1 y = 1 }
+						mechanized = { x = 1 y = 2 }
+
+						light_sp_artillery_brigade = { x = 2 y = 0 }
+						light_sp_artillery_brigade = { x = 2 y = 1 }
+						light_sp_artillery_brigade = { x = 2 y = 2 }
+
+						light_tank_destroyer_brigade = { x = 3 y = 0 }
+						light_tank_destroyer_brigade = { x = 3 y = 1 }
+						light_tank_destroyer_brigade = { x = 3 y = 2 }
+
+						light_armor = { x = 4 y = 0 }
+						light_armor = { x = 4 y = 1 }
+						light_armor = { x = 4 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						medium_sp_anti_air_brigade = { x = 0 y = 1 }
+						light_tank_recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						medium_assault_gun_support = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						field_hospital = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_10_click = {
+				division_template = {
+					name = "3/3/3 Medium Tank"
+					is_locked = no
+					regiments = {
+						mechanized = { x = 0 y = 0 }
+						mechanized = { x = 0 y = 1 }
+						mechanized = { x = 0 y = 2 }
+
+						mechanized = { x = 1 y = 0 }
+						mechanized = { x = 1 y = 1 }
+						mechanized = { x = 1 y = 2 }
+
+						medium_sp_artillery_brigade = { x = 2 y = 0 }
+						medium_sp_artillery_brigade = { x = 2 y = 1 }
+						medium_sp_artillery_brigade = { x = 2 y = 2 }
+
+						medium_tank_destroyer_brigade = { x = 3 y = 0 }
+						medium_tank_destroyer_brigade = { x = 3 y = 1 }
+						medium_tank_destroyer_brigade = { x = 3 y = 2 }
+
+						medium_armor = { x = 4 y = 0 }
+						medium_armor = { x = 4 y = 1 }
+						medium_armor = { x = 4 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						medium_sp_anti_air_brigade = { x = 0 y = 1 }
+						light_tank_recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						medium_assault_gun_support = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						field_hospital = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+			template_add_11_click = {
+				division_template = {
+					name = "3/3/3 Heavy Tank"
+					is_locked = no
+					regiments = {
+						mechanized = { x = 0 y = 0 }
+						mechanized = { x = 0 y = 1 }
+						mechanized = { x = 0 y = 2 }
+
+						mechanized = { x = 1 y = 0 }
+						mechanized = { x = 1 y = 1 }
+						mechanized = { x = 1 y = 2 }
+
+						heavy_sp_artillery_brigade = { x = 2 y = 0 }
+						heavy_sp_artillery_brigade = { x = 2 y = 1 }
+						heavy_sp_artillery_brigade = { x = 2 y = 2 }
+
+						heavy_tank_destroyer_brigade = { x = 3 y = 0 }
+						heavy_tank_destroyer_brigade = { x = 3 y = 1 }
+						heavy_tank_destroyer_brigade = { x = 3 y = 2 }
+
+						heavy_armor = { x = 4 y = 0 }
+						heavy_armor = { x = 4 y = 1 }
+						heavy_armor = { x = 4 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						medium_sp_anti_air_brigade = { x = 0 y = 1 }
+						light_tank_recon = { x = 0 y = 2 }
+						logistics_company_mot = { x = 0 y = 3 }
+						signal_company = { x = 1 y = 0 }
+						medium_assault_gun_support = { x = 1 y = 1 }
+						maintenance_company = { x = 1 y = 2 }
+						field_hospital = { x = 1 y = 3 }
+					}
+				}
+				mark_template_list_as_dirty = yes
+			}
+		}
+
+		triggers = {
+			template_add_1_click_enabled = {
+				NOT = {
+					has_template = "11/8 Artillery"
+				}
+			}
+			template_add_2_click_enabled = {
+				NOT = {
+					has_template = "11/8 Dual Purpose"
+				}
+			}
+			template_add_3_click_enabled = {
+				NOT = {
+					has_template = "11/8 Pack Artillery"
+				}
+			}
+			template_add_4_click_enabled = {
+				NOT = {
+					has_template = "11/8 Heavy Artillery"
+				}
+			}
+			template_add_5_click_enabled = {
+				NOT = {
+					has_template = "11/8 Assault Troops"
+				}
+			}
+			template_add_6_click_enabled = {
+				NOT = {
+					has_template = "11/8 Marines"
+				}
+			}
+			template_add_7_click_enabled = {
+				NOT = {
+					has_template = "11/8 Mountaineers"
+				}
+			}
+			template_add_8_click_enabled = {
+				NOT = {
+					has_template = "11/8 Rangers"
+				}
+			}
+			template_add_9_click_enabled = {
+				NOT = {
+					has_template = "3/3/3 Light Tank"
+				}
+			}
+			template_add_10_click_enabled = {
+				NOT = {
+					has_template = "3/3/3 Medium Tank"
+				}
+			}
+			template_add_11_click_enabled = {
+				NOT = {
+					has_template = "3/3/3 Heavy Tank"
+				}
+			}
+		}
+	}
+}
+
+
+
+	# free_template_menu = {
+	# 	context_type = player_context
+	# 	parent_window_name = "countrydeploymentview"
+	# 	window_name = "free_template_container"
+	# 	visible = {
+	# 		always = yes
+	# 	}
+	# 	effects = {
+	# 		free_template_menu_click = {
+	# 			if = {
+	# 				limit = { ROOT = { NOT = { has_country_flag = FOCUS_BG_background } } }
+	# 				ROOT = { set_country_flag = FOCUS_BG_background }
+	# 			}
+	# 			else = {
+	# 				ROOT = { clr_country_flag = FOCUS_BG_background }
+	# 			}
+	# 		}
+	# 	}
+	# 	triggers = {
+	# 		free_template_menu_click_enabled = {
+	# 			always = yes
+	# 		}
+	# 	}
+	# }

@@ -1,0 +1,1582 @@
+#!gfx:interface\lw_goals.gfx
+#!gfx:interface\tfu_goals.gfx
+#!gfx:interface\KR_goals.gfx
+#!gfx:interface\cic_goals.gfx
+#!gfx:interface\snek_teleport.gfx
+#!gfx:interface\replace\bruh_interface.gfx
+#!gfx:interface\replace\bruh_bra_interface.gfx
+#!gfx:interface\replace\bruh_eng_interface.gfx
+#!gfx:interface\replace\bruh_ger_interface.gfx
+#!gfx:interface\replace\bruh_hol_interface.gfx
+#!gfx:interface\replace\bruh_ita_interface.gfx
+#!gfx:interface\replace\bruh_jap_interface.gfx
+#!gfx:interface\replace\bruh_nsb_interface.gfx
+#!gfx:interface\replace\bruh_sov_interface.gfx
+
+focus_tree = {
+	id = siam_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = SIA
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 550 }
+
+	# NEW POLITICAL
+	focus = {
+		id = SIA_align_with_the_king
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 3
+		y = 0
+		mutually_exclusive = { focus = SIA_align_with_japan }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_absolute_monarchy
+		}
+	}
+
+	focus = {
+		id = SIA_return_to_absolutism
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = SIA_align_with_the_king }
+		x = -2
+		y = 1
+		relative_position_id = SIA_align_with_the_king
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = SIA_support_the_japanese_war_industry
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		prerequisite = { focus = SIA_align_with_the_king }
+		x = 0
+		y = 1
+		relative_position_id = SIA_align_with_the_king
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			JAP = {
+				add_timed_idea = { idea = SIA_siamese_support_for_the_japanese_war_industry days = 250 }
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_crush_the_traitors
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		prerequisite = { focus = SIA_align_with_the_king }
+		x = 2
+		y = 1
+		relative_position_id = SIA_align_with_the_king
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = -1
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_cultural_mandate_of_thailand
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = SIA_return_to_absolutism }
+		x = -1
+		y = 1
+		relative_position_id = SIA_return_to_absolutism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SIA_crown_the_king
+					}
+				}
+				swap_ideas = {
+					remove_idea = SIA_absolute_monarchy
+					add_idea = SIA_absolute_monarchy_1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SIA_absolute_monarchy_2
+					add_idea = SIA_absolute_monarchy_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_mobilize_the_people
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = SIA_return_to_absolutism }
+		x = 1
+		y = 1
+		relative_position_id = SIA_return_to_absolutism
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.2
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = SIA_reform_the_administration
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = SIA_crush_the_traitors }
+		x = -1
+		y = 1
+		relative_position_id = SIA_crush_the_traitors
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = SIA_administration_reform days = 180 }
+		}
+	}
+
+	focus = {
+		id = SIA_reform_the_economy
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = SIA_crush_the_traitors }
+		x = 1
+		y = 1
+		relative_position_id = SIA_crush_the_traitors
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = SIA_economy_reform days = 365 }
+		}
+	}
+
+	focus = {
+		id = SIA_crown_the_king
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = SIA_mobilize_the_people }
+		prerequisite = { focus = SIA_reform_the_administration }
+		x = 1
+		y = 1
+		relative_position_id = SIA_mobilize_the_people
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_country_leader = {
+				name = "Rama VII"
+				desc = "POLITICS_RAMA_VII_DESC"
+				picture = "GFX_portrait_King_Rama"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					indecisive
+				}
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = "Chakri Dynasty"
+				name = "Chakri Dynasty"
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SIA_cultural_mandate_of_thailand
+					}
+				}
+				swap_ideas = {
+					remove_idea = SIA_absolute_monarchy
+					add_idea = SIA_absolute_monarchy_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SIA_absolute_monarchy_1
+					add_idea = SIA_absolute_monarchy_3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_align_with_japan
+		icon = GFX_shadow_over_asia
+		x = 16
+		y = 0
+		relative_position_id = SIA_align_with_the_king
+		mutually_exclusive = { focus = SIA_align_with_the_king }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_japanese_advisors
+		}
+	}
+
+	focus = {
+		id = SIA_burn_the_royal_portraits
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = SIA_align_with_japan }
+		x = -2
+		y = 1
+		relative_position_id = SIA_align_with_japan
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = SIA_dissolve_the_royal_assets
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SIA_align_with_japan }
+		x = 2
+		y = 1
+		relative_position_id = SIA_align_with_japan
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = { idea = SIA_dissolve_the_royal_assets days = 210 }
+		}
+	}
+
+	focus = {
+		id = SIA_declare_martial_law
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = SIA_burn_the_royal_portraits }
+		x = -1
+		y = 1
+		relative_position_id = SIA_burn_the_royal_portraits
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_martial_law
+		}
+	}
+
+	focus = {
+		id = SIA_support_manchukuo
+		icon = GFX_JAP_development
+		prerequisite = { focus = SIA_burn_the_royal_portraits }
+		x = 1
+		y = 1
+		relative_position_id = SIA_burn_the_royal_portraits
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+			add_war_support = 0.1
+			MAN = {
+				add_political_power = 150
+				add_stability = 0.1
+				add_war_support = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_support_the_empire
+		icon = GFX_JAP_imperial_arsenals_upgrade
+		prerequisite = { focus = SIA_dissolve_the_royal_assets }
+		x = -1
+		y = 1
+		relative_position_id = SIA_dissolve_the_royal_assets
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			JAP = {
+				add_timed_idea = { idea = SIA_siamese_support days = 180 }
+				add_political_power = 100
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_mobilise_the_workers
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SIA_dissolve_the_royal_assets }
+		x = 1
+		y = 1
+		relative_position_id = SIA_dissolve_the_royal_assets
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIA_japanese_advisors
+				add_idea = SIA_japanese_advisors_1
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_overthrow_the_government
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = SIA_support_manchukuo }
+		prerequisite = { focus = SIA_support_the_empire }
+		x = 1
+		y = 1
+		relative_position_id = SIA_support_manchukuo
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_country_leader = {
+				name = "Plaek Phibunsongkhram"
+				desc = "POLITICS_PLAEK_PHIBUNSONGKHRAM_DESC"
+				picture = "gfx/leaders/SIA/Plaek_Phibunsongkhram.dds"
+				expire = "1965.1.1"
+				traits = {
+					rearmer
+				}
+				ideology = fascism_ideology
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = { ideology = fascism popularity = 1.00 }
+		}
+	}
+
+	# NEW ECO
+	focus = {
+		id = SIA_industrial_revitalization
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = SIA_align_with_the_king focus = SIA_align_with_japan }
+		x = 8
+		y = 1
+		relative_position_id = SIA_align_with_the_king
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_industrial_revitalization
+				bonus = 0.75
+				uses = 3
+				category = industry
+			}
+			add_ideas = SIA_siamese_innovation
+		}
+	}
+
+	focus = {
+		id = SIA_invite_japanese_investors
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = SIA_industrial_revitalization }
+		x = -2
+		y = 1
+		relative_position_id = SIA_industrial_revitalization
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			289 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_expand_the_surat_thani_rubber_plantations
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = SIA_industrial_revitalization }
+		x = 2
+		y = 1
+		relative_position_id = SIA_industrial_revitalization
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			724 = {
+				add_resource = {
+					type = rubber
+					amount = 300
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = SIA_technological_advancements
+		icon = GFX_focus_research
+		prerequisite = { focus = SIA_industrial_revitalization }
+		x = 0
+		y = 1
+		relative_position_id = SIA_industrial_revitalization
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SIA_german_trade_treaty
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = SIA_invite_japanese_investors }
+		x = -1
+		y = 1
+		relative_position_id = SIA_invite_japanese_investors
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_german_trade_treaty
+		}
+	}
+
+	focus = {
+		id = SIA_expand_the_siamese_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = SIA_invite_japanese_investors focus = SIA_expand_the_surat_thani_rubber_plantations }
+		x = 2
+		y = 1
+		relative_position_id = SIA_invite_japanese_investors
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			289 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SIA_cooperation_with_ig_farben
+					}
+				}
+				swap_ideas = {
+					remove_idea = SIA_siamese_innovation
+					add_idea = SIA_siamese_innovation_2
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SIA_siamese_innovation_3
+					add_idea = SIA_siamese_innovation_4
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_cooperation_with_ig_farben
+		icon = GFX_ig_farben
+		prerequisite = { focus = SIA_expand_the_surat_thani_rubber_plantations }
+		x = 1
+		y = 1
+		relative_position_id = SIA_expand_the_surat_thani_rubber_plantations
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SIA_expand_the_siamese_arms_industry
+					}
+				}
+				swap_ideas = {
+					remove_idea = SIA_siamese_innovation
+					add_idea = SIA_siamese_innovation_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SIA_siamese_innovation_2
+					add_idea = SIA_siamese_innovation_4
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_expand_the_siamese_mining_industry
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = SIA_expand_the_siamese_arms_industry }
+		x = -1
+		y = 1
+		relative_position_id = SIA_expand_the_siamese_arms_industry
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			289 = {
+				add_resource = {
+					type = steel
+					amount = 350
+				}
+				add_resource = {
+					type = tungsten
+					amount = 200
+				}
+				add_resource = {
+					type = chromium
+					amount = 100
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_pave_the_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = SIA_expand_the_siamese_arms_industry }
+		x = 1
+		y = 1
+		relative_position_id = SIA_expand_the_siamese_arms_industry
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_controlled_by = SIA
+					is_core_of = SIA
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_japanese_sponsored_small_arms_inudstry
+		icon = GFX_JAP_massed_rifle_production
+		prerequisite = { focus = SIA_expand_the_siamese_arms_industry }
+		x = 0
+		y = 2
+		relative_position_id = SIA_expand_the_siamese_arms_industry
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = SIA
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = SIA_japanese_sponsored_small_arms_inudstry
+		}
+	}
+
+	focus = {
+		id = SIA_thai_legacy
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		prerequisite = { focus = SIA_japanese_sponsored_small_arms_inudstry }
+		x = 0
+		y = 1
+		relative_position_id = SIA_japanese_sponsored_small_arms_inudstry
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = SIA_crown_the_king
+				has_completed_focus = SIA_overthrow_the_government
+			}
+			286 = {
+				CONTROLLER = {
+					OR = {
+						tag = JAP
+						tag = SIA
+						is_subject_of = JAP
+					}
+				}
+			}
+			671 = {
+				CONTROLLER = {
+					OR = {
+						tag = JAP
+						tag = SIA
+						is_subject_of = JAP
+					}
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			JAP = {
+				country_event = { days = 2 id = siam.2 }
+			}
+			add_state_core = 671
+			add_state_core = 286
+			add_state_core = 741
+			add_state_core = 670
+			add_state_core = 982
+		}
+	}
+
+	focus = {
+		id = SIA_develop_indochina
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = SIA_thai_legacy }
+		x = 0
+		y = 1
+		relative_position_id = SIA_thai_legacy
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 671
+						state = 286
+						state = 741
+						state = 670
+						state = 982
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_cambodian_resource_extraction
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = SIA_develop_indochina }
+		x = -2
+		y = 1
+		relative_position_id = SIA_develop_indochina
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			741 = {
+				add_resource = {
+					type = steel
+					amount = 200
+				}
+				add_resource = {
+					type = chromium
+					amount = 250
+				}
+			}
+			add_tech_bonus = {
+				name = SIA_cambodian_resource_extraction
+				bonus = 0.75
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_vietnamese_tungsten_mines
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = SIA_develop_indochina }
+		x = 2
+		y = 1
+		relative_position_id = SIA_develop_indochina
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			671 = {
+				add_resource = {
+					type = tungsten
+					amount = 250
+				}
+			}
+			add_tech_bonus = {
+				name = SIA_vietnamese_tungsten_mines
+				bonus = 0.75
+				uses = 1
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_reclaim_burma
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SIA_develop_indochina }
+		x = 0
+		y = 1
+		relative_position_id = SIA_develop_indochina
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			640 = {
+				CONTROLLER = {
+					OR = {
+						tag = JAP
+						tag = SIA
+						is_subject_of = JAP
+					}
+				}
+			}
+			288 = {
+				CONTROLLER = {
+					OR = {
+						tag = JAP
+						tag = SIA
+						is_subject_of = JAP
+					}
+				}
+			}
+			982 = {
+				CONTROLLER = {
+					OR = {
+						tag = JAP
+						tag = SIA
+						is_subject_of = JAP
+					}
+				}
+			}
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 640
+						state = 288
+						state = 982
+					}
+				}
+				add_core_of = SIA
+			}
+			add_war_support = 0.25
+		}
+	}
+
+	focus = {
+		id = SIA_burmese_resource_extraction
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = SIA_reclaim_burma }
+		x = -1
+		y = 1
+		relative_position_id = SIA_reclaim_burma
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			288 = {
+				add_resource = {
+					type = rubber
+					amount = 200
+				}
+				add_resource = {
+					type = tungsten
+					amount = 250
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_develop_burma
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = SIA_reclaim_burma }
+		x = 1
+		y = 1
+		relative_position_id = SIA_reclaim_burma
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			288 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_thai_golden_era
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = SIA_burmese_resource_extraction }
+		prerequisite = { focus = SIA_develop_burma }
+		x = 1
+		y = 1
+		relative_position_id = SIA_burmese_resource_extraction
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_thai_golden_era
+		}
+	}
+
+	# NEW ARMY
+	focus = {
+		id = SIA_army_modernization
+		icon = GFX_goal_generic_army_doctrines
+		x = 28
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+			add_doctrine_cost_reduction = {
+				name = SIA_army_modernization
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = SIA_songsuradet
+		}
+	}
+
+	focus = {
+		id = SIA_innovate_our_communiaction_systems
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = SIA_army_modernization }
+		x = 0
+		y = 1
+		relative_position_id = SIA_army_modernization
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = SIA_innovate_our_communiaction_systems
+				bonus = 0.75
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_follow_the_imperial_japanese_army
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		prerequisite = { focus = SIA_innovate_our_communiaction_systems }
+		x = -2
+		y = 1
+		relative_position_id = SIA_innovate_our_communiaction_systems
+		mutually_exclusive = { focus = SIA_follow_the_wehrmacht }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_field_marshal = {
+				name = "Phraya Songsuradet"
+				portrait_path = "gfx/leaders/SIA/Phraya_Sonsuradet.dds"
+				traits = { infantry_leader jungle_rat commando organizer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			add_doctrine_cost_reduction = {
+				name = SIA_follow_the_imperial_japanese_army
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_superior_firepower
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_shell_modernization
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SIA_innovate_our_communiaction_systems }
+		x = 0
+		y = 2
+		relative_position_id = SIA_innovate_our_communiaction_systems
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_shell_modernization
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_modernize_our_infantry_guns
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SIA_follow_the_imperial_japanese_army }
+		x = -1
+		y = 2
+		relative_position_id = SIA_follow_the_imperial_japanese_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_modernize_our_infantry_guns
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_embrace_japanese_bushido
+		icon = GFX_focus_generic_japanese_imperial_glory
+		prerequisite = { focus = SIA_follow_the_imperial_japanese_army }
+		x = 0
+		y = 1
+		relative_position_id = SIA_follow_the_imperial_japanese_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_militarism
+		}
+	}
+
+	focus = {
+		id = SIA_modernize_our_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = SIA_follow_the_imperial_japanese_army }
+		x = 1
+		y = 2
+		relative_position_id = SIA_follow_the_imperial_japanese_army
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SIA_modernize_our_special_forces
+				cost_reduction = 0.75
+				uses = 2
+				category = special_forces_doctrine
+			}
+			custom_effect_tooltip = RAJ_jungle_training_effect
+			hidden_effect = { set_technology = { jungle_warfare = 1 } }
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SIA_army_commando
+		}
+	}
+
+	focus = {
+		id = SIA_masters_of_infantry_warfare
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SIA_embrace_japanese_bushido }
+		x = 0
+		y = 2
+		relative_position_id = SIA_embrace_japanese_bushido
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+			add_doctrine_cost_reduction = {
+				name = SIA_follow_the_imperial_japanese_army
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_superior_firepower
+				category = cat_grand_battle_plan
+			}
+			custom_effect_tooltip = mountain_training_effect
+			hidden_effect = { set_technology = { mountain_warfare = 1 } }
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SIA_air_superiority
+		}
+	}
+
+	focus = {
+		id = SIA_follow_the_wehrmacht
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = SIA_innovate_our_communiaction_systems }
+		x = 2
+		y = 1
+		relative_position_id = SIA_innovate_our_communiaction_systems
+		mutually_exclusive = { focus = SIA_follow_the_imperial_japanese_army }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_field_marshal = {
+				name = "Phraya Songsuradet"
+				portrait_path = "gfx/leaders/SIA/Phraya_Sonsuradet.dds"
+				traits = { panzer_leader organizer hill_fighter brilliant_strategist }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_doctrine_cost_reduction = {
+				name = SIA_follow_the_wehrmacht
+				cost_reduction = 0.75
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_modernize_the_cavarly
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = SIA_follow_the_wehrmacht }
+		x = -1
+		y = 2
+		relative_position_id = SIA_follow_the_wehrmacht
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_cavalry_modernization
+			add_tech_bonus = {
+				name = SIA_modernize_the_cavarly
+				bonus = 0.75
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_modernize_the_tank_guns
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SIA_follow_the_wehrmacht }
+		x = 0
+		y = 1
+		relative_position_id = SIA_follow_the_wehrmacht
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				name = SIA_modernize_the_tank_guns
+				bonus = 0.75
+				uses = 4
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_innovative_light_tanks
+		icon = GFX_JAP_tank
+		prerequisite = { focus = SIA_follow_the_wehrmacht }
+		x = 1
+		y = 2
+		relative_position_id = SIA_follow_the_wehrmacht
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 100
+			add_tech_bonus = {
+				name = SIA_innovative_light_tanks
+				bonus = 1
+				uses = 2
+				category = cat_light_armor
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_terrain_training
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SIA_modernize_the_tank_guns }
+		x = 0
+		y = 2
+		relative_position_id = SIA_modernize_the_tank_guns
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = SIA_terrain_training
+			hidden_effect = {
+				every_army_leader={
+					add_trait = {
+						trait = five_terrain_penalty_reduction
+					}
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = SIA_terrain_training
+				cost_reduction = 0.75
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	# Start Navy
+	focus = {
+		id = SIA_form_the_rtn
+		icon = GFX_goal_generic_build_navy
+		x = 36
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			navy_experience = 100
+			add_doctrine_cost_reduction = {
+				name = NZL_form_the_rnzn
+				cost_reduction = 0.25
+				uses = 2
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				name = ships_bonus
+				bonus = 0.75
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_expand_bangkok_naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = SIA_form_the_rtn }
+		x = -1
+		y = 1
+		relative_position_id = SIA_form_the_rtn
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			289 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_coastal_defense
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SIA_form_the_rtn }
+		relative_position_id = SIA_form_the_rtn
+
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = SIA
+					is_fully_controlled_by = SIA
+				}
+				add_building_construction  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = SIA
+					is_fully_controlled_by = SIA
+				}
+				add_building_construction  = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_destroyer_effort
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = SIA_expand_bangkok_naval_base }
+		x = 0
+		y = 1
+		relative_position_id = SIA_expand_bangkok_naval_base
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_destroyer_effort
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_light_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SIA_destroyer_effort }
+		x = -1
+		y = 1
+		relative_position_id = SIA_destroyer_effort
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_light_cruiser_effort
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SIA_capital_ship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SIA_destroyer_effort }
+		x = 1
+		y = 1
+		relative_position_id = SIA_destroyer_effort
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SIA_capital_ship_effort
+				bonus = 0.75
+				ahead_reduction = 0.5
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+}

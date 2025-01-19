@@ -1,0 +1,29 @@
+scripted_gui = {
+
+	tool_open_1VS1= {
+		context_type = player_context
+
+		window_name = "horsttool_open_container_1VS1"
+		visible = {
+			#NOT = {tag=SWE}
+			has_global_flag = ONE_VS_ONE
+		}
+
+		effects = {
+			tool_open_1VS1_click = {
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = transfer_enabled_1vs1 } } }
+					ROOT = { set_country_flag = transfer_enabled_1vs1 }
+				}
+				else = {
+					ROOT = { clr_country_flag = transfer_enabled_1vs1 }
+				}
+			}
+		}
+		triggers = {
+			tool_open_1VS1_click_enabled = {
+				always = yes
+			}
+		}
+	}
+}

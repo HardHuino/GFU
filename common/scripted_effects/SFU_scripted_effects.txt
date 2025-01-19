@@ -1,0 +1,6319 @@
+SOV_eco_modifier_tt = {
+	if = {
+		limit = {
+			SOV = {
+				has_war = no
+			}
+		}
+		custom_effect_tooltip = SOV_modify_soviet_economy_peace_ns_intro
+	}
+	if = {
+		limit = {
+			SOV = {
+				has_war = yes
+			}
+		}
+		custom_effect_tooltip = SOV_modify_soviet_economy_war_ns_intro
+	}
+}
+
+SOV_agitprop_modifier_tt = {
+	custom_effect_tooltip = SOV_modify_soviet_agitprop_ns_intro
+}
+
+ENG_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = ENG_modify_british_economy_ns_intro
+}
+
+ENG_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = ENG_modify_british_army_ns_intro
+}
+
+ENG_airforce_dynamic_modifier_tt = {
+	custom_effect_tooltip = ENG_modify_british_airforce_ns_intro
+}
+
+ENG_navy_dynamic_modifier_tt = {
+	custom_effect_tooltip = ENG_modify_british_navy_ns_intro
+}
+
+JAP_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = JAP_modify_japanese_economy_ns_intro
+}
+
+JAP_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = JAP_modify_japanese_army_ns_intro
+}
+
+JAP_navy_and_air_dynamic_modifier_tt = {
+	custom_effect_tooltip = JAP_modify_japanese_naval_air_ns_intro
+}
+
+ITA_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = ITA_modify_italian_economy_ns_intro
+}
+
+ITA_il_duce_update_tt = {
+	custom_effect_tooltip = ITA_il_duce_update_ns_tt
+}
+
+ITA_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = ITA_modify_italian_army_ns_intro
+}
+
+ITA_airforce_dynamic_modifier_tt = {
+	custom_effect_tooltip = ITA_modify_italian_airforce_ns_intro
+}
+
+ITA_navy_dynamic_modifier_tt = {
+	custom_effect_tooltip = ITA_modify_italian_navy_ns_intro
+}
+
+GER_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = GER_modify_german_economy_ns_intro
+}
+
+GER_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = GER_modify_german_army_ns_intro
+}
+
+GER_airforce_dynamic_modifier_tt = {
+	custom_effect_tooltip = GER_modify_german_airforce_ns_intro
+}
+
+GER_navy_dynamic_modifier_tt = {
+	custom_effect_tooltip = GER_modify_german_navy_ns_intro
+}
+
+USA_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = USA_modify_american_economy_ns_intro
+}
+
+USA_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = USA_modify_american_army_ns_intro
+}
+
+USA_airforce_navy_dynamic_modifier_tt = {
+	custom_effect_tooltip = USA_modify_american_airforce_navy_ns_intro
+}
+
+CAN_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = CAN_modify_canadian_economy_ns_intro
+}
+
+CAN_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = CAN_modify_canadian_army_ns_intro
+}
+
+MEX_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = MEX_modify_mexican_economy_ns_intro
+}
+
+MEX_army_navy_dynamic_modifier_tt = {
+	custom_effect_tooltip = MEX_modify_mexican_army_navy_ns_intro
+}
+
+BRA_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = BRA_modify_brazilian_economy_ns_intro
+}
+
+BRA_army_navy_dynamic_modifier_tt = {
+	custom_effect_tooltip = BRA_modify_brazilian_army_navy_ns_intro
+}
+
+SAF_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = SAF_modify_south_african_economy_ns_intro
+}
+
+SAF_segregation_dynamic_modifier_tt = {
+	custom_effect_tooltip = SAF_modify_south_african_segregation_ns_intro
+}
+
+SAF_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = SAF_modify_south_african_army_ns_intro
+}
+
+AST_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = AST_modify_australian_economy_ns_intro
+}
+
+AST_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = AST_modify_australian_army_ns_intro
+}
+
+YUG_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = YUG_modify_yugoslavian_economy_ns_intro
+}
+
+YUG_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = YUG_modify_yugoslavian_army_ns_intro
+}
+
+ROM_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = ROM_modify_romanian_economy_ns_intro
+}
+
+ROM_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = ROM_modify_romanian_army_ns_intro
+}
+
+HUN_economy_dynamic_modifier_tt = {
+	custom_effect_tooltip = HUN_modify_hungarian_economy_ns_intro
+}
+
+HUN_army_dynamic_modifier_tt = {
+	custom_effect_tooltip = HUN_modify_hungarian_army_ns_intro
+}
+
+mark_template_list_as_dirty = {
+	division_template = {
+		name = "."
+		is_locked = no
+		regiments = {
+			infantry = { x = 0 y = 0 }
+		}
+	}
+	delete_unit_template_and_units = {
+		division_template = "."
+	}
+}
+
+poland_declare_init = {
+	86 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+	}
+	807 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	98 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+	10 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 7
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 14
+			instant_build = yes
+		}
+	}
+	87 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	762 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+	}
+	88 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 3
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 5
+			instant_build = yes
+		}
+	}
+	96 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	95 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+	94 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+	93 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+	91 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	89 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+	}
+	85 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	90 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	set_technology = {
+		improved_infantry_weapons = 1
+		hq_1 = 1
+		hq_2 = 1
+		infantry_weapons2 = 1
+		radio = 1
+		hq_radio1 = 1
+		hq_radio2 = 1
+		gw_artillery = 1
+		popup = no
+	}
+	add_timed_idea = {
+		idea = AI_move_and_entrech_units
+		days = 7
+	}
+	division_template = {
+		name = "Dywizja Piechoty"
+		division_names_group = POL_INF_01
+
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+
+			artillery_brigade = { x = 3 y = 0 }
+			artillery_brigade = { x = 3 y = 1 }
+			artillery_brigade = { x = 3 y = 2 }
+			artillery_brigade = { x = 3 y = 3 }
+		}
+		support = {
+			recon = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+			signal_company = { x = 0 y = 2 }
+			logistics_company_mot = { x = 0 y = 3 }
+			anti_air = { x = 1 y = 0 }
+		}
+	}
+	807 = {
+		for_loop_effect = {
+			end = 30
+			create_unit = {
+				division = "division_template = \"Dywizja Piechoty\" start_experience_factor = 0.3"
+				owner = POL
+			}
+		}
+	}
+	87 = {
+		for_loop_effect = {
+			end = 30
+			create_unit = {
+				division = "division_template = \"Dywizja Piechoty\" start_experience_factor = 0.3"
+				owner = POL
+			}
+		}
+	}
+	88 = {
+		for_loop_effect = {
+			end = 30
+			create_unit = {
+				division = "division_template = \"Dywizja Piechoty\" start_experience_factor = 0.3"
+				owner = POL
+			}
+		}
+	}
+}
+
+belgium_declare_init = {
+	6 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 1
+			instant_build = yes
+		}
+	}
+	34 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+	}
+	8 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 4
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+	}
+	set_technology = {
+		improved_infantry_weapons = 1
+		hq_1 = 1
+		hq_2 = 1
+		infantry_weapons2 = 1
+		radio = 1
+		hq_radio1 = 1
+		hq_radio2 = 1
+		gw_artillery = 1
+		popup = no
+	}
+	add_timed_idea = {
+		idea = AI_move_and_entrech_units
+		days = 7
+	}
+	division_template = {
+		name = "Divsion d'Infanterie"
+		division_names_group = BEL_INF_01
+
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+
+			artillery_brigade = { x = 3 y = 0 }
+			artillery_brigade = { x = 3 y = 1 }
+			artillery_brigade = { x = 3 y = 2 }
+			artillery_brigade = { x = 3 y = 3 }
+		}
+		support = {
+			recon = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+			signal_company = { x = 0 y = 2 }
+			logistics_company_mot = { x = 0 y = 3 }
+			anti_air = { x = 1 y = 0 }
+		}
+	}
+	34 = {
+		for_loop_effect = {
+			end = 30
+			create_unit = {
+				division = "division_template = \"Divsion d'Infanterie\" start_experience_factor = 0.3"
+				owner = BEL
+			}
+		}
+	}
+}
+
+netherlands_declare_init = {
+	7 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}
+	}
+	35 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 4
+			instant_build = yes
+		}
+	}
+	36 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	695 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 6
+			instant_build = yes
+		}
+	}
+	309 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 4
+			instant_build = yes
+		}
+	}
+	set_technology = {
+		improved_infantry_weapons = 1
+		hq_1 = 1
+		hq_2 = 1
+		infantry_weapons2 = 1
+		radio = 1
+		hq_radio1 = 1
+		hq_radio2 = 1
+		gw_artillery = 1
+		popup = no
+	}
+	add_timed_idea = {
+		idea = AI_move_and_entrech_units
+		days = 7
+	}
+	division_template = {
+		name = "Infanterie Divisie"
+		division_names_group = HOL_INF_01
+
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+
+			infantry = { x = 2 y = 0 }
+			infantry = { x = 2 y = 1 }
+
+			artillery_brigade = { x = 3 y = 0 }
+			artillery_brigade = { x = 3 y = 1 }
+			artillery_brigade = { x = 3 y = 2 }
+			artillery_brigade = { x = 3 y = 3 }
+		}
+		support = {
+			recon = { x = 0 y = 0 }
+			engineer = { x = 0 y = 1 }
+			signal_company = { x = 0 y = 2 }
+			logistics_company_mot = { x = 0 y = 3 }
+			anti_air = { x = 1 y = 0 }
+		}
+	}
+	36 = {
+		for_loop_effect = {
+			end = 30
+			create_unit = {
+				division = "division_template = \"Infanterie Divisie\" start_experience_factor = 0.3"
+				owner = HOL
+			}
+		}
+	}
+}
+
+norway_declare_init = {
+	110 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 2
+			instant_build = yes
+		}
+	}
+	922 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 3
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+	921 = {
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+	}
+	143 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	142 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+denmark_declare_init = {
+	99 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 4
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = infrastructure
+			level = 1
+			instant_build = yes
+		}
+	}
+	911 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+	}
+	37 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 3
+			instant_build = yes
+		}
+	}
+	142 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}
+	}
+	910 = {
+		add_building_construction = {
+			type = industrial_complex
+			level = 1
+			instant_build = yes
+		}
+	}
+}
+
+il_duce_trait_clear = {
+	remove_country_leader_trait = il_duce
+	remove_country_leader_trait = il_duce_2
+	remove_country_leader_trait = il_duce_3
+	remove_country_leader_trait = il_duce_4
+	remove_country_leader_trait = il_duce_5
+	remove_country_leader_trait = il_duce_6
+	remove_country_leader_trait = il_duce_7
+	remove_country_leader_trait = il_duce_8
+	remove_country_leader_trait = il_duce_9
+	remove_country_leader_trait = il_duce_10
+	remove_country_leader_trait = il_duce_11
+	remove_country_leader_trait = il_duce_12
+}
+
+il_duce_trait_update = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.15 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.15 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_2
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.15 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_3
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.05 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_4
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.15 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_5
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.05 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_6
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.05 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_7
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.05 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_8
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.1 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.05 }
+				check_variable = { ITA_il_duce_local_resources_factor = 0.1 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_9
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.1 }
+				check_variable = { ITA_il_duce_production_factory_max_efficiency_factor = 0.025 }
+				check_variable = { ITA_il_duce_production_factory_efficiency_gain_factor = 0.025 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_10
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.2 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.05 }
+				check_variable = { ITA_il_duce_local_resources_factor = 0.1 }
+				check_variable = { ITA_il_duce_global_building_slots_factor = 0.1 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_11
+		}
+		if = {
+			limit = {
+				check_variable = { ITA_il_duce_political_power_factor = 0.2 }
+				check_variable = { ITA_il_duce_stability_factor = 0.1 }
+				check_variable = { ITA_il_duce_conscription = 0.02 }
+				check_variable = { ITA_il_duce_intelligence_agency_defense = 1 }
+				check_variable = { ITA_il_duce_production_speed_buildings_factor = 0.05 }
+				check_variable = { ITA_il_duce_research_speed_factor = 0.1 }
+				check_variable = { ITA_il_duce_production_factory_max_efficiency_factor = 0.025 }
+				check_variable = { ITA_il_duce_production_factory_efficiency_gain_factor = 0.025 }
+				check_variable = { ITA_il_duce_industrial_capacity_factory = 0.05 }
+				check_variable = { ITA_il_duce_industrial_capacity_dockyard = 0.05 }
+			}
+			il_duce_trait_clear = yes
+			add_country_leader_trait = il_duce_12
+		}
+	}
+}
+
+generic_arty_ic_spirit_clean = {
+	remove_ideas = {
+		generic_arty_ic_modifier_15
+		generic_arty_ic_modifier_12_5
+		generic_arty_ic_modifier_10
+		generic_arty_ic_modifier_7_5
+		generic_arty_ic_modifier_5
+		generic_arty_ic_modifier_2_5
+		generic_arty_ic_modifier_negative_2_5
+		generic_arty_ic_modifier_negative_5
+		generic_arty_ic_modifier_negative_7_5
+		generic_arty_ic_modifier_negative_10
+		generic_arty_ic_modifier_negative_12_5
+		generic_arty_ic_modifier_negative_15
+	}
+}
+
+generic_arty_ic_spirit_update = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = 0.15 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_15
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = 0.125 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_12_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = 0.1 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_10
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = 0.075 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_7_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = 0.05 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = 0.025 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_2_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = 0 }
+			}
+			generic_arty_ic_spirit_clean = yes
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = -0.025 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_negative_2_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = -0.05 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_negative_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = -0.075 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_negative_7_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = -0.1 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_negative_10
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = -0.125 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_negative_12_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.arty_ic_count = -0.15 }
+			}
+			generic_arty_ic_spirit_clean = yes
+			add_ideas = generic_arty_ic_modifier_negative_15
+		}
+	}
+}
+
+generic_inf_ic_spirit_clean = {
+	remove_ideas = {
+		generic_inf_ic_modifier_15
+		generic_inf_ic_modifier_12_5
+		generic_inf_ic_modifier_10
+		generic_inf_ic_modifier_7_5
+		generic_inf_ic_modifier_5
+		generic_inf_ic_modifier_2_5
+		generic_inf_ic_modifier_negative_2_5
+		generic_inf_ic_modifier_negative_5
+		generic_inf_ic_modifier_negative_7_5
+		generic_inf_ic_modifier_negative_10
+		generic_inf_ic_modifier_negative_12_5
+		generic_inf_ic_modifier_negative_15
+	}
+}
+
+generic_inf_ic_spirit_update = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = 0.15 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_15
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = 0.125 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_12_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = 0.1 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_10
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = 0.075 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_7_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = 0.05 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = 0.025 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_2_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = 0 }
+			}
+			generic_inf_ic_spirit_clean = yes
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = -0.025 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_negative_2_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = -0.05 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_negative_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = -0.075 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_negative_7_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = -0.1 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_negative_10
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = -0.125 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_negative_12_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.inf_ic_count = -0.15 }
+			}
+			generic_inf_ic_spirit_clean = yes
+			add_ideas = generic_inf_ic_modifier_negative_15
+		}
+	}
+}
+
+generic_armor_ic_spirit_clean = {
+	remove_ideas = {
+		generic_armor_ic_modifier_15
+		generic_armor_ic_modifier_12_5
+		generic_armor_ic_modifier_10
+		generic_armor_ic_modifier_7_5
+		generic_armor_ic_modifier_5
+		generic_armor_ic_modifier_2_5
+		generic_armor_ic_modifier_negative_2_5
+		generic_armor_ic_modifier_negative_5
+		generic_armor_ic_modifier_negative_7_5
+		generic_armor_ic_modifier_negative_10
+		generic_armor_ic_modifier_negative_12_5
+		generic_armor_ic_modifier_negative_15
+	}
+}
+
+generic_armor_ic_spirit_update = {
+	hidden_effect = {
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = 0.15 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_15
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = 0.125 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_12_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = 0.1 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_10
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = 0.075 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_7_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = 0.05 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = 0.025 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_2_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = 0 }
+			}
+			generic_armor_ic_spirit_clean = yes
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = -0.025 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_negative_2_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = -0.05 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_negative_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = -0.075 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_negative_7_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = -0.1 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_negative_10
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = -0.125 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_negative_12_5
+		}
+		if = {
+			limit = {
+				check_variable = { ROOT.armor_ic_count = -0.15 }
+			}
+			generic_armor_ic_spirit_clean = yes
+			add_ideas = generic_armor_ic_modifier_negative_15
+		}
+	}
+}
+
+declare_war_on_enemy_faction = {
+	if = {
+		limit = {
+			NOT = {
+				ROOT = {
+					has_war_with = THIS.faction_leader
+				}
+			}
+		}
+		set_variable = { GER.test1 = 15 }
+		ROOT = {
+			declare_war_on = {
+				target = PREV.faction_leader
+				type = annex_everything
+			}
+		}
+		ROOT_call_all_allies_against_THIS = yes
+		THIS_call_all_allies_against_ROOT = yes
+	}
+}
+
+ROOT_call_allies_both_sides = {
+	ROOT_call_all_allies_against_THIS = yes
+	THIS_call_all_allies_against_ROOT = yes
+}
+
+ROOT_call_all_allies_against_THIS = {
+	for_each_scope_loop = {
+		array = ROOT.faction_members
+		if = {
+			limit = {
+				NOT = {
+					original_tag = ROOT
+					OR = {
+						AND = {
+							original_tag = USA
+							has_war = no
+						}
+						AND = {
+							original_tag = MEX
+							has_war = no
+						}
+						AND = {
+							original_tag = BRA
+							has_war = no
+						}
+						AND = {
+							original_tag = FIN
+						}
+						AND = {
+							original_tag = ITA
+							has_war = no
+						}
+					}
+				}
+			}
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = PREV
+			}
+		}
+	}
+}
+
+THIS_call_all_allies_against_ROOT = {
+	for_each_scope_loop = {
+		array = THIS.faction_members
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						AND = {
+							original_tag = USA
+							has_war = no
+						}
+						AND = {
+							original_tag = MEX
+							has_war = no
+						}
+						AND = {
+							original_tag = BRA
+							has_war = no
+						}
+						# AND = { 
+						# 	original_tag = FRA
+						# 	NOT = {
+						# 		has_global_flag=fall_of_france
+						# 	}
+						# } 
+						AND = {
+							original_tag = FIN
+						}
+						AND = {
+							original_tag = ITA
+							has_war = no
+						}
+						original_tag = PREV
+					}
+				}
+			}
+			add_to_war = {
+				targeted_alliance = ENG
+				enemy = ROOT
+			}
+		}
+	}
+}
+
+anti_cross_faction_trade_axis = {
+	add_opinion_modifier = {
+		target = GER
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = ITA
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = SPR
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = HUN
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = ROM
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = BUL
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = FIN
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = YUG
+		modifier = anti_cross_faction_trade
+	}
+
+	add_opinion_modifier = {
+		target = JAP
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = MAN
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = SIA
+		modifier = anti_cross_faction_trade
+	}
+}
+
+anti_cross_faction_trade_allies = {
+	add_opinion_modifier = {
+		target = USA
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = ENG
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = FRA
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = CAN
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = SAF
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = RAJ
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = AST
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = NZL
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = BRA
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = MEX
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = HOL
+		modifier = anti_cross_faction_trade
+	}
+	add_opinion_modifier = {
+		target = MAL
+		modifier = anti_cross_faction_trade
+	}
+
+	add_opinion_modifier = {
+		target = SOV
+		modifier = anti_cross_faction_trade
+	}
+}
+
+anti_cross_faction_trade_all = {
+	# allies
+	USA = {
+		anti_cross_faction_trade_axis = yes
+	}
+	ENG = {
+		anti_cross_faction_trade_axis = yes
+	}
+	FRA = {
+		anti_cross_faction_trade_axis = yes
+	}
+	USA = {
+		anti_cross_faction_trade_axis = yes
+	}
+	CAN = {
+		anti_cross_faction_trade_axis = yes
+	}
+	SAF = {
+		anti_cross_faction_trade_axis = yes
+	}
+	RAJ = {
+		anti_cross_faction_trade_axis = yes
+	}
+	AST = {
+		anti_cross_faction_trade_axis = yes
+	}
+	NZL = {
+		anti_cross_faction_trade_axis = yes
+	}
+	BRA = {
+		anti_cross_faction_trade_axis = yes
+	}
+	MEX = {
+		anti_cross_faction_trade_axis = yes
+	}
+	HOL = {
+		anti_cross_faction_trade_axis = yes
+	}
+	MAL = {
+		anti_cross_faction_trade_axis = yes
+	}
+
+	SOV = {
+		anti_cross_faction_trade_axis = yes
+	}
+	# axis
+	GER = {
+		anti_cross_faction_trade_allies = yes
+	}
+	ITA = {
+		anti_cross_faction_trade_allies = yes
+	}
+	SPR = {
+		anti_cross_faction_trade_allies = yes
+	}
+	HUN = {
+		anti_cross_faction_trade_allies = yes
+	}
+	ROM = {
+		anti_cross_faction_trade_allies = yes
+	}
+	BUL = {
+		anti_cross_faction_trade_allies = yes
+	}
+	FIN = {
+		anti_cross_faction_trade_allies = yes
+	}
+	YUG = {
+		anti_cross_faction_trade_allies = yes
+	}
+
+	JAP = {
+		anti_cross_faction_trade_allies = yes
+	}
+	MAN = {
+		anti_cross_faction_trade_allies = yes
+	}
+	SIA = {
+		anti_cross_faction_trade_allies = yes
+	}
+}
+
+boot_naval_treaty_f = {
+	if = {
+		limit = {
+			has_naval_treaty_trigger = yes
+		}
+		remove_naval_treaty_effect = yes
+		every_other_country = {
+			limit = {
+				has_naval_treaty_trigger = yes
+			}
+			country_event = { id = MTG_naval_treaty.7 days = 2 }
+		}
+		if = {
+			limit = {
+				has_global_flag = {
+					flag = MTG_naval_treaty_signatories
+					value < 3
+				}
+			}
+			random_other_country = {
+				limit = {
+					has_naval_treaty_trigger = yes
+				}
+				remove_naval_treaty_effect = yes
+			}
+			clr_global_flag = MTG_naval_treaty_signatories
+			hidden_effect = { news_event = mtg_news.60 }
+		}
+		if = {
+			limit = {
+				has_global_flag = MTG_naval_treaty_signatories
+			}
+			modify_global_flag = {
+				flag = MTG_naval_treaty_signatories
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					any_other_country = {
+						OR = {
+							has_idea = MTG_naval_treaty_cheating_reduced
+							has_idea = MTG_naval_treaty_adherent_reduced
+						}
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						has_idea = MTG_naval_treaty_cheating
+						has_idea = MTG_naval_treaty_adherent
+					}
+				}
+				activate_mission = MTG_escalator_clause_invocation_mission
+				custom_effect_tooltip = MTG_escalator_clause_tt
+			}
+		}
+		add_threat = 2
+	}
+}
+
+boot_naval_treat_d = {
+	if = {
+		limit = {
+			has_naval_treaty_trigger = yes
+		}
+		remove_naval_treaty_effect = yes
+		every_other_country = {
+			limit = {
+				has_naval_treaty_trigger = yes
+			}
+			country_event = MTG_naval_treaty.7
+		}
+		if = {
+			limit = {
+				has_global_flag = {
+					flag = MTG_naval_treaty_signatories
+					value < 3
+				}
+			}
+			random_other_country = {
+				limit = {
+					has_naval_treaty_trigger = yes
+				}
+				remove_naval_treaty_effect = yes
+			}
+			clr_global_flag = MTG_naval_treaty_signatories
+			hidden_effect = { news_event = mtg_news.60 }
+		}
+		if = {
+			limit = {
+				has_global_flag = MTG_naval_treaty_signatories
+			}
+			modify_global_flag = {
+				flag = MTG_naval_treaty_signatories
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				not = {
+					any_other_country = {
+						OR = {
+							has_idea = MTG_naval_treaty_cheating_reduced
+							has_idea = MTG_naval_treaty_adherent_reduced
+						}
+					}
+				}
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						has_idea = MTG_naval_treaty_cheating
+						has_idea = MTG_naval_treaty_adherent
+					}
+				}
+				activate_mission = MTG_escalator_clause_invocation_mission
+				custom_effect_tooltip = MTG_escalator_clause_tt
+			}
+		}
+	}
+}
+
+USA_DEI_radar_construction_transfer_effect = {
+	if = {
+		limit = {
+			USA = {
+				is_special_project_completed = sp:sp_air_radar
+			}
+			INS = {
+				NOT = {
+					is_special_project_completed = sp:sp_air_radar
+				}
+			}
+		}
+		INS = {
+			complete_special_project = {
+				project = sp:sp_air_radar
+			}
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = cavity_magnatron
+			}
+			INS = {
+				NOT = {
+					has_tech = cavity_magnatron
+				}
+			}
+		}
+		INS = {
+			set_technology = { cavity_magnatron = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = centimetric_radar
+			}
+			INS = {
+				NOT = {
+					has_tech = centimetric_radar
+				}
+			}
+		}
+		INS = {
+			set_technology = { centimetric_radar = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = phased_array
+			}
+			INS = {
+				NOT = {
+					has_tech = phased_array
+				}
+			}
+		}
+		INS = {
+			set_technology = { phased_array = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = monopulse_radar
+			}
+			INS = {
+				NOT = {
+					has_tech = monopulse_radar
+				}
+			}
+		}
+		INS = {
+			set_technology = { monopulse_radar = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = construction1
+			}
+			INS = {
+				NOT = {
+					has_tech = construction1
+				}
+			}
+		}
+		INS = {
+			set_technology = { construction1 = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = construction2
+			}
+			INS = {
+				NOT = {
+					has_tech = construction2
+				}
+			}
+		}
+		INS = {
+			set_technology = { construction2 = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = construction3
+			}
+			INS = {
+				NOT = {
+					has_tech = construction3
+				}
+			}
+		}
+		INS = {
+			set_technology = { construction3 = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = construction4
+			}
+			INS = {
+				NOT = {
+					has_tech = construction4
+				}
+			}
+		}
+		INS = {
+			set_technology = { construction4 = 1 }
+		}
+	}
+	if = {
+		limit = {
+			USA = {
+				has_tech = construction5
+			}
+			INS = {
+				NOT = {
+					has_tech = construction5
+				}
+			}
+		}
+		INS = {
+			set_technology = { construction5 = 1 }
+		}
+	}
+}
+
+pow_before_annex = {
+	hidden_effect = {
+		set_variable = { getting_annexed = 1 }
+		every_enemy_country = {
+			limit = {
+				is_playable_country = yes
+				OR = {
+					NOT = {
+						original_tag = FRA
+					}
+					has_global_flag = fall_of_france
+				}
+				OR = {
+					NOT = {
+						original_tag = HOL
+					}
+					has_global_flag = fall_of_france
+				}
+			}
+			calculate_click_effect = yes
+		}
+	}
+}
+
+calculate_click_effect = { #prevent spam hidden idea for one day
+	clear_variable = ROOT.pow_total
+	every_enemy_country = {
+		limit = {
+			is_playable_country = yes
+			OR = {
+				NOT = {
+					original_tag = FRA
+				}
+				has_global_flag = fall_of_france
+			}
+			OR = {
+				NOT = {
+					original_tag = HOL
+				}
+				has_global_flag = fall_of_france
+			}
+		}
+
+		set_temp_variable = { casualty1 = 0 }
+
+		while_loop_effect = {
+			limit = {
+				casualties_inflicted_by = {
+					opponent = PREV
+					thousands > casualty1
+				}
+			}
+			add_to_temp_variable = { casualty1 = 1000 }
+		}
+		if = {
+			limit = {
+				casualties_inflicted_by = {
+					opponent = PREV
+					thousands < casualty1
+				}
+			}
+			add_to_temp_variable  = { casualty1 = -1000 }
+		}
+		while_loop_effect = {
+			limit = {
+				casualties_inflicted_by = {
+					opponent = PREV
+					thousands > casualty1
+				}
+			}
+			add_to_temp_variable = { casualty1 = 100 }
+		}
+		if = {
+			limit = {
+				casualties_inflicted_by = {
+					opponent = PREV
+					thousands < casualty1
+				}
+			}
+			add_to_temp_variable  = { casualty1 = -100 }
+		}
+		while_loop_effect = {
+			limit = {
+				casualties_inflicted_by = {
+					opponent = PREV
+					thousands > casualty1
+				}
+			}
+			add_to_temp_variable = { casualty1 = 10 }
+		}
+		if = {
+			limit = {
+				casualties_inflicted_by = {
+					opponent = PREV
+					thousands < casualty1
+				}
+			}
+			add_to_temp_variable  = { casualty1 = -10 }
+		}
+		while_loop_effect = {
+			limit = {
+				casualties_inflicted_by = {
+					opponent = PREV
+					thousands > casualty1
+				}
+			}
+			add_to_temp_variable = { casualty1 = 1 }
+		}
+
+		multiply_temp_variable = { casualty1 = 0.25 }
+		if = {
+			limit = {
+				check_variable = { getting_annexed = 1 }
+			}
+			add_to_variable= { PREV.pow_other_sources = casualty1 }
+		}
+		else = {
+			add_to_variable = { ROOT.pow_total = casualty1 }
+		}
+	}
+
+	add_to_variable = { ROOT.pow_total = pow_other_sources  }
+	set_variable = { ROOT.pow_unassigned = ROOT.pow_total }
+	subtract_from_variable = { ROOT.pow_unassigned = ROOT.pow_assinged_total }
+}
+
+# Vichy_Spawn = {
+# 	if = {
+# 		limit = {
+# 			AND = {
+# 				461 = {has_state_flag = AFRICA_COMMONWEALTH_controls }
+# 				461 = {is_controlled_by = VIC }
+# 			}
+# 		}
+# 		461 = {
+# 			clr_state_flag = AFRICA_COMMONWEALTH_controls
+# 			set_state_flag = NOT_AFRICA_COMMONWEALTH_controls
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				OR = {
+# 					tag = FIN
+# 					tag = GER
+# 					tag = HUN
+# 					tag = ITA
+# 					tag = ROM
+# 					tag = BUL
+# 					tag = SPR
+# 					tag = YUG
+# 					tag = VIC
+# 				}
+# 			}
+# 			AFRICA_COMMONWEALTH_AXIS_bases_level_down = yes
+# 		}
+# 		add_to_variable = {
+# 			var = ITA.AFRICA_COMMONWEALTH_BASES_LEVEL
+# 			value = 1
+# 		}
+# 	}
+
+# 	if = {
+# 		limit = {
+# 			AND = {
+# 				458 = {has_state_flag = AFRICA_COMMONWEALTH_controls }
+# 				OR = {
+# 					458 = {is_controlled_by = VIC }
+# 					458 = {is_controlled_by = ITA }
+# 				}
+# 			}
+# 		}
+# 		458 = {
+# 			clr_state_flag = AFRICA_COMMONWEALTH_controls
+# 			set_state_flag = NOT_AFRICA_COMMONWEALTH_controls
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				OR = {
+# 					tag = FIN
+# 					tag = GER
+# 					tag = HUN
+# 					tag = ITA
+# 					tag = ROM
+# 					tag = BUL
+# 					tag = SPR
+# 					tag = YUG
+# 					tag = VIC
+# 				}
+# 			}
+# 			AFRICA_COMMONWEALTH_AXIS_bases_level_down = yes
+# 		}
+# 		add_to_variable = {
+# 			var = ITA.AFRICA_COMMONWEALTH_BASES_LEVEL
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# AFRICA_COMMONWEALTH_AXIS_bases_level_down = {
+# 	# if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_16 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_16
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_17
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_15 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_15
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_16
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_14 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_14
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_15
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_13 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_13
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_14
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_12 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_12
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_13
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_11 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_11
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_12
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_10 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_10
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_11
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_9 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_9
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_10
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_8 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_8
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_9
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_7 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_7
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_8
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_6 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_6
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_7
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_5 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_5
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_6
+# 	# 	}
+# 	# }
+# 	if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_4 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_4
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_5
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_3 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_3
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_4
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_2 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_2
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_3
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_1 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_1
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_2
+# 		}
+# 	}
+# }
+# AFRICA_COMMONWEALTH_AXIS_bases_level_up = {
+# 	if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_2 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_2
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_1
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_3 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_3
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_2
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_4 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_4
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_3
+# 		}
+# 	}
+# 	else_if = {
+# 		limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_5 }
+# 		swap_ideas = {
+# 			remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_5
+# 			add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_4
+# 		}
+# 	}
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_6 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_6
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_5
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_7 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_7
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_6
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_8 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_8
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_7
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_9 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_9
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_8
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_10 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_10
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_9
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_11 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_11
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_10
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_12 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_12
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_11
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_13 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_13
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_12
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_14 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_14
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_13
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_15 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_15
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_14
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_16 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_16
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_15
+# 	# 	}
+# 	# }
+# 	# else_if = {
+# 	# 	limit = { has_idea = AFRICA_COMMONWEALTH_controls_axis_idea_17 }
+# 	# 	swap_ideas = {
+# 	# 		remove_idea = AFRICA_COMMONWEALTH_controls_axis_idea_17
+# 	# 		add_idea = AFRICA_COMMONWEALTH_controls_axis_idea_16
+# 	# 	}
+# 	# }
+# }
+
+update_sov_major_city_status = {
+	SOV = {
+		set_variable = { major_city_status = 0 }
+		if = {
+			limit = {
+				NOT = {
+					count_triggers = {
+						amount = 2
+						controls_state = 219 # moscow
+						controls_state = 195 # leningrad
+						controls_state = 217 # stalingrad
+					}
+				}
+			}
+			add_to_variable = { major_city_status = -0.20 }
+		}
+		if = {
+			limit = {
+				NOT = {
+					controls_state = 249 #kazan
+				}
+			}
+			add_to_variable = {
+				major_city_status = -0.025
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					controls_state = 239 # saratov
+				}
+			}
+			add_to_variable = {
+				major_city_status = -0.025
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					controls_state = 248 # yaroslavl
+				}
+			}
+			add_to_variable = {
+				major_city_status = -0.025
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					controls_state = 229 # azerbaijan
+				}
+			}
+			add_to_variable = {
+				major_city_status = -0.025
+			}
+		}
+	}
+}
+
+# update_academy_weekly ={
+# 	# training_time_fixer = yes
+# 	every_country = {
+# 		limit = {
+# 			is_playable_country = yes
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_idea = academy_scholarships_spirit
+# 			}
+# 			add_to_variable = { academy_weekly_training_speed = -0.005 }
+# 		}
+# 		# if = {
+# 		# 	limit = {
+# 		# 		has_idea = political_loyalty_spirit
+# 		# 	}
+# 		# 	add_to_variable = { academy_weekly_pp = 0.005 }
+# 		# }
+# 		# if = {
+# 		# 	limit = { 
+# 		# 		has_idea = relief_of_command_spirit
+# 		# 	}
+# 		# 	add_to_variable = { academy_experience_gain = 0.005 }	
+# 		# }
+# 		# if = {
+# 		# 	limit = {
+# 		# 		has_idea = grand_battleplan_army_spirit
+# 		# 	}
+# 		# 	add_to_variable = { academy_special_forces_capacity = 0.5 }
+# 		# 	if = {
+# 		# 		limit = {
+# 		# 			is_major = yes
+# 		# 		}
+# 		# 		add_to_variable = { academy_special_forces_capacity = 0.5 }
+# 		# 	}
+# 		# }
+# 		# set_variable = { academy_weekly_training_speed_total = modifier@training_time_army_factor }
+# 		set_variable = { academy_weekly_training_speed_total = academy_weekly_training_speed }
+# 		if = {
+# 			limit = {
+# 				check_variable = { academy_weekly_training_speed_total < -0.60 }
+# 			}
+# 			set_variable = {
+# 				academy_weekly_training_speed_result = -0.60
+# 			}
+# 			# subtract_from_variable = { 
+# 			# 	academy_weekly_training_speed_result = academy_weekly_training_speed_total
+# 			# }
+# 		}
+# 		else = {
+# 			set_variable = { academy_weekly_training_speed_result = academy_weekly_training_speed }
+# 		}
+# 	}
+# }
+
+# training_time_fixer = {
+# 	every_country = {
+# 		limit = {
+# 			is_playable_country = yes
+# 		}
+# 		set_variable = { training_time_mod_total = modifier@training_time_factor } #training_time_army_factor
+# 		add_to_variable = { training_time_mod_total = training_time_balancer }
+# 		if = { limit = { check_variable = { training_time_mod_total = -0.75 } } set_variable = { training_time_balancer = 0.10 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.76 } } set_variable = { training_time_balancer = 0.11 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.77 } } set_variable = { training_time_balancer = 0.12 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.78 } } set_variable = { training_time_balancer = 0.13 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.79 } } set_variable = { training_time_balancer = 0.14 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.80 } } set_variable = { training_time_balancer = 0.15 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.81 } } set_variable = { training_time_balancer = 0.16 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.82 } } set_variable = { training_time_balancer = 0.17 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.83 } } set_variable = { training_time_balancer = 0.18 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.84 } } set_variable = { training_time_balancer = 0.19 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.85 } } set_variable = { training_time_balancer = 0.20 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.86 } } set_variable = { training_time_balancer = 0.21 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.87 } } set_variable = { training_time_balancer = 0.22 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.88 } } set_variable = { training_time_balancer = 0.23 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.89 } } set_variable = { training_time_balancer = 0.24 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.90 } } set_variable = { training_time_balancer = 0.25 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.91 } } set_variable = { training_time_balancer = 0.26 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.92 } } set_variable = { training_time_balancer = 0.27 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.93 } } set_variable = { training_time_balancer = 0.28 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.94 } } set_variable = { training_time_balancer = 0.29 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.95 } } set_variable = { training_time_balancer = 0.30 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.96 } } set_variable = { training_time_balancer = 0.31 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.97 } } set_variable = { training_time_balancer = 0.32 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.98 } } set_variable = { training_time_balancer = 0.33 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -0.99 } } set_variable = { training_time_balancer = 0.34 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.00 } } set_variable = { training_time_balancer = 0.35 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.01 } } set_variable = { training_time_balancer = 0.36 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.02 } } set_variable = { training_time_balancer = 0.37 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.03 } } set_variable = { training_time_balancer = 0.38 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.04 } } set_variable = { training_time_balancer = 0.39 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.05 } } set_variable = { training_time_balancer = 0.40 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.06 } } set_variable = { training_time_balancer = 0.41 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.07 } } set_variable = { training_time_balancer = 0.42 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.08 } } set_variable = { training_time_balancer = 0.43 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.09 } } set_variable = { training_time_balancer = 0.44 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.10 } } set_variable = { training_time_balancer = 0.45 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.11 } } set_variable = { training_time_balancer = 0.46 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.12 } } set_variable = { training_time_balancer = 0.47 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.13 } } set_variable = { training_time_balancer = 0.48 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.14 } } set_variable = { training_time_balancer = 0.49 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.15 } } set_variable = { training_time_balancer = 0.50 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.16 } } set_variable = { training_time_balancer = 0.51 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.17 } } set_variable = { training_time_balancer = 0.52 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.18 } } set_variable = { training_time_balancer = 0.53 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.19 } } set_variable = { training_time_balancer = 0.54 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.20 } } set_variable = { training_time_balancer = 0.55 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.21 } } set_variable = { training_time_balancer = 0.56 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.22 } } set_variable = { training_time_balancer = 0.57 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.23 } } set_variable = { training_time_balancer = 0.58 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.24 } } set_variable = { training_time_balancer = 0.59 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.25 } } set_variable = { training_time_balancer = 0.60 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.26 } } set_variable = { training_time_balancer = 0.61 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.27 } } set_variable = { training_time_balancer = 0.62 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.28 } } set_variable = { training_time_balancer = 0.63 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.29 } } set_variable = { training_time_balancer = 0.64 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.30 } } set_variable = { training_time_balancer = 0.65 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.31 } } set_variable = { training_time_balancer = 0.66 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.32 } } set_variable = { training_time_balancer = 0.67 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.33 } } set_variable = { training_time_balancer = 0.68 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.34 } } set_variable = { training_time_balancer = 0.69 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.35 } } set_variable = { training_time_balancer = 0.70 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.36 } } set_variable = { training_time_balancer = 0.71 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.37 } } set_variable = { training_time_balancer = 0.72 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.38 } } set_variable = { training_time_balancer = 0.73 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.39 } } set_variable = { training_time_balancer = 0.74 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.40 } } set_variable = { training_time_balancer = 0.75 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.41 } } set_variable = { training_time_balancer = 0.76 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.42 } } set_variable = { training_time_balancer = 0.77 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.43 } } set_variable = { training_time_balancer = 0.78 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.44 } } set_variable = { training_time_balancer = 0.79 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.45 } } set_variable = { training_time_balancer = 0.80 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.46 } } set_variable = { training_time_balancer = 0.81 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.47 } } set_variable = { training_time_balancer = 0.82 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.48 } } set_variable = { training_time_balancer = 0.83 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.49 } } set_variable = { training_time_balancer = 0.84 } }
+# 		else_if = { limit = { check_variable = { training_time_mod_total = -1.50 } } set_variable = { training_time_balancer = 0.85 } }
+# 	}
+# }
+
+SFU_manpower_count = {
+	every_country = {
+		limit = {
+			is_playable_country = yes
+		}
+		IF = {
+			limit = {
+				has_army_manpower = {
+					size > 9750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 9000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 9000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 8000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 8000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 7000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 7000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 6000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 6000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 5000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 5000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 4000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 4000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 3000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 3000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 2000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 2000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1075000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1075
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1050000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1050
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1025000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1025
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 1000000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 1000
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 975000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 975
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 950000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 950
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 925000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 925
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 900000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 900
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 875000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 875
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 850000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 850
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 825000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 825
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 800000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 800
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 775000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 775
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 750000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 750
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 725000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 725
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 700000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 700
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 675000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 675
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 650000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 650
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 625000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 625
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 600000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 600
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 575000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 575
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 550000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 550
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 525000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 525
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 500000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 500
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 475000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 475
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 450000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 450
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 425000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 425
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 400000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 400
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 375000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 375
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 350000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 350
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 325000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 325
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 300000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 300
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 275000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 275
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 250000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 250
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 225000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 225
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 200000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 200
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 175000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 175
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 150000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 150
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 125000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 125
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 100000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 100
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 75000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 75
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 50000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 50
+			}
+		}
+		else_if = {
+			limit = {
+				has_army_manpower = {
+					size > 25000
+				}
+			}
+			set_variable = {
+				SFU_manpower_score = 25
+			}
+		}
+		else = {
+			set_variable = {
+				SFU_manpower_score = 0
+			}
+		}
+	}
+}

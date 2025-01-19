@@ -1,0 +1,1809 @@
+equipments = {
+
+  # French Tanks
+	# French FT17
+	fra_light_tank_chassis_ft = {
+		abbreviation = "rft"
+		visual_level = 0
+		year = 1918
+		archetype = light_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_small_main_armament_tier_1
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_1
+		}
+		maximum_speed = 4.0
+		build_cost_ic = 8
+		reliability = 0.65
+		armor_value = 15
+		defense = 1
+		breakthrough = 5
+	}
+
+	# French H35
+	fra_light_tank_chassis_h35 = {
+		abbreviation = "h35"
+		visual_level = 1
+		year = 1935
+		archetype = light_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_small_main_armament_tier_1
+					tank_small_main_armament_tier_2
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_1
+		}
+		maximum_speed = 5.0
+		build_cost_ic = 10
+		reliability = 0.65
+		armor_value = 15
+		defense = 1
+		breakthrough = 5
+	}
+
+	# French AMX12
+	fra_light_tank_chassis_x13 = {
+		abbreviation = "x13"
+		visual_level = 2
+		year = 1941
+		archetype = light_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_small_main_armament_tier_1
+					tank_small_main_armament_tier_2
+					tank_small_main_armament_tier_3
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_misc_tier_2_module
+			# 		tank_special_misc_tier_3_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_special_radio_tier_2_module
+			# 		tank_special_radio_tier_3_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_electronics_tier_2_special_module
+			# 		tank_electronics_tier_3_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_ammo_tier_2_special_module
+			# 		tank_ammo_tier_3_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_armor_tier_2_special_module
+			# 		tank_armor_tier_3_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_mg_tier_2_special_module
+			# 		tank_hmg_special_module
+			# 		tank_mg_tier_3_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 		tank_hull_mounted_addition_tier_2_special_module
+			# 		tank_hull_mounted_addition_tier_3_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_3
+		}
+		maximum_speed = 8.0
+		build_cost_ic = 16
+		reliability = 0.65
+		armor_value = 40
+		defense = 4
+		breakthrough = 25
+	}
+
+	# French S35
+	fra_medium_tank_chassis_s35 = {
+		abbreviation = "s35"
+		visual_level = 1
+		year = 1937
+		archetype = medium_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_medium_main_armament_tier_1
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_1
+		}
+		maximum_speed = 6
+		build_cost_ic = 18
+		reliability = 0.65
+		armor_value = 30
+		defense = 2
+		breakthrough = 15
+	}
+
+	# French S40
+	fra_medium_tank_chassis_s40 = {
+		abbreviation = "s40"
+		visual_level = 2
+		year = 1940
+		archetype = medium_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_medium_main_armament_tier_1
+					tank_medium_main_armament_tier_2
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_misc_tier_2_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_special_radio_tier_2_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_electronics_tier_2_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_ammo_tier_2_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_armor_tier_2_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_mg_tier_2_special_module
+			# 		tank_hmg_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 		tank_hull_mounted_addition_tier_2_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_2
+		}
+		maximum_speed = 6.0
+		build_cost_ic = 26
+		reliability = 0.65
+		armor_value = 40
+		defense = 3
+		breakthrough = 30
+	}
+
+	# French SARL42
+	fra_medium_tank_chassis_s42 = {
+		abbreviation = "s42"
+		visual_level = 2
+		year = 1942
+		archetype = medium_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_medium_main_armament_tier_1
+					tank_medium_main_armament_tier_2
+					tank_medium_main_armament_tier_3
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_misc_tier_2_module
+			# 		tank_special_misc_tier_3_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_special_radio_tier_2_module
+			# 		tank_special_radio_tier_3_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_electronics_tier_2_special_module
+			# 		tank_electronics_tier_3_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_ammo_tier_2_special_module
+			# 		tank_ammo_tier_3_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_armor_tier_2_special_module
+			# 		tank_armor_tier_3_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_mg_tier_2_special_module
+			# 		tank_hmg_special_module
+			# 		tank_mg_tier_3_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 		tank_hull_mounted_addition_tier_2_special_module
+			# 		tank_hull_mounted_addition_tier_3_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_3
+		}
+		maximum_speed = 6.0
+		build_cost_ic = 28
+		reliability = 0.65
+		armor_value = 50
+		defense = 4
+		breakthrough = 45
+	}
+
+	# French AMX4
+	fra_medium_tank_chassis_x4 = {
+		abbreviation = "am4"
+		visual_level = 2
+		year = 1945
+		archetype = medium_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_medium_main_armament_tier_1
+					tank_medium_main_armament_tier_2
+					tank_medium_main_armament_tier_3
+					tank_heavy_main_armament_tier_1
+					tank_heavy_main_armament_tier_2
+					tank_heavy_main_armament_tier_3
+				}
+			}
+			turret_type_slot = 	{
+				required = yes
+				allowed_module_categories = {
+					tank_medium_turret_type
+					tank_modern_turret_type
+				}
+			}
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_misc_tier_2_module
+			# 		tank_special_misc_tier_3_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_special_radio_tier_2_module
+			# 		tank_special_radio_tier_3_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_electronics_tier_2_special_module
+			# 		tank_electronics_tier_3_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_ammo_tier_2_special_module
+			# 		tank_ammo_tier_3_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_armor_tier_2_special_module
+			# 		tank_armor_tier_3_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_mg_tier_2_special_module
+			# 		tank_hmg_special_module
+			# 		tank_mg_tier_3_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 		tank_hull_mounted_addition_tier_2_special_module
+			# 		tank_hull_mounted_addition_tier_3_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_3
+		}
+		maximum_speed = 6
+		build_cost_ic = 32
+		reliability = 0.65
+		armor_value = 80
+		defense = 4
+		breakthrough = 60
+	}
+
+	# French B1 Biss
+	fra_heavy_tank_chassis_b1 = {
+		abbreviation = "fb1"
+		visual_level = 0
+		year = 1937
+		archetype = heavy_tank_chassis
+		priority = 2000
+		module_slots = 	{
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_medium_main_armament_tier_1
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_1
+		}
+		maximum_speed = 5
+		build_cost_ic = 24
+		reliability = 0.65
+		armor_value = 55
+		defense = 4
+		breakthrough = 30
+	}
+
+	# French ARL 44
+	fra_heavy_tank_chassis_arl = {
+		abbreviation = "arl"
+		visual_level = 0
+		year = 1941
+		archetype = heavy_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_heavy_main_armament_tier_1
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_misc_tier_2_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_special_radio_tier_2_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_electronics_tier_2_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_ammo_tier_2_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_armor_tier_2_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_mg_tier_2_special_module
+			# 		tank_hmg_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 		tank_hull_mounted_addition_tier_2_special_module
+			# 	}
+			# }
+		}
+
+		upgrades = {
+			tank_nsb_armor_upgrade_1
+		}
+		maximum_speed = 5
+		build_cost_ic = 30 #32
+		reliability = 0.65
+		armor_value = 75
+		defense = 4
+		breakthrough = 50
+	}
+
+	# French AMX50 
+	fra_heavy_tank_chassis_x50 = {
+		abbreviation = "a50"
+		visual_level = 0
+		year = 1945
+		archetype = heavy_tank_chassis
+		priority = 2000
+		module_slots = {
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_assault_main_armament
+					tank_heavy_main_armament_tier_1
+					tank_heavy_main_armament_tier_2
+					tank_heavy_main_armament_tier_3
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_misc_tier_2_module
+					tank_special_misc_tier_3_module
+					tank_special_radio_tier_1_module
+					tank_special_radio_tier_2_module
+					tank_special_radio_tier_3_module
+					tank_electronics_tier_1_special_module
+					tank_electronics_tier_2_special_module
+					tank_electronics_tier_3_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_ammo_tier_2_special_module
+					tank_ammo_tier_3_special_module
+					tank_armor_tier_1_special_module
+					tank_armor_tier_2_special_module
+					tank_armor_tier_3_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_mg_tier_2_special_module
+					tank_hmg_special_module
+					tank_mg_tier_3_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+					tank_hull_mounted_addition_tier_2_special_module
+					tank_hull_mounted_addition_tier_3_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_misc_tier_2_module
+			# 		tank_special_misc_tier_3_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_special_radio_tier_2_module
+			# 		tank_special_radio_tier_3_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_electronics_tier_2_special_module
+			# 		tank_electronics_tier_3_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_ammo_tier_2_special_module
+			# 		tank_ammo_tier_3_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_armor_tier_2_special_module
+			# 		tank_armor_tier_3_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_mg_tier_2_special_module
+			# 		tank_hmg_special_module
+			# 		tank_mg_tier_3_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 		tank_hull_mounted_addition_tier_2_special_module
+			# 		tank_hull_mounted_addition_tier_3_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_3
+		}
+		maximum_speed = 5
+		build_cost_ic = 38
+		reliability = 0.65
+		armor_value = 110
+		defense = 8
+		breakthrough = 70
+	}
+
+	# French Char 2C
+	fra_heavy_tank_chassis_2c = {
+		abbreviation = "f2c"
+		visual_level = 0
+		year = 1921
+		archetype = heavy_tank_chassis
+		priority = 2000
+		module_slots = 	{
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_medium_main_armament_tier_1
+				}
+			}
+			turret_type_slot = inherit
+			suspension_type_slot = inherit
+			armor_type_slot = inherit
+			engine_type_slot = inherit
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			special_type_slot_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_misc_tier_1_module
+					tank_special_radio_tier_1_module
+					tank_electronics_tier_1_special_module
+					tank_ammo_tier_1_special_module
+					tank_ammo_apcr_special_module
+					tank_ammo_he_special_module
+					tank_armor_tier_1_special_module
+					tank_mg_tier_1_special_module
+					tank_lmg_special_module
+					tank_hull_mounted_addition_tier_1_special_module
+				}
+			}
+			# special_type_slot_6 = {
+			# 	required = no
+			# 	allowed_module_categories = {
+			# 		tank_special_misc_tier_1_module
+			# 		tank_special_radio_tier_1_module
+			# 		tank_electronics_tier_1_special_module
+			# 		tank_ammo_tier_1_special_module
+			# 		tank_ammo_apcr_special_module
+			# 		tank_ammo_he_special_module
+			# 		tank_armor_tier_1_special_module
+			# 		tank_mg_tier_1_special_module
+			# 		tank_lmg_special_module
+			# 		tank_hull_mounted_addition_tier_1_special_module
+			# 	}
+			# }
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade_1
+		}
+		maximum_speed = 5
+		build_cost_ic = 20
+		reliability = 0.65
+		armor_value = 40
+		defense = 4
+		breakthrough = 20
+	}
+
+}
