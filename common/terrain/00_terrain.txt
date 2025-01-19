@@ -114,7 +114,7 @@ categories =  {
 		}
 
 		units = {
-			attack = -0.6
+			attack = -0.4
 			defence = -0.2
 			#movement = -0.4
 		}

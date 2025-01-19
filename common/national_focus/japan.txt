@@ -3355,7 +3355,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_intervene_in_china }
 		x = 9
 		y = 1
-		cost = 20
+		cost = 10
 		relative_position_id = JAP_intervene_in_china
 
 		select_effect = {

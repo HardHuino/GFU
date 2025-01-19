@@ -3,39 +3,42 @@ upgrades = {
 	tank_nsb_armor_upgrade_1 = {
 		abbreviation = "arm1"
 		max_level = 8
-		cost = naval
+		cost = land
 
 		build_cost_ic = 0.01
 		maximum_speed = -0.01
 		add_stats = {
 			hardness = 0.01
 			breakthrough = 1
+			armor = 1
 		}
 	}
 
 	tank_nsb_armor_upgrade_2 = {
 		abbreviation = "arm2"
 		max_level = 10
-		cost = naval
+		cost = land
 
 		build_cost_ic = 0.01
 		maximum_speed = -0.01
 		add_stats = {
 			hardness = 0.01
 			breakthrough = 1
+			armor = 1
 		}
 	}
 
 	tank_nsb_armor_upgrade_3 = {
 		abbreviation = "arm3"
 		max_level = 12
-		cost = naval
+		cost = land
 
 		build_cost_ic = 0.01
 		maximum_speed = -0.01
 		add_stats = {
 			hardness = 0.01
 			breakthrough = 1
+			armor = 1
 		}
 	}
 
