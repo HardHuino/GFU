@@ -98,9 +98,16 @@ technologies = {
 		medium_sp_anti_air_brigade  = {
 			air_attack = 0.1
 		}
+		
+		pack_artillery_brigade = {
+			soft_attack = 0.05
+		}
 		pack_antitank_brigade = {
 			hard_attack = 0.1
 		}
+		
+		
+		
 		enable_equipment_modules = {
 			tank_anti_air_gun_1
 			ship_anti_air_2
@@ -148,6 +155,7 @@ technologies = {
 
 		enable_equipments = {
 			anti_air_equipment_2
+			pack_artillery_equipment_2
 		}
 
 		research_cost = 2.0
@@ -212,9 +220,18 @@ technologies = {
 		medium_sp_anti_air_brigade  = {
 			air_attack = 0.1
 		}
+		
+		pack_artillery_brigade = {
+			soft_attack = 0.05
+			fort = {
+				attack = 0.1
+			}
+		}
+		
 		pack_antitank_brigade = {
 			hard_attack = 0.1
 		}
+		
 		# light_assault_gun_brigade = {
 		# 	fort = {
 		# 		attack = 0.3
@@ -269,6 +286,7 @@ technologies = {
 
 		enable_equipments = {
 			anti_air_equipment_3
+			pack_artillery_equipment_3
 		}
 
 		research_cost = 2.0
@@ -334,9 +352,18 @@ technologies = {
 		medium_sp_anti_air_brigade  = {
 			air_attack = 0.1
 		}
+		
+		pack_artillery_brigade = {
+			soft_attack = 0.05
+			fort = {
+				attack = 0.1
+			}
+		}
+		
 		pack_antitank_brigade = {
 			hard_attack = 0.1
 		}
+		
 		# light_assault_gun_brigade = {
 		# 	fort = {
 		# 		attack = 0.3
@@ -391,6 +418,7 @@ technologies = {
 
 		enable_equipments = {
 			anti_air_equipment_4
+			pack_artillery_equipment_4
 		}
 
 		research_cost = 2.0
@@ -455,10 +483,18 @@ technologies = {
 		medium_sp_anti_air_brigade  = {
 			air_attack = 0.1
 		}
+		
+		pack_artillery_brigade = {
+			soft_attack = 0.05
+			fort = {
+				attack = 0.1
+			}
+		}
+		
 		pack_antitank_brigade = {
 			hard_attack = 0.1
 		}
-
+		
 		research_cost = 1
 
 		start_year = 1944
@@ -489,9 +525,7 @@ technologies = {
 		mot_artillery_brigade = {
 			soft_attack = 0.05
 		}
-		pack_artillery_brigade = {
-			soft_attack = 0.05
-		}
+		
 		anti_tank_brigade = {
 			hard_attack = 0.05
 		}
@@ -550,7 +584,7 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_2
-			pack_artillery_equipment_2
+			
 		}
 
 		research_cost = 2.0
@@ -630,12 +664,7 @@ technologies = {
 				attack = 0.1
 			}
 		}
-		pack_artillery_brigade = {
-			soft_attack = 0.05
-			fort = {
-				attack = 0.1
-			}
-		}
+		
 		# medium_assault_gun_brigade = {
 		# 	fort = {
 		# 		attack = 0.4
@@ -699,7 +728,7 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_3
-			pack_artillery_equipment_3
+			
 		}
 
 		research_cost = 2.0
@@ -773,12 +802,7 @@ technologies = {
 				attack = 0.1
 			}
 		}
-		pack_artillery_brigade = {
-			soft_attack = 0.05
-			fort = {
-				attack = 0.1
-			}
-		}
+		
 		# medium_assault_gun_brigade = {
 		# 	fort = {
 		# 		attack = 0.4
@@ -837,7 +861,7 @@ technologies = {
 
 		enable_equipments = {
 			artillery_equipment_4
-			pack_artillery_equipment_4
+			
 		}
 
 		research_cost = 2.0
@@ -906,12 +930,7 @@ technologies = {
 				attack = 0.1
 			}
 		}
-		pack_artillery_brigade = {
-			soft_attack = 0.05
-			fort = {
-				attack = 0.1
-			}
-		}
+		
 		anti_tank_brigade = {
 			hard_attack = 0.05
 		}
