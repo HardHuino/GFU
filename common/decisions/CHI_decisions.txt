@@ -2898,14 +2898,14 @@ foreign_support = {
 						is_in_faction_with = ROOT
 					}
 				}
-				601 = {
-					CONTROLLER = {
-						OR = {
-							has_completed_focus = CHI_the_hump
-							is_in_faction_with = ROOT
-						}
-					}
-				}
+#				601 = {
+#					CONTROLLER = {
+#						OR = {
+#							has_completed_focus = CHI_the_hump
+#							is_in_faction_with = ROOT
+#						}
+#					}
+#				}
 			}
 		}
 		visible = {

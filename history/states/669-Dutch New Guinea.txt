@@ -3,32 +3,24 @@ state={
 	name="STATE_669"
 	manpower = 314300
 
-	resources = {
-		rubber = 400
-	}
 	state_category = pastoral
 
 	history= {
-		set_state_flag = ASN_ALLIES_controls
 		owner = INS
-		1936.1.1.15 = {
-			owner = WST
-		}
 		add_core_of = INS
 		victory_points = {
-			12371 1
+			12371 1 
 		}
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
-			4509 = {
-				naval_base = 1
+			12371 = {
+				naval_base = 2
 			}
 		}
 	}
 	provinces={
-		4509 4552 7529 7542 10369 10396 12371
+		1546 1602 1617 1629 4468 4509 4524 4552 4593 7269 7487 7512 7529 7542 7585 7627 10369 10396 10505 12315 12371 12386 12457 
 	}
 
-	local_supplies=1.0
+	local_supplies=0.0 
 }
