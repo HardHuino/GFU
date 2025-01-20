@@ -3,7 +3,7 @@ characters={
 		name=ENG_winston_churchill
 		portraits={
 			civilian={
-				large=GFX_portrait_ENG_winston_churchill
+				large="gfx/leaders/ENG/Portrait_Britain_Winston_Churchill.dds"
 			}
 			army={
 				small="GFX_idea_ENG_winston_churchill"
@@ -30,6 +30,23 @@ characters={
 			ideology=liberalism
 			traits={ conservative_grandee }
 			expire="1938.1.1.1"
+			id=-1
+		}
+	}
+
+	ENG_neville_chamberlain={
+		name=ENG_neville_chamberlain
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Britain_Neville_Chamberlain.dds"
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			traits = {
+				chamberlain_appeaser #rearmer
+			}
+			expire="1965.1.1.1"
 			id=-1
 		}
 	}

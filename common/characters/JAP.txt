@@ -1180,7 +1180,7 @@ characters={
 				small="GFX_idea_hideki_tojo"
 			}
 			civilian={
-				large="gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
+				large="gfx/leaders/JAP/Portrait_Japan_Hideki_Tojo.dds"
 			}
 		}
 		advisor={

@@ -3,7 +3,7 @@ characters={
 		name=FRA_pierre_laval
 		portraits={
 			civilian={
-				large="GFX_portrait_fra_pierre_laval"
+				large="gfx/leaders/FRA/Portrait_FRA_Pierre_Laval.dds"
 			}
 		}
 		country_leader={
@@ -1042,7 +1042,7 @@ characters={
 				small="GFX_idea_leon_blum"
 			}
 			civilian = {
-				large="GFX_portrait_fra_leon_blum"
+				large="gfx/leaders/FRA/r56_portrait_FRA_Leon_Blum.dds"
 			}
 		}
 		advisor={

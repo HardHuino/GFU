@@ -6,7 +6,7 @@ tags={
 	"Technologies"
 	"Fixes"
 }
-name="SFU - Savesta Friends United"
+name="GFU - GSG Friends United"
 picture="thumbnail.png"
 replace_path="common/ai_focus"
 replace_path="common/ai_equipment"
@@ -23,4 +23,3 @@ replace_path="common/military_industrial_organization/organizations"
 replace_path="history/countries"
 replace_path="gfx/interface/equipmentdesigner/tanks/designer"
 supported_version="1.15.*"
-remote_file_id="3134010664"

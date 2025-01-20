@@ -14,7 +14,7 @@ characters = {
 		name = GER_adolf_hitler
 		portraits = {
 			civilian = {
-				large = GFX_portrait_GER_adolf_hitler
+				large = "gfx/leaders/GER/Portrait_Germany_Adolf_Hitler.dds"
 			}
 		}
 		country_leader = {

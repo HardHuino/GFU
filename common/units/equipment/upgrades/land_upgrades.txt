@@ -10,7 +10,7 @@ upgrades = {
 		add_stats = {
 			hardness = 0.01
 			breakthrough = 1
-			armor = 1
+			armor_value = 1
 		}
 	}
 
@@ -24,7 +24,7 @@ upgrades = {
 		add_stats = {
 			hardness = 0.01
 			breakthrough = 1
-			armor = 1
+			armor_value = 1
 		}
 	}
 
@@ -38,7 +38,7 @@ upgrades = {
 		add_stats = {
 			hardness = 0.01
 			breakthrough = 1
-			armor = 1
+			armor_value = 1
 		}
 	}
 
