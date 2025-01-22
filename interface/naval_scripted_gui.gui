@@ -153,16 +153,26 @@ guiTypes = {
 			maxHeight = 24
 			fixedsize = yes		
 		}
-		# instantTextBoxType = {
-		# 	name = "shbb"
-		# 	position = { x = 350 y = 50 }
-		# 	font = "hoi_18mbs"
-		# 	text = "SHBB: [?shbb_count]" 
-		# 	format = left
-		# 	maxWidth = 65
-		# 	maxHeight = 24
-		# 	fixedsize = yes		
-		# }
+		 instantTextBoxType = {
+		 	name = "shbb"
+		 	position = { x = 350 y = 50 }
+		 	font = "hoi_18mbs"
+		 	text = "SHBB: [?shbb_count]" 
+		 	format = left
+		 	maxWidth = 65
+		 	maxHeight = 24
+		 	fixedsize = yes		
+		 }
+		 instantTextBoxType = {
+		 	name = "shcv"
+		 	position = { x = 280 y = 65 }
+		 	font = "hoi_18mbs"
+		 	text = "SHCV: [?shcv_count]" 
+		 	format = left
+		 	maxWidth = 65
+		 	maxHeight = 24
+		 	fixedsize = yes		
+		 }
 		instantTextBoxType = {
 			name = "Capitals"
 			position = { x = 55 y = 65 }
@@ -183,17 +193,7 @@ guiTypes = {
 			maxHeight = 24
 			fixedsize = yes		
 		}
-		instantTextBoxType = {
-			name = "Screens Needed"
-			position = { x = 280 y = 65 }
-			font = "hoi_18mbs"
-			text = "[GetScreensNeededCount]" 
-			format = left
-			maxWidth = 150
-			maxHeight = 24
-			fixedsize = yes		
-		}	
-
+	
 	}
 
 	containerWindowType = {

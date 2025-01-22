@@ -48,6 +48,16 @@ NVLCAP_check_fleet_size = {
 			var = carrier_count
 			value = num_ships_with_type@carrier
 		}
+		clear_variable = shbb_count 
+		add_to_variable = { 
+			var = shbb_count
+			value = num_ships_with_type@sh_battleship
+		}	
+		clear_variable = shcv_count 
+		add_to_variable = { 
+			var = shbb_count
+			value = num_ships_with_type@sh_carrier
+		}
 
 		# New stuff I added
 		clear_variable = capital_count 
@@ -181,6 +191,28 @@ NVLCAP_check_fleet_size = {
 			var = command_limit_used_temp
 			value = submarine_count_temp
 		}		
+		set_temp_variable = {
+			var = shbb_count_temp
+			value = shbb_count 
+		}
+		multiply_temp_variable  = { 
+			var =  shbb_count_temp value = global.SHBBCAP
+		}
+		add_to_temp_variable = {
+			var = command_limit_used_temp
+			value = shbb_count_temp
+		}
+		set_temp_variable = {
+			var = shcv_count_temp
+			value = shcv_count 
+		}
+		multiply_temp_variable  = { 
+			var =  shcv_count_temp value = global.SHCVCAP
+		}
+		add_to_temp_variable = {
+			var = command_limit_used_temp
+			value = shcv_count_temp
+		}
 		
 		clear_variable = command_limit_used 
 		add_to_variable = { 
